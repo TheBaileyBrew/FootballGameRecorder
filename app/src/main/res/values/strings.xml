@@ -1,0 +1,73 @@
+<resources>
+    <string name="app_name">Football Game Recorder</string>
+    <string name="arizona_cardinals">Carson Palmer</string>
+    <string name="atlanta_falcons">Matt Ryan</string>
+    <string name="baltimore_ravens">Joe Flacco</string>
+    <string name="buffalo_bills">Tyrod Taylor</string>
+    <string name="carolina_panthers">Cam Newton</string>
+    <string name="chicago_bears">Mitchell Trubisky</string>
+    <string name="cincinnati_bengals">Andy Dalton</string>
+    <string name="cleveland_browns">DeShone Kizer</string>
+    <string name="dallas_cowboys">Dak Prescott</string>
+    <string name="denver_broncos">Paxton Lynch</string>
+    <string name="detroit_lions">Matthew Stafford</string>
+    <string name="green_bay_packers">Aaron Rodgers</string>
+    <string name="houston_texans">T.J. Yates</string>
+    <string name="indianapolis_colts">Andrew Luck</string>
+    <string name="jacksonville_jaguars">Blake Bortles</string>
+    <string name="kansas_city_chiefs">Alex Smith</string>
+    <string name="los_angeles_chargers">Philip Rivers</string>
+    <string name="los_angeles_rams">Jared Goff</string>
+    <string name="miami_dolphins">Jay Cutler</string>
+    <string name="minnesota_vikings">Case Keenum</string>
+    <string name="new_england_patriots">Tom Brady</string>
+    <string name="new_orleans_saints">Drew Brees</string>
+    <string name="new_york_giants">Eli Manning</string>
+    <string name="new_york_jets">Bryce Petty</string>
+    <string name="oakland_raiders">Derek Carr</string>
+    <string name="philadelphia_eagles">Carson Wentz</string>
+    <string name="pittsburgh_steelers">Ben Rothlisberger</string>
+    <string name="san_francisco_49ers">Jimmy Garoppolo</string>
+    <string name="seattle_seahawks">Seattle Russell Wilson</string>
+    <string name="tampa_bay_bucanneers">Jameis Winston</string>
+    <string name="tennessee_titans">Marcus Mariota</string>
+    <string name="washington_redskins">Kirk Cousins</string>
+    <string name="start_game">Start Game</string>
+
+
+    <string-array name="football_teams">
+        <item>Choose Your Team</item>
+        <item>Arizona Cardinals</item>
+        <item>Atlanta Falcons</item>
+        <item>Baltimore Ravens</item>
+        <item>Buffalo Bills</item>
+        <item>Carolina Panthers</item>
+        <item>Chicago Bears</item>
+        <item>Cincinnati Bengals</item>
+        <item>Cleveland Browns</item>
+        <item>Dallas Cowboys</item>
+        <item>Denver Broncos</item>
+        <item>Detroit Lions</item>
+        <item>Green Bay Packers</item>
+        <item>Houston Texans</item>
+        <item>Indianapolis Colts</item>
+        <item>Jacksonville Jaguars</item>
+        <item>Kansas City Chiefs</item>
+        <item>Los Angeles Chargers</item>
+        <item>Los Angeles Rams</item>
+        <item>Miami Dolphins</item>
+        <item>Minnesota Vikings</item>
+        <item>New England Patriots</item>
+        <item>New Orleans Saints</item>
+        <item>New York Giants</item>
+        <item>New York Jets</item>
+        <item>Oakland Raiders</item>
+        <item>Philadelphia Eagles</item>
+        <item>Pittsburgh Steelers</item>
+        <item>San Francisco 49ers</item>
+        <item>Seattle Seahawks</item>
+        <item>Tampa Bay Buccaneers</item>
+        <item>Tennessee Titans</item>
+        <item>Washington Redskins</item>
+    </string-array>
+</resources>

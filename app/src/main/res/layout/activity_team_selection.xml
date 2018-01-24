@@ -1,0 +1,81 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@drawable/football_field"
+    android:orientation="vertical"
+    tools:context="com.example.android.footballgamerecorder.TeamSelection">
+
+    <Spinner
+        android:id="@+id/teamOne_spinner"
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        android:layout_weight=".5"
+        android:layout_marginTop="@dimen/small_padding"
+        android:layout_marginLeft="@dimen/small_padding"
+        android:layout_marginRight="@dimen/small_padding"
+        android:gravity="center" />
+    <TextView
+        android:id="@+id/team_one_passing_player_name"
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        android:layout_weight=".25"
+        android:layout_marginLeft="@dimen/small_med_padding"
+        android:layout_marginRight="@dimen/small_med_padding"
+        android:text=""
+        android:textColor="#FFFFFF"
+        android:textSize="@dimen/medium_font"
+        android:textStyle="bold"/>
+
+    <ImageView
+        android:id="@+id/team_one_spinner_team_logo"
+        android:layout_width="wrap_content"
+        android:layout_height="0dp"
+        android:layout_weight="3"
+        android:layout_marginLeft="@dimen/small_padding"
+        android:layout_marginRight="@dimen/small_padding"
+        android:gravity="center"
+        />
+
+    <Spinner
+        android:id="@+id/teamTwo_spinner"
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        android:layout_weight=".5"
+        android:layout_marginLeft="@dimen/small_padding"
+        android:layout_marginRight="@dimen/small_padding"
+        android:gravity="center" />
+    <TextView
+        android:id="@+id/team_two_passing_player_name"
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        android:layout_weight=".25"
+        android:layout_marginLeft="@dimen/small_med_padding"
+        android:layout_marginRight="@dimen/small_med_padding"
+        android:text=""
+        android:textColor="#FFFFFF"
+        android:textSize="@dimen/medium_font"
+        android:textStyle="bold"/>
+
+    <ImageView
+        android:id="@+id/team_two_spinner_team_logo"
+        android:layout_width="wrap_content"
+        android:layout_height="0dp"
+        android:layout_weight="3"
+        android:layout_marginLeft="@dimen/small_padding"
+        android:layout_marginRight="@dimen/small_padding"
+        android:gravity="center"
+        />
+
+    <Button
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        android:layout_weight="1"
+        android:layout_marginLeft="@dimen/small_padding"
+        android:layout_marginRight="@dimen/small_padding"
+        android:text="@string/start_game"
+        android:onClick="onClickStartGame"/>
+
+</LinearLayout>
