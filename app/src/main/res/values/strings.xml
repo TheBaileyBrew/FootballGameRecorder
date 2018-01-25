@@ -1,11 +1,4 @@
 <resources>
-
-    <dimen name="small_padding">6dp</dimen>
-    <dimen name="medium_font">16sp</dimen>
-    <dimen name="small_med_padding">12dp</dimen>
-    <dimen name="large_font">40sp</dimen>
-
-
     <string name="app_name">Football Game Recorder</string>
     <string name="blank_team"> </string>
     <string name="arizona_cardinals">Carson Palmer</string>
@@ -41,8 +34,7 @@
     <string name="tennessee_titans">Marcus Mariota</string>
     <string name="washington_redskins">Kirk Cousins</string>
     <string name="start_game">Start Game</string>
-
-
+    <string name="team_name_here">Team Name Here</string>
     <string-array name="football_teams">
         <item>Choose Your Team</item>
         <item>Arizona Cardinals</item>

@@ -23,9 +23,20 @@ public class StartGame extends AppCompatActivity {
         setContentView(R.layout.activity_game_start);
 
         String teamOneName = getIntent().getStringExtra("team_one");
+        String teamTwoName = getIntent().getStringExtra("team_two");
         TextView textView = (TextView) findViewById(R.id.team_one_game_start_name_display);
+        TextView textView2 = (TextView) findViewById(R.id.team_two_game_start_name_display);
+
+        String qbOneName = getIntent().getStringExtra("qbOne");
+        String qbTwoName = getIntent().getStringExtra("qbTwo");
+        TextView qbTextOne = (TextView) findViewById(R.id.team_one_passing_player_name);
+        TextView qbTextTwo = (TextView) findViewById(R.id.team_two_passing_player_name);
 
         textView.setText(teamOneName);
+        textView2.setText(teamTwoName);
+        qbTextOne.setText(qbOneName);
+        qbTextTwo.setText(qbTwoName);
+
 
 
 

@@ -3,19 +3,43 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
     android:orientation="vertical"
     tools:context="com.example.android.footballgamerecorder.StartGame">
 
 
-
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content">
     <TextView
         android:id="@+id/team_one_game_start_name_display"
+        android:layout_weight="2"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_gravity="center_vertical"
+        android:text="@string/team_name_here"
+        android:textSize="@dimen/large_font"
+        android:textStyle="bold" />
+    <Button
+        style="@style/Widget.AppCompat.Button.Borderless.Colored"
+        android:layout_width="0dp"
+        android:layout_weight=".5"
+        android:layout_height="wrap_content"
+        android:gravity="center"
+        android:layout_marginRight="@dimen/small_med_padding"
+        android:layout_marginLeft="@dimen/small_med_padding"
+        android:layout_marginBottom="@dimen/small_med_padding"
+        android:textColor="#66111111"
+        android:textStyle="bold"
+        android:textSize="@dimen/small_font"
+        android:text="New Team"/>
+    </LinearLayout>
+
+    <TextView
+        android:id="@+id/team_one_starting_qb"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:text="Team Name Here"
-        android:textColor="#1267EE"
-        android:textStyle="bold" />
-
+        android:text="Starting Quarterback: "/>
     <ImageView
         android:id="@+id/team_one_game_start_logo"
         android:layout_width="wrap_content"
@@ -23,14 +47,8 @@
         />
 
     <TextView
-        android:id="@+id/team_one_starting_qb"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:text="Starting Quarterback: "/>
-
-    <TextView
         android:id="@+id/team_one_passing_player_name"
-        android:layout_width="wrap_content"
+        android:layout_width="match_parent"
         android:layout_height="wrap_content" />
 
 
@@ -38,12 +56,10 @@
         android:id="@+id/team_two_game_start_name_display"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:text="Team Name Here"/>
+        android:text="@string/team_name_here"
+        android:textSize="@dimen/large_font"
+        android:textStyle="bold"/>
 
-    <ImageView
-        android:id="@+id/team_two_game_start_logo"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content" />
 
     <TextView
         android:id="@+id/team_two_starting_qb"
@@ -53,10 +69,13 @@
 
     <TextView
         android:id="@+id/team_two_passing_player_name"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_alignRight="@id/team_one_starting_qb"/>
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content" />
 
+    <ImageView
+        android:id="@+id/team_two_game_start_logo"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content" />
 
 
 </LinearLayout>
