@@ -18,8 +18,8 @@ public class TeamSelection extends AppCompatActivity {
     Spinner teamTwoSpinner;
     String teamOneName;
     String teamTwoName;
-    String qbOne;
-    String qbTwo;
+    TextView teamOneQB;
+    TextView teamTwoQB;
     int scoreTeamOne=0;
     int scoreTeamTwo=0;
     int passingYardsTeamOne=0;
@@ -52,8 +52,6 @@ public class TeamSelection extends AppCompatActivity {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_team_selection);
 
-        final TextView teamOneQB = (TextView) findViewById(R.id.team_one_passing_player_name);
-        final TextView teamTwoQB = (TextView) findViewById(R.id.team_two_passing_player_name);
 
 
             //Team One spinner selection criteria and image dsisplay
@@ -70,6 +68,7 @@ public class TeamSelection extends AppCompatActivity {
                 @Override
                 public void onItemSelected (AdapterView < ? > adapterView, View view,int i, long l){
                 final ImageView im = (ImageView) findViewById(R.id.team_one_spinner_team_logo);
+                TextView teamOneQB = (TextView) findViewById(R.id.team_one_passing_player_name);
                 String spinnerTeamOne = ((TextView) view).getText().toString();
                 teamOneName = String.valueOf(teamOneSpinner.getSelectedItem());
                 switch (spinnerTeamOne) {
@@ -227,6 +226,7 @@ public class TeamSelection extends AppCompatActivity {
                 @Override
                 public void onItemSelected (AdapterView < ? > adapterView, View view,int i, long l){
                 final ImageView im2 = (ImageView) findViewById(R.id.team_two_spinner_team_logo);
+                TextView teamTwoQB = (TextView) findViewById(R.id.team_two_passing_player_name);
                 String spinnerTeamTwo = ((TextView) view).getText().toString();
                 teamTwoName = String.valueOf(teamTwoSpinner.getSelectedItem());
                 switch (spinnerTeamTwo) {
@@ -371,26 +371,17 @@ public class TeamSelection extends AppCompatActivity {
             }
             });
 
-        qbOne = teamOneQB.getText().toString();
-        qbTwo = teamTwoQB.getText().toString();
-
-
     }
+
 
     public void onClickStartGame(View view) {
         Intent goToStartGame = new Intent(this,StartGame.class);
         Log.i(teamOneName, "is the value of selection intent");
         goToStartGame.putExtra("team_one", teamOneName);
         goToStartGame.putExtra("team_two", teamTwoName);
-        Log.i(qbOne, "is the name of the starting qb team one");
-        Log.i(qbTwo, "is the name of the starting qb team two");
-        goToStartGame.putExtra("qb_one", qbOne);
-        goToStartGame.putExtra("qb_two", qbTwo);
-
         startActivity(goToStartGame);
 
     }
-
 
 
 }
