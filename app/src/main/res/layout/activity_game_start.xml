@@ -1,33 +1,37 @@
 <?xml version="1.0" encoding="utf-8"?>
 <LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    android:orientation="vertical">
+    android:orientation="vertical"
+    tools:context="com.example.android.footballgamerecorder.StartGame">
+
+
 
     <TextView
         android:id="@+id/team_one_game_start_name_display"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:text="Team Name Here"/>
+        android:text="Team Name Here"
+        android:textColor="#1267EE"
+        android:textStyle="bold" />
 
     <ImageView
         android:id="@+id/team_one_game_start_logo"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_alignBottom="@id/team_one_game_start_name_display"/>
+        />
 
     <TextView
         android:id="@+id/team_one_starting_qb"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_alignBottom="@id/team_one_game_start_logo"
         android:text="Starting Quarterback: "/>
 
     <TextView
         android:id="@+id/team_one_passing_player_name"
         android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_alignRight="@id/team_one_starting_qb"/>
+        android:layout_height="wrap_content" />
 
 
     <TextView
@@ -39,14 +43,12 @@
     <ImageView
         android:id="@+id/team_two_game_start_logo"
         android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_alignBottom="@id/team_one_game_start_name_display"/>
+        android:layout_height="wrap_content" />
 
     <TextView
         android:id="@+id/team_two_starting_qb"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_alignBottom="@id/team_one_game_start_logo"
         android:text="Starting Quarterback: "/>
 
     <TextView

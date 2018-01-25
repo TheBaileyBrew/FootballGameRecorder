@@ -18,7 +18,8 @@
         </activity>
         <activity android:name=".StartGame"
             android:label="Game Start Menu"
-            android:theme="@style/Theme.AppCompat.Light.NoActionBar" />
+            android:theme="@style/Theme.AppCompat.Light.NoActionBar">
+        </activity>
     </application>
 
 </manifest>

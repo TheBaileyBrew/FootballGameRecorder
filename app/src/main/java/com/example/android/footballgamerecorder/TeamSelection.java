@@ -3,6 +3,7 @@ package com.example.android.footballgamerecorder;
 import android.content.Intent;
 import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
+import android.util.Log;
 import android.view.View;
 import android.widget.AdapterView;
 import android.widget.ArrayAdapter;
@@ -15,6 +16,7 @@ import android.widget.TextView;
 public class TeamSelection extends AppCompatActivity {
     Spinner teamOneSpinner;
     Spinner teamTwoSpinner;
+    String teamOneName;
     int scoreTeamOne=0;
     int scoreTeamTwo=0;
     int passingYardsTeamOne=0;
@@ -43,25 +45,30 @@ public class TeamSelection extends AppCompatActivity {
     String safety = "SAFETY";
 
     @Override
-    protected void onCreate(Bundle savedInstanceState) {
+    public void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_team_selection);
         final TextView teamOneQB = (TextView) findViewById(R.id.team_one_passing_player_name);
         final TextView teamTwoQB = (TextView) findViewById(R.id.team_two_passing_player_name);
 
-        //Team One spinner selection criteria and image dsisplay
-        teamOneSpinner = (Spinner) findViewById(R.id.teamOne_spinner);
-        //Created the ArrayAdapter
-        ArrayAdapter<CharSequence> teamOneAdapter = ArrayAdapter.createFromResource(this, R.array.football_teams, android.R.layout.simple_spinner_dropdown_item);
+
+            //Team One spinner selection criteria and image dsisplay
+            teamOneSpinner =(Spinner)
+
+            findViewById(R.id.teamOne_spinner);
+
+            //Created the ArrayAdapter
+            ArrayAdapter<CharSequence> teamOneAdapter = ArrayAdapter.createFromResource(this, R.array.football_teams, android.R.layout.simple_spinner_dropdown_item);
         teamOneSpinner.setAdapter(teamOneAdapter);
-        teamOneSpinner.setOnItemSelectedListener(new AdapterView.OnItemSelectedListener() {
-            @Override
-            public void onItemSelected(AdapterView<?> adapterView, View view, int i, long l) {
-                final ImageView im = (ImageView)findViewById(R.id.team_one_spinner_team_logo);
-                String spinnerTeamOne=((TextView)view).getText().toString();
-                String teamOneName = String.valueOf(teamOneSpinner.getSelectedItem());
-                Intent teamSelectionIntent = new Intent(getBaseContext(), TeamSelection.class);
-                teamSelectionIntent.putExtra("team_one_name", teamOneName);
+        teamOneSpinner.setOnItemSelectedListener(new AdapterView.OnItemSelectedListener()
+
+            {
+                @Override
+                public void onItemSelected (AdapterView < ? > adapterView, View view,int i, long l){
+                final ImageView im = (ImageView) findViewById(R.id.team_one_spinner_team_logo);
+                String spinnerTeamOne = ((TextView) view).getText().toString();
+                teamOneName = String.valueOf(teamOneSpinner.getSelectedItem());
+
                 switch (spinnerTeamOne) {
                     case "Arizona Cardinals":
                         im.setImageResource(R.drawable.arizona_cardinals);
@@ -197,23 +204,27 @@ public class TeamSelection extends AppCompatActivity {
                         break;
                 }
             }
-            @Override
-            public void onNothingSelected(AdapterView<?> adapterView) {
+                @Override
+                public void onNothingSelected (AdapterView < ? > adapterView){
 
             }
-        });
+            });
 
 
+            //Team Two spinner selection criteria and image display
+            teamTwoSpinner =(Spinner)
 
-        //Team Two spinner selection criteria and image display
-        teamTwoSpinner = (Spinner) findViewById(R.id.teamTwo_spinner);
-        ArrayAdapter<CharSequence> teamTwoAdapter = ArrayAdapter.createFromResource(this, R.array.football_teams, android.R.layout.simple_spinner_dropdown_item);
+            findViewById(R.id.teamTwo_spinner);
+
+            ArrayAdapter<CharSequence> teamTwoAdapter = ArrayAdapter.createFromResource(this, R.array.football_teams, android.R.layout.simple_spinner_dropdown_item);
         teamTwoSpinner.setAdapter(teamTwoAdapter);
-        teamTwoSpinner.setOnItemSelectedListener(new AdapterView.OnItemSelectedListener() {
-            @Override
-            public void onItemSelected(AdapterView<?> adapterView, View view, int i, long l) {
-                final ImageView im2 = (ImageView)findViewById(R.id.team_two_spinner_team_logo);
-                String spinnerTeamTwo = ((TextView)view).getText().toString();
+        teamTwoSpinner.setOnItemSelectedListener(new AdapterView.OnItemSelectedListener()
+
+            {
+                @Override
+                public void onItemSelected (AdapterView < ? > adapterView, View view,int i, long l){
+                final ImageView im2 = (ImageView) findViewById(R.id.team_two_spinner_team_logo);
+                String spinnerTeamTwo = ((TextView) view).getText().toString();
                 switch (spinnerTeamTwo) {
                     case "Arizona Cardinals":
                         im2.setImageResource(R.drawable.arizona_cardinals);
@@ -350,21 +361,26 @@ public class TeamSelection extends AppCompatActivity {
 
             }
 
-            @Override
-            public void onNothingSelected(AdapterView<?> adapterView) {
+                @Override
+                public void onNothingSelected (AdapterView < ? > adapterView){
 
             }
-        });
+            });
 
-
-
+        Intent teamSelectionIntent = new Intent (getApplication(), TeamSelection.class);
+        Log.i(teamOneName, "is the value of selection intent");
+        teamSelectionIntent.putExtra("team_one", teamOneName);
+        startActivityForResult(teamSelectionIntent,1);
+        
 
     }
 
     public void onClickStartGame(View view) {
         Intent goToStartGame = new Intent(this,StartGame.class);
         startActivity(goToStartGame);
+
     }
+
 
 
 }

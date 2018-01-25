@@ -1,4 +1,11 @@
 <resources>
+
+    <dimen name="small_padding">6dp</dimen>
+    <dimen name="medium_font">16sp</dimen>
+    <dimen name="small_med_padding">12dp</dimen>
+    <dimen name="large_font">40sp</dimen>
+
+
     <string name="app_name">Football Game Recorder</string>
     <string name="blank_team"> </string>
     <string name="arizona_cardinals">Carson Palmer</string>
