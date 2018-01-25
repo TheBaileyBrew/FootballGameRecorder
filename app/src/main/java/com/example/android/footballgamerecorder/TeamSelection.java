@@ -367,16 +367,18 @@ public class TeamSelection extends AppCompatActivity {
             }
             });
 
-        Intent teamSelectionIntent = new Intent (getApplication(), TeamSelection.class);
-        Log.i(teamOneName, "is the value of selection intent");
-        teamSelectionIntent.putExtra("team_one", teamOneName);
-        startActivityForResult(teamSelectionIntent,1);
-        
+
+
 
     }
 
     public void onClickStartGame(View view) {
         Intent goToStartGame = new Intent(this,StartGame.class);
+        Intent teamSelectionIntent = new Intent (TeamSelection.this, TeamSelection.class);
+        Log.i(teamOneName, "is the value of selection intent");
+        teamSelectionIntent.putExtra("team_one", teamOneName);
+        startActivity(teamSelectionIntent);
+
         startActivity(goToStartGame);
 
     }

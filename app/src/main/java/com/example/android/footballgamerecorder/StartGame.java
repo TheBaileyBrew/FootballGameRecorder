@@ -22,9 +22,7 @@ public class StartGame extends AppCompatActivity {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_game_start);
 
-        Intent teamSelectionIntent = getIntent();
-
-        String teamOneName = teamSelectionIntent.getStringExtra("team_one");
+        String teamOneName = getIntent().getStringExtra("team_one");
         TextView textView = (TextView) findViewById(R.id.team_one_game_start_name_display);
 
         textView.setText(teamOneName);
