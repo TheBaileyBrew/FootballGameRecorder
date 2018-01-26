@@ -20,6 +20,11 @@
             android:label="Game Start Menu"
             android:theme="@style/Theme.AppCompat.Light.NoActionBar">
         </activity>
+        <activity android:name=".GameHasStarted"
+            android:label="Scoring Menu"
+            android:theme="@style/Theme.AppCompat.Light.NoActionBar">
+
+        </activity>
     </application>
 
 </manifest>

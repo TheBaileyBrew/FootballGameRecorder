@@ -16,6 +16,8 @@
         android:layout_marginTop="@dimen/small_padding"
         android:layout_marginLeft="@dimen/small_padding"
         android:layout_marginRight="@dimen/small_padding"
+        android:fontFamily="@font/freshman"
+        android:textSize="@dimen/medium_font"
         android:gravity="center" />
     <TextView
         android:id="@+id/team_one_passing_player_name"
@@ -26,7 +28,7 @@
         android:layout_marginRight="@dimen/small_med_padding"
         android:text=""
         android:textColor="#FFFFFF"
-        android:textSize="@dimen/medium_font"
+        android:textSize="@dimen/small_med_font"
         android:textStyle="bold"/>
 
     <ImageView
@@ -34,6 +36,7 @@
         android:layout_width="wrap_content"
         android:layout_height="0dp"
         android:layout_weight="3"
+        android:layout_marginBottom="@dimen/small_padding"
         android:layout_marginLeft="@dimen/small_padding"
         android:layout_marginRight="@dimen/small_padding"
         android:gravity="center"
@@ -46,6 +49,7 @@
         android:layout_weight=".5"
         android:layout_marginLeft="@dimen/small_padding"
         android:layout_marginRight="@dimen/small_padding"
+        android:textSize="@dimen/medium_font"
         android:gravity="center" />
     <TextView
         android:id="@+id/team_two_passing_player_name"
@@ -56,7 +60,7 @@
         android:layout_marginRight="@dimen/small_med_padding"
         android:text=""
         android:textColor="#FFFFFF"
-        android:textSize="@dimen/medium_font"
+        android:textSize="@dimen/small_med_font"
         android:textStyle="bold"/>
 
     <ImageView
@@ -70,12 +74,20 @@
         />
 
     <Button
+        style="@style/Widget.AppCompat.Button.Borderless"
+        android:onClick="onClickStartGame"
         android:layout_width="match_parent"
         android:layout_height="0dp"
-        android:layout_weight="1"
-        android:layout_marginLeft="@dimen/small_padding"
-        android:layout_marginRight="@dimen/small_padding"
+        android:layout_weight=".65"
+        android:layout_marginLeft="@dimen/large_padding"
+        android:layout_marginRight="@dimen/large_padding"
+        android:layout_marginBottom="@dimen/small_med_padding"
+        android:background="@drawable/border"
+        android:fontFamily="@font/freshman"
+        android:textColor="#99111111"
+        android:textStyle="bold"
+        android:textSize="@dimen/small_med_font"
         android:text="@string/start_game"
-        android:onClick="onClickStartGame"/>
+        />
 
 </LinearLayout>

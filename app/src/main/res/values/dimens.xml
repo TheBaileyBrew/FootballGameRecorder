@@ -1,8 +1,17 @@
 <?xml version="1.0" encoding="utf-8"?>
 <resources>
-    <dimen name="large_font">32sp</dimen>
-    <dimen name="small_padding">6dp</dimen>
-    <dimen name="small_med_padding">10dp</dimen>
+    <dimen name="xtra_large_font">64sp</dimen>
+    <dimen name="larger_font">48sp</dimen>
+    <dimen name="large_font">26sp</dimen>
     <dimen name="medium_font">20sp</dimen>
     <dimen name="small_font">10sp</dimen>
+    <dimen name="xtra_small_font">6sp</dimen>
+
+
+
+    <dimen name="small_padding">6dp</dimen>
+    <dimen name="small_med_padding">10dp</dimen>
+    <dimen name="small_med_font">16sp</dimen>
+    <dimen name="large_padding">50dp</dimen>
+
 </resources>
