@@ -33,7 +33,7 @@
             android:background="@drawable/border_black"
             android:fontFamily="@font/freshman"
             android:textColor="#66111111"
-            android:textSize="@dimen/xtra_small_font"
+            android:textSize="@dimen/small_font"
             android:text="New Team"/>
     </LinearLayout>
 
@@ -67,21 +67,81 @@
         android:layout_width="match_parent"
         android:layout_height="0dp"
         android:layout_weight="3">
-    <ImageView
-        android:id="@+id/team_one_game_start_logo"
-        android:layout_width="140dp"
-        android:layout_height="140dp"
-        />
-    <TextView
-        android:id="@+id/team_one_score_display"
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:gravity="center"
-        android:layout_gravity="center_horizontal"
-        android:fontFamily="@font/freshman"
-        android:text="SCORE"
-        android:textColor="#111111"
-        android:textSize="@dimen/larger_font"/>
+        <ImageView
+            android:id="@+id/team_one_game_start_logo"
+            android:layout_width="140dp"
+            android:layout_height="140dp"
+            />
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content">
+            <TextView
+                android:id="@+id/team_one_score_display"
+                android:layout_gravity="center_horizontal"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginBottom="@dimen/small_med_padding"
+                android:gravity="center"
+                android:fontFamily="@font/freshman"
+                android:text="SCORE"
+                android:textColor="#111111"
+                android:textSize="@dimen/larger_font"
+                />
+
+            <TextView
+                android:id="@+id/team_one_passing_yards_display"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_below="@id/team_one_score_display"
+                android:layout_marginLeft="@dimen/medium_padding"
+                android:text="000"
+                />
+            <TextView
+                android:id="@+id/team_one_passing_yards"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_toRightOf="@id/team_one_passing_yards_display"
+                android:layout_below="@id/team_one_score_display"
+                android:layout_marginLeft="@dimen/small_med_padding"
+                android:text="Passing Yards"
+                />
+
+            <TextView
+                android:id="@+id/team_one_rushing_yards_display"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_below="@id/team_one_passing_yards_display"
+                android:layout_marginLeft="@dimen/medium_padding"
+                android:text="000"
+                />
+            <TextView
+                android:id="@+id/team_one_rushing_yards"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_toRightOf="@id/team_one_rushing_yards_display"
+                android:layout_marginLeft="@dimen/small_med_padding"
+                android:layout_below="@id/team_one_passing_yards"
+                android:text="Rushing Yards"
+                />
+
+            <TextView
+                android:id="@+id/team_one_receiving_yards_display"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_below="@id/team_one_rushing_yards_display"
+                android:layout_marginLeft="@dimen/medium_padding"
+                android:text="000"
+                />
+            <TextView
+                android:id="@+id/team_one_receiving_yards"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="@dimen/small_med_padding"
+                android:layout_toRightOf="@id/team_one_receiving_yards_display"
+                android:layout_below="@id/team_one_rushing_yards"
+                android:text="Receiving Yards"
+                />
+        </RelativeLayout>
     </LinearLayout>
 
     <LinearLayout
@@ -110,7 +170,7 @@
             android:background="@drawable/border_black"
             android:fontFamily="@font/freshman"
             android:textColor="#66111111"
-            android:textSize="@dimen/xtra_small_font"
+            android:textSize="@dimen/small_font"
             android:text="New Team"/>
     </LinearLayout>
 
@@ -149,16 +209,78 @@
             android:id="@+id/team_two_game_start_logo"
             android:layout_width="140dp"
             android:layout_height="140dp"/>
-        <TextView
-            android:id="@+id/team_two_score_display"
+        <RelativeLayout
             android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:gravity="center"
-            android:layout_gravity="center_horizontal"
-            android:fontFamily="@font/freshman"
-            android:text="SCORE"
-            android:textColor="#111111"
-            android:textSize="@dimen/larger_font"/>
+            android:layout_height="wrap_content">
+            <TextView
+                android:id="@+id/team_two_score_display"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center_horizontal"
+                android:gravity="center"
+                android:layout_marginBottom="@dimen/small_med_padding"
+                android:fontFamily="@font/freshman"
+                android:text="SCORE"
+                android:textColor="#111111"
+                android:textSize="@dimen/larger_font"
+                />
+
+            <TextView
+                android:id="@+id/team_two_passing_yards_display"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_below="@id/team_two_score_display"
+                android:layout_marginLeft="@dimen/medium_padding"
+                android:text="000"
+                />
+            <TextView
+                android:id="@+id/team_two_passing_yards"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_toRightOf="@id/team_two_passing_yards_display"
+                android:layout_below="@id/team_two_score_display"
+                android:layout_marginLeft="@dimen/small_med_padding"
+                android:text="Passing Yards"
+                />
+
+            <TextView
+                android:id="@+id/team_two_rushing_yards_display"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_below="@id/team_two_passing_yards_display"
+                android:layout_marginLeft="@dimen/medium_padding"
+                android:text="000"
+                />
+            <TextView
+                android:id="@+id/team_two_rushing_yards"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_toRightOf="@id/team_two_rushing_yards_display"
+                android:layout_marginLeft="@dimen/small_med_padding"
+                android:layout_below="@id/team_two_passing_yards"
+                android:text="Rushing Yards"
+                />
+
+            <TextView
+                android:id="@+id/team_two_receiving_yards_display"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_below="@id/team_two_rushing_yards_display"
+                android:layout_marginLeft="@dimen/medium_padding"
+                android:text="000"
+                />
+            <TextView
+                android:id="@+id/team_two_receiving_yards"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="@dimen/small_med_padding"
+                android:layout_toRightOf="@id/team_two_receiving_yards_display"
+                android:layout_below="@id/team_two_rushing_yards"
+                android:text="Receiving Yards"
+                />
+        </RelativeLayout>
+
+
     </LinearLayout>
 
     <LinearLayout
@@ -175,9 +297,10 @@
             android:layout_height="wrap_content"
             android:layout_marginRight="@dimen/small_padding"
             android:layout_marginLeft="@dimen/small_padding"
+            android:padding="@dimen/small_padding"
             android:text="start 1st half"
             android:fontFamily="@font/freshman"
-            android:textSize="@dimen/xtra_small_font"
+            android:textSize="@dimen/small_font"
             android:textStyle="bold"
             android:textAllCaps="true"
             android:textColor="#000000"
@@ -189,9 +312,10 @@
             android:layout_height="wrap_content"
             android:layout_marginRight="@dimen/small_padding"
             android:layout_marginLeft="@dimen/small_padding"
+            android:padding="@dimen/small_padding"
             android:text="HALFTIME"
             android:fontFamily="@font/freshman"
-            android:textSize="@dimen/xtra_small_font"
+            android:textSize="@dimen/small_font"
             android:textStyle="bold"
             android:textAllCaps="true"
             android:textColor="#000000"
@@ -203,9 +327,10 @@
             android:layout_height="wrap_content"
             android:layout_marginRight="@dimen/small_padding"
             android:layout_marginLeft="@dimen/small_padding"
+            android:padding="@dimen/small_padding"
             android:text="start 2nd half"
             android:fontFamily="@font/freshman"
-            android:textSize="@dimen/xtra_small_font"
+            android:textSize="@dimen/small_font"
             android:textStyle="bold"
             android:textAllCaps="true"
             android:textColor="#000000"

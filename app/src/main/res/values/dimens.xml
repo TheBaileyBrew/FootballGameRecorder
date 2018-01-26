@@ -11,7 +11,9 @@
 
     <dimen name="small_padding">6dp</dimen>
     <dimen name="small_med_padding">10dp</dimen>
-    <dimen name="small_med_font">16sp</dimen>
+    <dimen name="small_med_font">12sp</dimen>
     <dimen name="large_padding">50dp</dimen>
+    <dimen name="medium_padding">16dp</dimen>
+    <dimen name="xtra_small_padding">3dp</dimen>
 
 </resources>
