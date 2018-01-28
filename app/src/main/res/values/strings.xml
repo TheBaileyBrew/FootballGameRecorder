@@ -35,6 +35,33 @@
     <string name="washington_redskins">Kirk Cousins</string>
     <string name="start_game">Start Game</string>
     <string name="team_name_here">Team Name Here</string>
+    <string name="home">Home:</string>
+    <string name="_0">0</string>
+    <string name="_000">000</string>
+    <string name="away">Away:</string>
+    <string name="passing_yards">PASSING YARDS:</string>
+    <string name="completions">COMPLETIONS:</string>
+    <string name="attempts">ATTEMPTS:</string>
+    <string name="interceptions">INTERCEPTIONS:</string>
+    <string name="fumbles">FUMBLES:</string>
+    <string name="_0000">0000</string>
+    <string name="receiving_yards">RECEIVING YARDS:</string>
+    <string name="touchdowns">TOUCHDOWNS:</string>
+    <string name="rushing_yards">RUSHING YARDS:</string>
+    <string name="defense_td">defense TD</string>
+    <string name="rushing_td">rushing TD</string>
+    <string name="receiving_td">RECEIVING TD</string>
+    <string name="passing_statistics">PASSING STATISTICS</string>
+    <string name="current_yards">Current Yards:</string>
+    <string name="complete">complete</string>
+    <string name="incomplete">incomplete</string>
+    <string name="intercepted">intercepted</string>
+    <string name="fumble">fumble</string>
+    <string name="rushing_statistics">RUSHING STATISTICS</string>
+    <string name="_1">-1</string>
+    <string name="_1plus">+1</string>
+    <string name="_10">+10</string>
+    <string name="receiving_statistics">RECEIVING STATISTICS</string>
     <string-array name="football_teams">
         <item>Choose Your Team</item>
         <item>Arizona Cardinals</item>

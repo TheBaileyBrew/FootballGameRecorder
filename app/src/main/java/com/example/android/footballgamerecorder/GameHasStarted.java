@@ -235,40 +235,40 @@ public class GameHasStarted extends AppCompatActivity {
     }
 
     public void teamOneIntercept (int pass) {
-        TextView qbintercept = (TextView) findViewById(R.id.teamOne_interceptions);
+        TextView qbintercept = (TextView) findViewById(R.id.passing_intercept_display_total);
         qbintercept.setText(String.valueOf(pass));
     }
 
     public void teamOneComplete (int pass) {
-        TextView qbcomplete = (TextView) findViewById(R.id.teamOne_completed);
+        TextView qbcomplete = (TextView) findViewById(R.id.passing_comp_display_total);
         qbcomplete.setText(String.valueOf(pass));
     }
     public void teamOneIncomplete (int pass) {
-        TextView qbincomplete = (TextView) findViewById(R.id.teamOne_attempts);
+        TextView qbincomplete = (TextView) findViewById(R.id.passing_attempt_display_total);
         qbincomplete.setText(String.valueOf(pass));
     }
 
 
     public void qbTeamOneFumble (int fumble) {
-        TextView qbfumble = (TextView) findViewById(R.id.teamOne_quarterback_fumble);
+        TextView qbfumble = (TextView) findViewById(R.id.fumbles_qb_one_display);
         qbfumble.setText(String.valueOf(fumble));
     }
     public void wrTeamOneFumble (int fumble) {
-        TextView wrfumble = (TextView) findViewById(R.id.teamOne_widereceiver_fumble);
+        TextView wrfumble = (TextView) findViewById(R.id.fumbles_wr_one_display);
         wrfumble.setText(String.valueOf(fumble));
     }
     public void rbTeamOneFumble (int fumble) {
-        TextView rbfumble = (TextView) findViewById(R.id.teamOne_runningback_fumble);
+        TextView rbfumble = (TextView) findViewById(R.id.fumbles_rb_one_display);
         rbfumble.setText(String.valueOf(fumble));
     }
 
     public void wrtd (int td) {
-        TextView wideTD = (TextView) findViewById(R.id.receiving_td);
+        TextView wideTD = (TextView) findViewById(R.id.touchdown_wr_one_display);
         wideTD.setText(String.valueOf(td));
     }
 
     public void rbtd (int td) {
-        TextView backTD = (TextView) findViewById(R.id.rushing_td);
+        TextView backTD = (TextView) findViewById(R.id.touchdown_rb_one_display);
         backTD.setText(String.valueOf(td));
     }
 

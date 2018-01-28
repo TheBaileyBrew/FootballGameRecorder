@@ -76,7 +76,6 @@
                             android:layout_marginBottom="@dimen/small_padding">
 
                         </Spinner>
-        <!--CORRECT INVISIBLITY TO DEFAULT-->>
                         <RelativeLayout
                             android:id="@+id/passing_scoring_statistics"
                             android:layout_width="match_parent"
@@ -89,26 +88,26 @@
                                 android:id="@+id/passing_yards_total"
                                 android:layout_width="wrap_content"
                                 android:layout_height="wrap_content"
-                                android:text="PASSING YARDS: " />
+                                android:text="@string/passing_yards" />
                             <TextView
                                 android:id="@+id/passing_comp_total"
                                 android:layout_width="wrap_content"
                                 android:layout_height="wrap_content"
                                 android:layout_below="@id/passing_yards_total"
-                                android:text="COMPLETIONS: " />
+                                android:text="@string/completions" />
                             <TextView
                                 android:id="@+id/passing_attempts_total"
                                 android:layout_width="wrap_content"
                                 android:layout_height="wrap_content"
                                 android:layout_below="@id/passing_comp_total"
-                                android:text="ATTEMPTS: " />
+                                android:text="@string/attempts" />
                             <TextView
                                 android:id="@+id/passing_yards_display_total"
                                 android:layout_width="wrap_content"
                                 android:layout_height="wrap_content"
                                 android:layout_toRightOf="@id/passing_yards_total"
                                 android:paddingLeft="@dimen/small_med_padding"
-                                android:text="0000" />
+                                android:text="@string/_0000" />
                             <TextView
                                 android:id="@+id/passing_comp_display_total"
                                 android:layout_width="wrap_content"
@@ -116,7 +115,7 @@
                                 android:layout_below="@id/passing_yards_display_total"
                                 android:layout_alignLeft="@id/passing_yards_display_total"
                                 android:paddingLeft="@dimen/small_med_padding"
-                                android:text="0000" />
+                                android:text="@string/_0000" />
                             <TextView
                                 android:id="@+id/passing_attempt_display_total"
                                 android:layout_width="wrap_content"
@@ -124,14 +123,14 @@
                                 android:layout_below="@id/passing_comp_display_total"
                                 android:layout_alignLeft="@id/passing_comp_display_total"
                                 android:paddingLeft="@dimen/small_med_padding"
-                                android:text="0000" />
+                                android:text="@string/_0000" />
                             <TextView
                                 android:id="@+id/interception_qb_one_display"
                                 android:layout_width="wrap_content"
                                 android:layout_height="wrap_content"
                                 android:layout_toRightOf="@id/passing_comp_display_total"
                                 android:paddingLeft="@dimen/medium_padding"
-                                android:text="INTERCEPTIONS: " />
+                                android:text="@string/interceptions" />
                             <TextView
                                 android:id="@+id/fumbles_qb_one_display"
                                 android:layout_width="wrap_content"
@@ -139,21 +138,21 @@
                                 android:layout_toRightOf="@id/passing_comp_display_total"
                                 android:layout_below="@id/interception_qb_one_display"
                                 android:paddingLeft="@dimen/medium_padding"
-                                android:text="FUMBLES: " />
+                                android:text="@string/fumbles" />
                             <TextView
                                 android:id="@+id/passing_intercept_display_total"
                                 android:layout_width="wrap_content"
                                 android:layout_height="wrap_content"
                                 android:layout_toRightOf="@id/interception_qb_one_display"
                                 android:paddingLeft="@dimen/small_med_padding"
-                                android:text="0000" />
+                                android:text="@string/_0000" />
                             <TextView
                                 android:layout_width="wrap_content"
                                 android:layout_height="wrap_content"
                                 android:layout_alignLeft="@id/passing_intercept_display_total"
                                 android:layout_below="@id/passing_intercept_display_total"
                                 android:paddingLeft="@dimen/small_med_padding"
-                                android:text="0000"/>
+                                android:text="@string/_0000"/>
                         </RelativeLayout>
                         <RelativeLayout
                             android:id="@+id/receiving_scoring_statistics"
@@ -167,26 +166,26 @@
                                 android:id="@+id/receiving_yards_total"
                                 android:layout_width="wrap_content"
                                 android:layout_height="wrap_content"
-                                android:text="RECEIVING YARDS: " />
+                                android:text="@string/receiving_yards" />
                             <TextView
                                 android:id="@+id/receiving_comp_total"
                                 android:layout_width="wrap_content"
                                 android:layout_height="wrap_content"
                                 android:layout_below="@id/receiving_yards_total"
-                                android:text="COMPLETIONS: " />
+                                android:text="@string/completions" />
                             <TextView
                                 android:id="@+id/receiving_attempts_total"
                                 android:layout_width="wrap_content"
                                 android:layout_height="wrap_content"
                                 android:layout_below="@id/receiving_comp_total"
-                                android:text="ATTEMPTS: " />
+                                android:text="@string/attempts" />
                             <TextView
                                 android:id="@+id/receiving_yards_display_total"
                                 android:layout_width="wrap_content"
                                 android:layout_height="wrap_content"
                                 android:layout_toRightOf="@id/receiving_yards_total"
                                 android:paddingLeft="@dimen/small_med_padding"
-                                android:text="0000" />
+                                android:text="@string/_0000" />
                             <TextView
                                 android:id="@+id/receiving_comp_display_total"
                                 android:layout_width="wrap_content"
@@ -194,7 +193,7 @@
                                 android:layout_below="@id/receiving_yards_display_total"
                                 android:layout_alignLeft="@id/receiving_yards_display_total"
                                 android:paddingLeft="@dimen/small_med_padding"
-                                android:text="0000" />
+                                android:text="@string/_0000" />
                             <TextView
                                 android:id="@+id/receiving_attempt_display_total"
                                 android:layout_width="wrap_content"
@@ -202,14 +201,14 @@
                                 android:layout_below="@id/receiving_comp_display_total"
                                 android:layout_alignLeft="@id/receiving_comp_display_total"
                                 android:paddingLeft="@dimen/small_med_padding"
-                                android:text="0000" />
+                                android:text="@string/_0000" />
                             <TextView
                                 android:id="@+id/touchdown_wr_one_display"
                                 android:layout_width="wrap_content"
                                 android:layout_height="wrap_content"
                                 android:layout_toRightOf="@id/receiving_comp_display_total"
                                 android:paddingLeft="@dimen/medium_padding"
-                                android:text="TOUCHDOWNS: " />
+                                android:text="@string/touchdowns" />
                             <TextView
                                 android:id="@+id/fumbles_wr_one_display"
                                 android:layout_width="wrap_content"
@@ -217,21 +216,21 @@
                                 android:layout_toRightOf="@id/receiving_comp_display_total"
                                 android:layout_below="@id/touchdown_wr_one_display"
                                 android:paddingLeft="@dimen/medium_padding"
-                                android:text="FUMBLES: " />
+                                android:text="@string/fumbles" />
                             <TextView
                                 android:id="@+id/receiving_td_display_total"
                                 android:layout_width="wrap_content"
                                 android:layout_height="wrap_content"
                                 android:layout_toRightOf="@id/touchdown_wr_one_display"
                                 android:paddingLeft="@dimen/small_med_padding"
-                                android:text="0000" />
+                                android:text="@string/_0000" />
                             <TextView
                                 android:layout_width="wrap_content"
                                 android:layout_height="wrap_content"
                                 android:layout_alignLeft="@id/receiving_td_display_total"
                                 android:layout_below="@id/receiving_td_display_total"
                                 android:paddingLeft="@dimen/small_med_padding"
-                                android:text="0000"/>
+                                android:text="@string/_0000"/>
                         </RelativeLayout>
                         <RelativeLayout
                             android:id="@+id/rushing_scoring_statistics"
@@ -245,26 +244,26 @@
                                 android:id="@+id/rushing_yards_total"
                                 android:layout_width="wrap_content"
                                 android:layout_height="wrap_content"
-                                android:text="RUSHING YARDS: " />
+                                android:text="@string/rushing_yards" />
                             <TextView
                                 android:id="@+id/rushing_comp_total"
                                 android:layout_width="wrap_content"
                                 android:layout_height="wrap_content"
                                 android:layout_below="@id/rushing_yards_total"
-                                android:text="COMPLETIONS: " />
+                                android:text="@string/completions" />
                             <TextView
                                 android:id="@+id/rushing_attempts_total"
                                 android:layout_width="wrap_content"
                                 android:layout_height="wrap_content"
                                 android:layout_below="@id/rushing_comp_total"
-                                android:text="ATTEMPTS: " />
+                                android:text="@string/attempts" />
                             <TextView
                                 android:id="@+id/rushing_yards_display_total"
                                 android:layout_width="wrap_content"
                                 android:layout_height="wrap_content"
                                 android:layout_toRightOf="@id/rushing_yards_total"
                                 android:paddingLeft="@dimen/small_med_padding"
-                                android:text="0000" />
+                                android:text="@string/_0000" />
                             <TextView
                                 android:id="@+id/rushing_comp_display_total"
                                 android:layout_width="wrap_content"
@@ -272,7 +271,7 @@
                                 android:layout_below="@id/rushing_yards_display_total"
                                 android:layout_alignLeft="@id/rushing_yards_display_total"
                                 android:paddingLeft="@dimen/small_med_padding"
-                                android:text="0000" />
+                                android:text="@string/_0000" />
                             <TextView
                                 android:id="@+id/rushing_attempt_display_total"
                                 android:layout_width="wrap_content"
@@ -280,14 +279,14 @@
                                 android:layout_below="@id/rushing_comp_display_total"
                                 android:layout_alignLeft="@id/rushing_comp_display_total"
                                 android:paddingLeft="@dimen/small_med_padding"
-                                android:text="0000" />
+                                android:text="@string/_0000" />
                             <TextView
                                 android:id="@+id/touchdown_rb_one_display"
                                 android:layout_width="wrap_content"
                                 android:layout_height="wrap_content"
                                 android:layout_toRightOf="@id/rushing_comp_display_total"
                                 android:paddingLeft="@dimen/medium_padding"
-                                android:text="TOUCHDOWNS: " />
+                                android:text="@string/touchdowns" />
                             <TextView
                                 android:id="@+id/fumbles_rb_one_display"
                                 android:layout_width="wrap_content"
@@ -295,21 +294,21 @@
                                 android:layout_toRightOf="@id/rushing_comp_display_total"
                                 android:layout_below="@id/touchdown_rb_one_display"
                                 android:paddingLeft="@dimen/medium_padding"
-                                android:text="FUMBLES: " />
+                                android:text="@string/fumbles" />
                             <TextView
                                 android:id="@+id/rushing_td_display_total"
                                 android:layout_width="wrap_content"
                                 android:layout_height="wrap_content"
                                 android:layout_toRightOf="@id/touchdown_rb_one_display"
                                 android:paddingLeft="@dimen/small_med_padding"
-                                android:text="0000" />
+                                android:text="@string/_0000" />
                             <TextView
                                 android:layout_width="wrap_content"
                                 android:layout_height="wrap_content"
                                 android:layout_alignLeft="@id/rushing_td_display_total"
                                 android:layout_below="@id/rushing_td_display_total"
                                 android:paddingLeft="@dimen/small_med_padding"
-                                android:text="0000"/>
+                                android:text="@string/_0000"/>
                         </RelativeLayout>
                         <View
                             android:layout_width="match_parent"
@@ -329,7 +328,7 @@
                                 android:onClick="onClickTeamOneDefTD"
                                 android:layout_width="wrap_content"
                                 android:layout_height="wrap_content"
-                                android:text="defense TD"
+                                android:text="@string/defense_td"
                                 android:textSize="@dimen/small_font"
                                 />
                             <Button
@@ -338,7 +337,7 @@
                                 android:layout_width="wrap_content"
                                 android:layout_height="wrap_content"
                                 android:layout_toRightOf="@id/team_one_defensive_td"
-                                android:text="rushing TD"
+                                android:text="@string/rushing_td"
                                 android:textSize="@dimen/small_font"
                                 />
                             <Button
@@ -347,7 +346,7 @@
                                 android:layout_width="wrap_content"
                                 android:layout_height="wrap_content"
                                 android:layout_toRightOf="@id/team_one_rushing_td"
-                                android:text="RECEIVING TD"
+                                android:text="@string/receiving_td"
                                 android:textSize="@dimen/small_font"/>
                         <TextView
                             android:id="@+id/team_one_pass_stats"
@@ -355,7 +354,7 @@
                             android:layout_height="wrap_content"
                             android:layout_marginTop="@dimen/medium_padding"
                             android:layout_below="@id/team_one_defensive_td"
-                            android:text="PASSING STATISTICS"
+                            android:text="@string/passing_statistics"
                             android:textStyle="bold"
                             android:textColor="#000000"
                             />
@@ -367,7 +366,7 @@
                             android:layout_marginTop="@dimen/medium_padding"
                             android:layout_below="@id/team_one_defensive_td"
                             android:layout_toRightOf="@id/team_one_pass_stats"
-                            android:text="Current Yards: "
+                            android:text="@string/current_yards"
                             />
                         <TextView
                             android:id="@+id/teamOne_passing_stats"
@@ -376,14 +375,14 @@
                             android:layout_marginTop="@dimen/medium_padding"
                             android:layout_below="@id/team_one_receiving_td"
                             android:layout_toRightOf="@id/team_one_pass_yardage"
-                            android:text="000"/>
+                            android:text="@string/_000"/>
                         <Button
                             android:id="@+id/qb_one_pass_attempt"
                             android:onClick="onClickTeamOnePassComplete"
                             android:layout_width="wrap_content"
                             android:layout_height="wrap_content"
                             android:layout_below="@id/team_one_pass_stats"
-                            android:text="complete"
+                            android:text="@string/complete"
                             android:textSize="@dimen/small_font"
                             />
                         <Button
@@ -393,7 +392,7 @@
                             android:layout_height="wrap_content"
                             android:layout_below="@id/team_one_pass_stats"
                             android:layout_toRightOf="@id/qb_one_pass_attempt"
-                            android:text="incomplete"
+                            android:text="@string/incomplete"
                             android:textSize="@dimen/small_font"
                             />
                         <Button
@@ -403,7 +402,7 @@
                             android:layout_height="wrap_content"
                             android:layout_below="@id/team_one_pass_stats"
                             android:layout_toRightOf="@id/qb_one_incomplete"
-                            android:text="intercepted"
+                            android:text="@string/intercepted"
                             android:textSize="@dimen/small_font"
                             />
                         <Button
@@ -413,7 +412,7 @@
                             android:layout_height="wrap_content"
                             android:layout_below="@id/team_one_pass_stats"
                             android:layout_toRightOf="@id/qb_one_interception"
-                            android:text="fumble"
+                            android:text="@string/fumble"
                             android:textSize="@dimen/small_font"
                             />
                         <TextView
@@ -422,7 +421,7 @@
                             android:layout_height="wrap_content"
                             android:layout_marginTop="@dimen/medium_padding"
                             android:layout_below="@id/qb_one_pass_attempt"
-                            android:text="RUSHING STATISTICS"
+                            android:text="@string/rushing_statistics"
                             android:textStyle="bold"
                             android:textColor="#000000"
                             />
@@ -434,7 +433,7 @@
                             android:layout_marginTop="@dimen/medium_padding"
                             android:layout_toRightOf="@+id/team_one_rush_stats"
                             android:layout_below="@+id/qb_one_incomplete"
-                            android:text="Current Yards: "
+                            android:text="@string/current_yards"
                             />
                         <TextView
                             android:id="@+id/teamOne_rushing_stats"
@@ -443,14 +442,14 @@
                             android:layout_marginTop="@dimen/medium_padding"
                             android:layout_below="@id/qb_one_interception"
                             android:layout_toRightOf="@id/team_one_rush_yardage"
-                            android:text="000"/>
+                            android:text="@string/_000"/>
                         <Button
                             android:id="@+id/team_one_rushing_minus_one"
                             android:onClick="onClickTeamOneMinusOneRush"
                             android:layout_width="wrap_content"
                             android:layout_height="wrap_content"
                             android:layout_below="@id/team_one_rush_stats"
-                            android:text="-1"
+                            android:text="@string/_1"
                             android:textSize="@dimen/small_font"
                             />
                         <Button
@@ -460,7 +459,7 @@
                             android:layout_height="wrap_content"
                             android:layout_below="@id/team_one_rush_stats"
                             android:layout_toRightOf="@id/team_one_rushing_minus_one"
-                            android:text="+1"
+                            android:text="@string/_1plus"
                             android:textSize="@dimen/small_font"
                             />
                         <Button
@@ -470,7 +469,7 @@
                             android:layout_height="wrap_content"
                             android:layout_below="@id/team_one_rush_stats"
                             android:layout_toRightOf="@id/team_one_rushing_plus_one"
-                            android:text="+10"
+                            android:text="@string/_10"
                             android:textSize="@dimen/small_font"
                             />
                         <Button
@@ -480,7 +479,7 @@
                             android:layout_height="wrap_content"
                             android:layout_below="@id/team_one_rush_stats"
                             android:layout_toRightOf="@id/team_one_rushing_plus_ten"
-                            android:text="fumble"
+                            android:text="@string/fumble"
                             android:textSize="@dimen/small_font"
                             />
                         <TextView
@@ -489,7 +488,7 @@
                             android:layout_height="wrap_content"
                             android:layout_marginTop="@dimen/medium_padding"
                             android:layout_below="@id/team_one_rushing_minus_one"
-                            android:text="RECEIVING STATISTICS"
+                            android:text="@string/receiving_statistics"
                             android:textStyle="bold"
                             android:textColor="#000000"
                             />
@@ -501,7 +500,7 @@
                             android:layout_marginTop="@dimen/medium_padding"
                             android:layout_toRightOf="@+id/team_one_rec_stats"
                             android:layout_below="@+id/team_one_rushing_minus_one"
-                            android:text="Current Yards: "
+                            android:text="@string/current_yards"
                             />
                         <TextView
                             android:id="@+id/teamOne_receiving_stats"
@@ -510,14 +509,14 @@
                             android:layout_marginTop="@dimen/medium_padding"
                             android:layout_below="@id/team_one_rushing_plus_ten"
                             android:layout_toRightOf="@id/team_one_rec_yardage"
-                            android:text="000"/>
+                            android:text="@string/_000"/>
                         <Button
                             android:id="@+id/team_one_receiving_minus_one"
                             android:onClick="onClickTeamOneMinusOneRec"
                             android:layout_width="wrap_content"
                             android:layout_height="wrap_content"
                             android:layout_below="@id/team_one_rec_stats"
-                            android:text="-1"
+                            android:text="@string/_1"
                             android:textSize="@dimen/small_font"
                             />
                         <Button
@@ -527,7 +526,7 @@
                             android:layout_height="wrap_content"
                             android:layout_below="@id/team_one_rec_stats"
                             android:layout_toRightOf="@id/team_one_receiving_minus_one"
-                            android:text="+1"
+                            android:text="@string/_1plus"
                             android:textSize="@dimen/small_font"
                             />
                         <Button
@@ -537,7 +536,7 @@
                             android:layout_height="wrap_content"
                             android:layout_below="@id/team_one_rec_stats"
                             android:layout_toRightOf="@id/team_one_receiving_plus_one"
-                            android:text="+10"
+                            android:text="@string/_10"
                             android:textSize="@dimen/small_font"
                             />
                         <Button
@@ -547,7 +546,7 @@
                             android:layout_height="wrap_content"
                             android:layout_below="@id/team_one_rec_stats"
                             android:layout_toRightOf="@id/team_one_receiving_plus_ten"
-                            android:text="fumble"
+                            android:text="@string/fumble"
                             android:textSize="@dimen/small_font"
                             />
                     </RelativeLayout>
@@ -568,28 +567,28 @@
                             android:layout_width="wrap_content"
                             android:layout_height="wrap_content"
                             android:layout_marginLeft="@dimen/small_med_padding"
-                            android:text="Home: "
+                            android:text="@string/home"
                             android:textSize="@dimen/medium_font"
                             android:textColor="#000000"/>
                         <TextView
                             android:id="@+id/team_one_score_tab_two"
                             android:layout_width="wrap_content"
                             android:layout_height="wrap_content"
-                            android:text="0"
+                            android:text="@string/_0"
                             android:textSize="@dimen/medium_font"
                             android:textColor="#000000"/>
                         <TextView
                             android:layout_width="wrap_content"
                             android:layout_height="wrap_content"
                             android:layout_marginLeft="@dimen/small_med_padding"
-                            android:text="Away: "
+                            android:text="@string/away"
                             android:textSize="@dimen/medium_font"
                             android:textColor="#000000"/>
                         <TextView
                             android:id="@+id/team_two_score_tab_two"
                             android:layout_width="wrap_content"
                             android:layout_height="wrap_content"
-                            android:text="0"
+                            android:text="@string/_0"
                             android:textSize="@dimen/medium_font"
                             android:textColor="#000000"/>
                     </LinearLayout>
@@ -618,26 +617,26 @@
                                 android:id="@+id/passing_yards_total_team2"
                                 android:layout_width="wrap_content"
                                 android:layout_height="wrap_content"
-                                android:text="PASSING YARDS: " />
+                                android:text="@string/passing_yards" />
                             <TextView
                                 android:id="@+id/passing_comp_total_team2"
                                 android:layout_width="wrap_content"
                                 android:layout_height="wrap_content"
                                 android:layout_below="@id/passing_yards_total_team2"
-                                android:text="COMPLETIONS: " />
+                                android:text="@string/completions" />
                             <TextView
                                 android:id="@+id/passing_attempts_total_team2"
                                 android:layout_width="wrap_content"
                                 android:layout_height="wrap_content"
                                 android:layout_below="@id/passing_comp_total_team2"
-                                android:text="ATTEMPTS: " />
+                                android:text="@string/attempts" />
                             <TextView
                                 android:id="@+id/passing_yards_display_total_team2"
                                 android:layout_width="wrap_content"
                                 android:layout_height="wrap_content"
                                 android:layout_toRightOf="@id/passing_yards_total_team2"
                                 android:paddingLeft="@dimen/small_med_padding"
-                                android:text="0000" />
+                                android:text="@string/_0000" />
                             <TextView
                                 android:id="@+id/passing_comp_display_total_team2"
                                 android:layout_width="wrap_content"
@@ -645,7 +644,7 @@
                                 android:layout_below="@id/passing_yards_display_total_team2"
                                 android:layout_alignLeft="@id/passing_yards_display_total_team2"
                                 android:paddingLeft="@dimen/small_med_padding"
-                                android:text="0000" />
+                                android:text="@string/_0000" />
                             <TextView
                                 android:id="@+id/passing_attempt_display_total_team2"
                                 android:layout_width="wrap_content"
@@ -653,14 +652,14 @@
                                 android:layout_below="@id/passing_comp_display_total_team2"
                                 android:layout_alignLeft="@id/passing_comp_display_total_team2"
                                 android:paddingLeft="@dimen/small_med_padding"
-                                android:text="0000" />
+                                android:text="@string/_0000" />
                             <TextView
                                 android:id="@+id/interception_qb_one_display_team2"
                                 android:layout_width="wrap_content"
                                 android:layout_height="wrap_content"
                                 android:layout_toRightOf="@id/passing_comp_display_total_team2"
                                 android:paddingLeft="@dimen/medium_padding"
-                                android:text="INTERCEPTIONS: " />
+                                android:text="@string/interceptions" />
                             <TextView
                                 android:id="@+id/fumbles_qb_one_display_team2"
                                 android:layout_width="wrap_content"
@@ -668,25 +667,25 @@
                                 android:layout_toRightOf="@id/passing_comp_display_total_team2"
                                 android:layout_below="@id/interception_qb_one_display_team2"
                                 android:paddingLeft="@dimen/medium_padding"
-                                android:text="FUMBLES: " />
+                                android:text="@string/fumbles" />
                             <TextView
                                 android:id="@+id/passing_intercept_display_total_team2"
                                 android:layout_width="wrap_content"
                                 android:layout_height="wrap_content"
                                 android:layout_toRightOf="@id/interception_qb_one_display_team2"
                                 android:paddingLeft="@dimen/small_med_padding"
-                                android:text="0000" />
+                                android:text="@string/_0000" />
                             <TextView
                                 android:layout_width="wrap_content"
                                 android:layout_height="wrap_content"
                                 android:layout_alignLeft="@id/passing_intercept_display_total_team2"
                                 android:layout_below="@id/passing_intercept_display_total_team2"
                                 android:paddingLeft="@dimen/small_med_padding"
-                                android:text="0000"/>
+                                android:text="@string/_0000"/>
                         </RelativeLayout>
 
                         <RelativeLayout
-                            android:id="@+id/receiving_scoring_statistics"
+                            android:id="@+id/receiving_scoring_statistics_team2"
                             android:layout_width="match_parent"
                             android:layout_height="wrap_content"
                             android:layout_below="@id/spinner_team_two_scoring"
@@ -697,26 +696,26 @@
                                 android:id="@+id/receiving_yards_total_team2"
                                 android:layout_width="wrap_content"
                                 android:layout_height="wrap_content"
-                                android:text="RECEIVING YARDS: " />
+                                android:text="@string/receiving_yards" />
                             <TextView
                                 android:id="@+id/receiving_comp_total_team2"
                                 android:layout_width="wrap_content"
                                 android:layout_height="wrap_content"
                                 android:layout_below="@id/receiving_yards_total_team2"
-                                android:text="COMPLETIONS: " />
+                                android:text="@string/completions" />
                             <TextView
                                 android:id="@+id/receiving_attempts_total_team2"
                                 android:layout_width="wrap_content"
                                 android:layout_height="wrap_content"
                                 android:layout_below="@id/receiving_comp_total_team2"
-                                android:text="ATTEMPTS: " />
+                                android:text="@string/attempts" />
                             <TextView
                                 android:id="@+id/receiving_yards_display_total_team2"
                                 android:layout_width="wrap_content"
                                 android:layout_height="wrap_content"
                                 android:layout_toRightOf="@id/receiving_yards_total_team2"
                                 android:paddingLeft="@dimen/small_med_padding"
-                                android:text="0000" />
+                                android:text="@string/_0000" />
                             <TextView
                                 android:id="@+id/receiving_comp_display_total_team2"
                                 android:layout_width="wrap_content"
@@ -724,7 +723,7 @@
                                 android:layout_below="@id/receiving_yards_display_total_team2"
                                 android:layout_alignLeft="@id/receiving_yards_display_total_team2"
                                 android:paddingLeft="@dimen/small_med_padding"
-                                android:text="0000" />
+                                android:text="@string/_0000" />
                             <TextView
                                 android:id="@+id/receiving_attempt_display_total_team2"
                                 android:layout_width="wrap_content"
@@ -732,14 +731,14 @@
                                 android:layout_below="@id/receiving_comp_display_total_team2"
                                 android:layout_alignLeft="@id/receiving_comp_display_total_team2"
                                 android:paddingLeft="@dimen/small_med_padding"
-                                android:text="0000" />
+                                android:text="@string/_0000" />
                             <TextView
                                 android:id="@+id/touchdown_wr_two_display"
                                 android:layout_width="wrap_content"
                                 android:layout_height="wrap_content"
                                 android:layout_toRightOf="@id/receiving_comp_display_total_team2"
                                 android:paddingLeft="@dimen/medium_padding"
-                                android:text="TOUCHDOWNS: " />
+                                android:text="@string/touchdowns" />
                             <TextView
                                 android:id="@+id/fumbles_wr_two_display"
                                 android:layout_width="wrap_content"
@@ -747,21 +746,21 @@
                                 android:layout_toRightOf="@id/receiving_comp_display_total_team2"
                                 android:layout_below="@id/touchdown_wr_two_display"
                                 android:paddingLeft="@dimen/medium_padding"
-                                android:text="FUMBLES: " />
+                                android:text="@string/fumbles" />
                             <TextView
                                 android:id="@+id/receiving_td_display_total_team2"
                                 android:layout_width="wrap_content"
                                 android:layout_height="wrap_content"
                                 android:layout_toRightOf="@id/touchdown_wr_two_display"
                                 android:paddingLeft="@dimen/small_med_padding"
-                                android:text="0000" />
+                                android:text="@string/_0000" />
                             <TextView
                                 android:layout_width="wrap_content"
                                 android:layout_height="wrap_content"
                                 android:layout_alignLeft="@id/receiving_td_display_total_team2"
                                 android:layout_below="@id/receiving_td_display_total_team2"
                                 android:paddingLeft="@dimen/small_med_padding"
-                                android:text="0000"/>
+                                android:text="@string/_0000"/>
                         </RelativeLayout>
                         <RelativeLayout
                             android:id="@+id/rushing_scoring_statistics_team2"
@@ -775,26 +774,26 @@
                                 android:id="@+id/rushing_yards_total_team2"
                                 android:layout_width="wrap_content"
                                 android:layout_height="wrap_content"
-                                android:text="RUSHING YARDS: " />
+                                android:text="@string/rushing_yards" />
                             <TextView
                                 android:id="@+id/rushing_comp_total_team2"
                                 android:layout_width="wrap_content"
                                 android:layout_height="wrap_content"
                                 android:layout_below="@id/rushing_yards_total_team2"
-                                android:text="COMPLETIONS: " />
+                                android:text="@string/completions" />
                             <TextView
                                 android:id="@+id/rushing_attempts_total_team2"
                                 android:layout_width="wrap_content"
                                 android:layout_height="wrap_content"
                                 android:layout_below="@id/rushing_comp_total_team2"
-                                android:text="ATTEMPTS: " />
+                                android:text="@string/attempts" />
                             <TextView
                                 android:id="@+id/rushing_yards_display_total_team2"
                                 android:layout_width="wrap_content"
                                 android:layout_height="wrap_content"
                                 android:layout_toRightOf="@id/rushing_yards_total_team2"
                                 android:paddingLeft="@dimen/small_med_padding"
-                                android:text="0000" />
+                                android:text="@string/_0000" />
                             <TextView
                                 android:id="@+id/rushing_comp_display_total_team2"
                                 android:layout_width="wrap_content"
@@ -802,7 +801,7 @@
                                 android:layout_below="@id/rushing_yards_display_total_team2"
                                 android:layout_alignLeft="@id/rushing_yards_display_total_team2"
                                 android:paddingLeft="@dimen/small_med_padding"
-                                android:text="0000" />
+                                android:text="@string/_0000" />
                             <TextView
                                 android:id="@+id/rushing_attempt_display_total_team2"
                                 android:layout_width="wrap_content"
@@ -810,14 +809,14 @@
                                 android:layout_below="@id/rushing_comp_display_total_team2"
                                 android:layout_alignLeft="@id/rushing_comp_display_total_team2"
                                 android:paddingLeft="@dimen/small_med_padding"
-                                android:text="0000" />
+                                android:text="@string/_0000" />
                             <TextView
                                 android:id="@+id/touchdown_rb_two_display"
                                 android:layout_width="wrap_content"
                                 android:layout_height="wrap_content"
                                 android:layout_toRightOf="@id/rushing_comp_display_total_team2"
                                 android:paddingLeft="@dimen/medium_padding"
-                                android:text="TOUCHDOWNS: " />
+                                android:text="@string/touchdowns" />
                             <TextView
                                 android:id="@+id/fumbles_rb_two_display"
                                 android:layout_width="wrap_content"
@@ -825,21 +824,21 @@
                                 android:layout_toRightOf="@id/rushing_comp_display_total_team2"
                                 android:layout_below="@id/touchdown_rb_two_display"
                                 android:paddingLeft="@dimen/medium_padding"
-                                android:text="FUMBLES: " />
+                                android:text="@string/fumbles" />
                             <TextView
                                 android:id="@+id/rushing_td_display_total_team2"
                                 android:layout_width="wrap_content"
                                 android:layout_height="wrap_content"
                                 android:layout_toRightOf="@id/touchdown_rb_two_display"
                                 android:paddingLeft="@dimen/small_med_padding"
-                                android:text="0000" />
+                                android:text="@string/_0000" />
                             <TextView
                                 android:layout_width="wrap_content"
                                 android:layout_height="wrap_content"
                                 android:layout_alignLeft="@id/rushing_td_display_total_team2"
                                 android:layout_below="@id/rushing_td_display_total_team2"
                                 android:paddingLeft="@dimen/small_med_padding"
-                                android:text="0000"/>
+                                android:text="@string/_0000"/>
                         </RelativeLayout>
                         <View
                             android:layout_width="match_parent"
@@ -858,7 +857,7 @@
                             android:id="@+id/team_two_defensive_td"
                             android:layout_width="wrap_content"
                             android:layout_height="wrap_content"
-                            android:text="defense TD"
+                            android:text="@string/defense_td"
                             android:textSize="@dimen/small_font"
                             />
                         <Button
@@ -866,7 +865,7 @@
                             android:layout_width="wrap_content"
                             android:layout_height="wrap_content"
                             android:layout_toRightOf="@id/team_two_defensive_td"
-                            android:text="rushing TD"
+                            android:text="@string/rushing_td"
                             android:textSize="@dimen/small_font"
                             />
                         <Button
@@ -874,7 +873,7 @@
                             android:layout_width="wrap_content"
                             android:layout_height="wrap_content"
                             android:layout_toRightOf="@id/team_two_rushing_td"
-                            android:text="RECEIVING TD"
+                            android:text="@string/receiving_td"
                             android:textSize="@dimen/small_font"/>
                         <TextView
                             android:id="@+id/team_two_pass_stats"
@@ -882,7 +881,7 @@
                             android:layout_height="wrap_content"
                             android:layout_marginTop="@dimen/medium_padding"
                             android:layout_below="@id/team_two_defensive_td"
-                            android:text="PASSING STATISTICS"
+                            android:text="@string/passing_statistics"
                             android:textStyle="bold"
                             android:textColor="#000000"
                             />
@@ -894,14 +893,14 @@
                             android:layout_marginTop="@dimen/medium_padding"
                             android:layout_below="@id/team_two_defensive_td"
                             android:layout_toRightOf="@id/team_two_pass_stats"
-                            android:text="Current Yards: "
+                            android:text="@string/current_yards"
                             />
                         <Button
                             android:id="@+id/qb_two_pass_attempt"
                             android:layout_width="wrap_content"
                             android:layout_height="wrap_content"
                             android:layout_below="@id/team_two_pass_stats"
-                            android:text="complete"
+                            android:text="@string/complete"
                             android:textSize="@dimen/small_font"
                             />
                         <Button
@@ -910,7 +909,7 @@
                             android:layout_height="wrap_content"
                             android:layout_below="@id/team_two_pass_stats"
                             android:layout_toRightOf="@id/qb_two_pass_attempt"
-                            android:text="incomplete"
+                            android:text="@string/incomplete"
                             android:textSize="@dimen/small_font"
                             />
                         <Button
@@ -919,7 +918,7 @@
                             android:layout_height="wrap_content"
                             android:layout_below="@id/team_two_pass_stats"
                             android:layout_toRightOf="@id/qb_two_incomplete"
-                            android:text="intercepted"
+                            android:text="@string/intercepted"
                             android:textSize="@dimen/small_font"
                             />
                         <Button
@@ -928,7 +927,7 @@
                             android:layout_height="wrap_content"
                             android:layout_below="@id/team_two_pass_stats"
                             android:layout_toRightOf="@id/qb_two_interception"
-                            android:text="fumble"
+                            android:text="@string/fumble"
                             android:textSize="@dimen/small_font"
                             />
                         <TextView
@@ -937,7 +936,7 @@
                             android:layout_height="wrap_content"
                             android:layout_marginTop="@dimen/medium_padding"
                             android:layout_below="@id/qb_two_pass_attempt"
-                            android:text="RUSHING STATISTICS"
+                            android:text="@string/rushing_statistics"
                             android:textStyle="bold"
                             android:textColor="#000000"
                             />
@@ -949,14 +948,14 @@
                             android:layout_marginTop="@dimen/medium_padding"
                             android:layout_toRightOf="@+id/team_two_rush_stats"
                             android:layout_below="@+id/qb_two_incomplete"
-                            android:text="Current Yards: "
+                            android:text="@string/current_yards"
                             />
                         <Button
                             android:id="@+id/team_two_rushing_minus_one"
                             android:layout_width="wrap_content"
                             android:layout_height="wrap_content"
                             android:layout_below="@id/team_two_rush_stats"
-                            android:text="-1"
+                            android:text="@string/_1"
                             android:textSize="@dimen/small_font"
                             />
                         <Button
@@ -965,7 +964,7 @@
                             android:layout_height="wrap_content"
                             android:layout_below="@id/team_two_rush_stats"
                             android:layout_toRightOf="@id/team_two_rushing_minus_one"
-                            android:text="+1"
+                            android:text="@string/_1plus"
                             android:textSize="@dimen/small_font"
                             />
                         <Button
@@ -974,7 +973,7 @@
                             android:layout_height="wrap_content"
                             android:layout_below="@id/team_two_rush_stats"
                             android:layout_toRightOf="@id/team_two_rushing_plus_one"
-                            android:text="+10"
+                            android:text="@string/_10"
                             android:textSize="@dimen/small_font"
                             />
                         <Button
@@ -983,7 +982,7 @@
                             android:layout_height="wrap_content"
                             android:layout_below="@id/team_two_rush_stats"
                             android:layout_toRightOf="@id/team_two_rushing_plus_ten"
-                            android:text="fumble"
+                            android:text="@string/fumble"
                             android:textSize="@dimen/small_font"
                             />
                         <TextView
@@ -992,7 +991,7 @@
                             android:layout_height="wrap_content"
                             android:layout_marginTop="@dimen/medium_padding"
                             android:layout_below="@id/team_two_rushing_minus_one"
-                            android:text="RECEIVING STATISTICS"
+                            android:text="@string/receiving_statistics"
                             android:textStyle="bold"
                             android:textColor="#000000"
                             />
@@ -1004,14 +1003,14 @@
                             android:layout_marginTop="@dimen/medium_padding"
                             android:layout_toRightOf="@+id/team_two_rec_stats"
                             android:layout_below="@+id/team_two_rushing_minus_one"
-                            android:text="Current Yards: "
+                            android:text="@string/current_yards"
                             />
                         <Button
                             android:id="@+id/team_two_receiving_minus_one"
                             android:layout_width="wrap_content"
                             android:layout_height="wrap_content"
                             android:layout_below="@id/team_two_rec_stats"
-                            android:text="-1"
+                            android:text="@string/_1"
                             android:textSize="@dimen/small_font"
                             />
                         <Button
@@ -1020,7 +1019,7 @@
                             android:layout_height="wrap_content"
                             android:layout_below="@id/team_two_rec_stats"
                             android:layout_toRightOf="@id/team_two_receiving_minus_one"
-                            android:text="+1"
+                            android:text="@string/_1plus"
                             android:textSize="@dimen/small_font"
                             />
                         <Button
@@ -1029,7 +1028,7 @@
                             android:layout_height="wrap_content"
                             android:layout_below="@id/team_two_rec_stats"
                             android:layout_toRightOf="@id/team_two_receiving_plus_one"
-                            android:text="+10"
+                            android:text="@string/_10"
                             android:textSize="@dimen/small_font"
                             />
                         <Button
@@ -1038,7 +1037,7 @@
                             android:layout_height="wrap_content"
                             android:layout_below="@id/team_two_rec_stats"
                             android:layout_toRightOf="@id/team_two_receiving_plus_ten"
-                            android:text="fumble"
+                            android:text="@string/fumble"
                             android:textSize="@dimen/small_font"
                             />
                     </RelativeLayout>
