@@ -55,9 +55,7 @@ public class TeamSelection extends AppCompatActivity {
 
 
             //Team One spinner selection criteria and image dsisplay
-            teamOneSpinner =(Spinner)
-
-            findViewById(R.id.teamOne_spinner);
+            teamOneSpinner =(Spinner) findViewById(R.id.teamOne_spinner);
 
             //Created the ArrayAdapter
             ArrayAdapter<CharSequence> teamOneAdapter = ArrayAdapter.createFromResource(this, R.array.football_teams, android.R.layout.simple_spinner_dropdown_item);

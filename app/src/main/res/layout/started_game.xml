@@ -23,7 +23,6 @@
                 android:id="@android:id/tabcontent"
                 android:layout_width="match_parent"
                 android:layout_height="match_parent">
-
                 <LinearLayout
                     android:id="@+id/team_one"
                     android:layout_width="match_parent"
@@ -65,6 +64,262 @@
                             android:textSize="@dimen/medium_font"
                             android:textColor="#000000"/>
                     </LinearLayout>
+                    <!--Spinner Selection for Scoring Statistics-->
+                    <RelativeLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content">
+                        <Spinner
+                            android:id="@+id/spinner_team_one_scoring"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:layout_marginTop="@dimen/small_padding"
+                            android:layout_marginBottom="@dimen/small_padding">
+
+                        </Spinner>
+        <!--CORRECT INVISIBLITY TO DEFAULT-->>
+                        <RelativeLayout
+                            android:id="@+id/passing_scoring_statistics"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:layout_below="@id/spinner_team_one_scoring"
+                            android:layout_marginRight="@dimen/medium_padding"
+                            android:layout_marginLeft="@dimen/medium_padding"
+                            android:visibility="visible">
+                            <TextView
+                                android:id="@+id/passing_yards_total"
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:text="PASSING YARDS: " />
+                            <TextView
+                                android:id="@+id/passing_comp_total"
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:layout_below="@id/passing_yards_total"
+                                android:text="COMPLETIONS: " />
+                            <TextView
+                                android:id="@+id/passing_attempts_total"
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:layout_below="@id/passing_comp_total"
+                                android:text="ATTEMPTS: " />
+                            <TextView
+                                android:id="@+id/passing_yards_display_total"
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:layout_toRightOf="@id/passing_yards_total"
+                                android:paddingLeft="@dimen/small_med_padding"
+                                android:text="0000" />
+                            <TextView
+                                android:id="@+id/passing_comp_display_total"
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:layout_below="@id/passing_yards_display_total"
+                                android:layout_alignLeft="@id/passing_yards_display_total"
+                                android:paddingLeft="@dimen/small_med_padding"
+                                android:text="0000" />
+                            <TextView
+                                android:id="@+id/passing_attempt_display_total"
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:layout_below="@id/passing_comp_display_total"
+                                android:layout_alignLeft="@id/passing_comp_display_total"
+                                android:paddingLeft="@dimen/small_med_padding"
+                                android:text="0000" />
+                            <TextView
+                                android:id="@+id/interception_qb_one_display"
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:layout_toRightOf="@id/passing_comp_display_total"
+                                android:paddingLeft="@dimen/medium_padding"
+                                android:text="INTERCEPTIONS: " />
+                            <TextView
+                                android:id="@+id/fumbles_qb_one_display"
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:layout_toRightOf="@id/passing_comp_display_total"
+                                android:layout_below="@id/interception_qb_one_display"
+                                android:paddingLeft="@dimen/medium_padding"
+                                android:text="FUMBLES: " />
+                            <TextView
+                                android:id="@+id/passing_intercept_display_total"
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:layout_toRightOf="@id/interception_qb_one_display"
+                                android:paddingLeft="@dimen/small_med_padding"
+                                android:text="0000" />
+                            <TextView
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:layout_alignLeft="@id/passing_intercept_display_total"
+                                android:layout_below="@id/passing_intercept_display_total"
+                                android:paddingLeft="@dimen/small_med_padding"
+                                android:text="0000"/>
+                        </RelativeLayout>
+                        <RelativeLayout
+                            android:id="@+id/receiving_scoring_statistics"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:layout_below="@id/spinner_team_one_scoring"
+                            android:layout_marginRight="@dimen/medium_padding"
+                            android:layout_marginLeft="@dimen/medium_padding"
+                            android:visibility="invisible">
+                            <TextView
+                                android:id="@+id/receiving_yards_total"
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:text="RECEIVING YARDS: " />
+                            <TextView
+                                android:id="@+id/receiving_comp_total"
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:layout_below="@id/receiving_yards_total"
+                                android:text="COMPLETIONS: " />
+                            <TextView
+                                android:id="@+id/receiving_attempts_total"
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:layout_below="@id/receiving_comp_total"
+                                android:text="ATTEMPTS: " />
+                            <TextView
+                                android:id="@+id/receiving_yards_display_total"
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:layout_toRightOf="@id/receiving_yards_total"
+                                android:paddingLeft="@dimen/small_med_padding"
+                                android:text="0000" />
+                            <TextView
+                                android:id="@+id/receiving_comp_display_total"
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:layout_below="@id/receiving_yards_display_total"
+                                android:layout_alignLeft="@id/receiving_yards_display_total"
+                                android:paddingLeft="@dimen/small_med_padding"
+                                android:text="0000" />
+                            <TextView
+                                android:id="@+id/receiving_attempt_display_total"
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:layout_below="@id/receiving_comp_display_total"
+                                android:layout_alignLeft="@id/receiving_comp_display_total"
+                                android:paddingLeft="@dimen/small_med_padding"
+                                android:text="0000" />
+                            <TextView
+                                android:id="@+id/touchdown_wr_one_display"
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:layout_toRightOf="@id/receiving_comp_display_total"
+                                android:paddingLeft="@dimen/medium_padding"
+                                android:text="TOUCHDOWNS: " />
+                            <TextView
+                                android:id="@+id/fumbles_wr_one_display"
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:layout_toRightOf="@id/receiving_comp_display_total"
+                                android:layout_below="@id/touchdown_wr_one_display"
+                                android:paddingLeft="@dimen/medium_padding"
+                                android:text="FUMBLES: " />
+                            <TextView
+                                android:id="@+id/receiving_td_display_total"
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:layout_toRightOf="@id/touchdown_wr_one_display"
+                                android:paddingLeft="@dimen/small_med_padding"
+                                android:text="0000" />
+                            <TextView
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:layout_alignLeft="@id/receiving_td_display_total"
+                                android:layout_below="@id/receiving_td_display_total"
+                                android:paddingLeft="@dimen/small_med_padding"
+                                android:text="0000"/>
+                        </RelativeLayout>
+                        <RelativeLayout
+                            android:id="@+id/rushing_scoring_statistics"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:layout_below="@id/spinner_team_one_scoring"
+                            android:layout_marginRight="@dimen/medium_padding"
+                            android:layout_marginLeft="@dimen/medium_padding"
+                            android:visibility="invisible">
+                            <TextView
+                                android:id="@+id/rushing_yards_total"
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:text="RUSHING YARDS: " />
+                            <TextView
+                                android:id="@+id/rushing_comp_total"
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:layout_below="@id/rushing_yards_total"
+                                android:text="COMPLETIONS: " />
+                            <TextView
+                                android:id="@+id/rushing_attempts_total"
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:layout_below="@id/rushing_comp_total"
+                                android:text="ATTEMPTS: " />
+                            <TextView
+                                android:id="@+id/rushing_yards_display_total"
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:layout_toRightOf="@id/rushing_yards_total"
+                                android:paddingLeft="@dimen/small_med_padding"
+                                android:text="0000" />
+                            <TextView
+                                android:id="@+id/rushing_comp_display_total"
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:layout_below="@id/rushing_yards_display_total"
+                                android:layout_alignLeft="@id/rushing_yards_display_total"
+                                android:paddingLeft="@dimen/small_med_padding"
+                                android:text="0000" />
+                            <TextView
+                                android:id="@+id/rushing_attempt_display_total"
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:layout_below="@id/rushing_comp_display_total"
+                                android:layout_alignLeft="@id/rushing_comp_display_total"
+                                android:paddingLeft="@dimen/small_med_padding"
+                                android:text="0000" />
+                            <TextView
+                                android:id="@+id/touchdown_rb_one_display"
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:layout_toRightOf="@id/rushing_comp_display_total"
+                                android:paddingLeft="@dimen/medium_padding"
+                                android:text="TOUCHDOWNS: " />
+                            <TextView
+                                android:id="@+id/fumbles_rb_one_display"
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:layout_toRightOf="@id/rushing_comp_display_total"
+                                android:layout_below="@id/touchdown_rb_one_display"
+                                android:paddingLeft="@dimen/medium_padding"
+                                android:text="FUMBLES: " />
+                            <TextView
+                                android:id="@+id/rushing_td_display_total"
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:layout_toRightOf="@id/touchdown_rb_one_display"
+                                android:paddingLeft="@dimen/small_med_padding"
+                                android:text="0000" />
+                            <TextView
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:layout_alignLeft="@id/rushing_td_display_total"
+                                android:layout_below="@id/rushing_td_display_total"
+                                android:paddingLeft="@dimen/small_med_padding"
+                                android:text="0000"/>
+                        </RelativeLayout>
+                        <View
+                            android:layout_width="match_parent"
+                            android:layout_height="1dp"
+                            android:layout_below="@id/passing_scoring_statistics"
+                            android:layout_marginTop="@dimen/small_padding"
+                            android:layout_marginLeft="@dimen/small_med_padding"
+                            android:layout_marginRight="@dimen/small_med_padding"
+                            android:background="#000000"/>
+                    </RelativeLayout>
                     <RelativeLayout
                         android:layout_width="match_parent"
                         android:layout_height="wrap_content"
@@ -296,127 +551,7 @@
                             android:textSize="@dimen/small_font"
                             />
                     </RelativeLayout>
-                <LinearLayout
-                    android:layout_width="match_parent"
-                    android:layout_height="wrap_content"
-                    android:orientation="vertical">
-                    <TextView
-                        android:layout_width="match_parent"
-                        android:layout_height="wrap_content"
-                        android:text="STARTING QUARTERBACK STATISTICS"/>
-                    <LinearLayout
-                        android:layout_width="match_parent"
-                        android:layout_height="wrap_content"
-                        android:layout_marginBottom="@dimen/medium_padding">
-                        <TextView
-                            android:layout_width="wrap_content"
-                            android:layout_height="wrap_content"
-                            android:text="ATTEMPTS: "/>
-                        <TextView
-                            android:id="@+id/teamOne_attempts"
-                            android:layout_width="wrap_content"
-                            android:layout_height="wrap_content"
-                            android:textStyle="bold"
-                            android:text="0"/>
-                        <TextView
-                            android:layout_width="wrap_content"
-                            android:layout_height="wrap_content"
-                            android:layout_marginLeft="@dimen/small_med_padding"
-                            android:text="COMPLETED: "/>
-                        <TextView
-                            android:id="@+id/teamOne_completed"
-                            android:layout_width="wrap_content"
-                            android:layout_height="wrap_content"
-                            android:textStyle="bold"
-                            android:text="0"/>
-                        <TextView
-                            android:layout_width="wrap_content"
-                            android:layout_height="wrap_content"
-                            android:layout_marginLeft="@dimen/small_med_padding"
-                            android:text="INTS: "/>
-                        <TextView
-                            android:id="@+id/teamOne_interceptions"
-                            android:layout_width="wrap_content"
-                            android:layout_height="wrap_content"
-                            android:textStyle="bold"
-                            android:text="0"/>
-                        <TextView
-                            android:layout_width="wrap_content"
-                            android:layout_height="wrap_content"
-                            android:layout_marginLeft="@dimen/small_med_padding"
-                            android:text="FUMBLES: "/>
-                        <TextView
-                            android:id="@+id/teamOne_quarterback_fumble"
-                            android:layout_width="wrap_content"
-                            android:layout_height="wrap_content"
-                            android:textStyle="bold"
-                            android:text="0"/>
-                    </LinearLayout>
-                    <TextView
-                        android:layout_width="match_parent"
-                        android:layout_height="wrap_content"
-                        android:text="STARTING RUNNINGBACK STATISTICS"/>
-                    <LinearLayout
-                        android:layout_width="match_parent"
-                        android:layout_height="wrap_content"
-                        android:layout_marginBottom="@dimen/medium_padding">
-                        <TextView
-                            android:layout_width="wrap_content"
-                            android:layout_height="wrap_content"
-                            android:text="TOUCHDOWNS: "/>
-                        <TextView
-                            android:id="@+id/rushing_td"
-                            android:layout_width="wrap_content"
-                            android:layout_height="wrap_content"
-                            android:textStyle="bold"
-                            android:text="0"/>
-                        <TextView
-                            android:layout_width="wrap_content"
-                            android:layout_height="wrap_content"
-                            android:layout_marginLeft="@dimen/small_med_padding"
-                            android:text="FUMBLES: "/>
-                        <TextView
-                            android:id="@+id/teamOne_runningback_fumble"
-                            android:layout_width="wrap_content"
-                            android:layout_height="wrap_content"
-                            android:textStyle="bold"
-                            android:text="0"/>
-                    </LinearLayout>
-                    <TextView
-                        android:layout_width="match_parent"
-                        android:layout_height="wrap_content"
-                        android:text="STARTING WIDE RECEIVER STATISTICS"/>
-                    <LinearLayout
-                        android:layout_width="match_parent"
-                        android:layout_height="wrap_content"
-                        android:layout_marginBottom="@dimen/medium_padding">
-                        <TextView
-                            android:layout_width="wrap_content"
-                            android:layout_height="wrap_content"
-                            android:text="TOUCHDOWNS: "/>
-                        <TextView
-                            android:id="@+id/receiving_td"
-                            android:layout_width="wrap_content"
-                            android:layout_height="wrap_content"
-                            android:textStyle="bold"
-                            android:text="0"/>
-                        <TextView
-                            android:layout_width="wrap_content"
-                            android:layout_height="wrap_content"
-                            android:layout_marginLeft="@dimen/small_med_padding"
-                            android:text="FUMBLES: "/>
-                        <TextView
-                            android:id="@+id/teamOne_widereceiver_fumble"
-                            android:layout_width="wrap_content"
-                            android:layout_height="wrap_content"
-                            android:textStyle="bold"
-                            android:text="0"/>
-                    </LinearLayout>
-
                 </LinearLayout>
-
-                </LinearLayout>
-
                 <LinearLayout
                     android:id="@+id/team_two"
                     android:layout_width="match_parent"
@@ -434,26 +569,287 @@
                             android:layout_height="wrap_content"
                             android:layout_marginLeft="@dimen/small_med_padding"
                             android:text="Home: "
-                            android:textSize="@dimen/medium_font"/>
+                            android:textSize="@dimen/medium_font"
+                            android:textColor="#000000"/>
                         <TextView
                             android:id="@+id/team_one_score_tab_two"
                             android:layout_width="wrap_content"
                             android:layout_height="wrap_content"
                             android:text="0"
-                            android:textSize="@dimen/medium_font"/>
+                            android:textSize="@dimen/medium_font"
+                            android:textColor="#000000"/>
                         <TextView
                             android:layout_width="wrap_content"
                             android:layout_height="wrap_content"
                             android:layout_marginLeft="@dimen/small_med_padding"
                             android:text="Away: "
-                            android:textSize="@dimen/medium_font"/>
+                            android:textSize="@dimen/medium_font"
+                            android:textColor="#000000"/>
                         <TextView
                             android:id="@+id/team_two_score_tab_two"
                             android:layout_width="wrap_content"
                             android:layout_height="wrap_content"
                             android:text="0"
-                            android:textSize="@dimen/medium_font"/>
+                            android:textSize="@dimen/medium_font"
+                            android:textColor="#000000"/>
                     </LinearLayout>
+
+                    <!--Spinner Selection for Scoring Statistics-->
+                    <RelativeLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content">
+                        <Spinner
+                            android:id="@+id/spinner_team_two_scoring"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:layout_marginTop="@dimen/small_padding"
+                            android:layout_marginBottom="@dimen/small_padding">
+
+                        </Spinner>
+                        <RelativeLayout
+                            android:id="@+id/passing_scoring_statistics_team2"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:layout_below="@id/spinner_team_two_scoring"
+                            android:layout_marginRight="@dimen/medium_padding"
+                            android:layout_marginLeft="@dimen/medium_padding"
+                            android:visibility="visible">
+                            <TextView
+                                android:id="@+id/passing_yards_total_team2"
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:text="PASSING YARDS: " />
+                            <TextView
+                                android:id="@+id/passing_comp_total_team2"
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:layout_below="@id/passing_yards_total_team2"
+                                android:text="COMPLETIONS: " />
+                            <TextView
+                                android:id="@+id/passing_attempts_total_team2"
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:layout_below="@id/passing_comp_total_team2"
+                                android:text="ATTEMPTS: " />
+                            <TextView
+                                android:id="@+id/passing_yards_display_total_team2"
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:layout_toRightOf="@id/passing_yards_total_team2"
+                                android:paddingLeft="@dimen/small_med_padding"
+                                android:text="0000" />
+                            <TextView
+                                android:id="@+id/passing_comp_display_total_team2"
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:layout_below="@id/passing_yards_display_total_team2"
+                                android:layout_alignLeft="@id/passing_yards_display_total_team2"
+                                android:paddingLeft="@dimen/small_med_padding"
+                                android:text="0000" />
+                            <TextView
+                                android:id="@+id/passing_attempt_display_total_team2"
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:layout_below="@id/passing_comp_display_total_team2"
+                                android:layout_alignLeft="@id/passing_comp_display_total_team2"
+                                android:paddingLeft="@dimen/small_med_padding"
+                                android:text="0000" />
+                            <TextView
+                                android:id="@+id/interception_qb_one_display_team2"
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:layout_toRightOf="@id/passing_comp_display_total_team2"
+                                android:paddingLeft="@dimen/medium_padding"
+                                android:text="INTERCEPTIONS: " />
+                            <TextView
+                                android:id="@+id/fumbles_qb_one_display_team2"
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:layout_toRightOf="@id/passing_comp_display_total_team2"
+                                android:layout_below="@id/interception_qb_one_display_team2"
+                                android:paddingLeft="@dimen/medium_padding"
+                                android:text="FUMBLES: " />
+                            <TextView
+                                android:id="@+id/passing_intercept_display_total_team2"
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:layout_toRightOf="@id/interception_qb_one_display_team2"
+                                android:paddingLeft="@dimen/small_med_padding"
+                                android:text="0000" />
+                            <TextView
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:layout_alignLeft="@id/passing_intercept_display_total_team2"
+                                android:layout_below="@id/passing_intercept_display_total_team2"
+                                android:paddingLeft="@dimen/small_med_padding"
+                                android:text="0000"/>
+                        </RelativeLayout>
+
+                        <RelativeLayout
+                            android:id="@+id/receiving_scoring_statistics"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:layout_below="@id/spinner_team_two_scoring"
+                            android:layout_marginRight="@dimen/medium_padding"
+                            android:layout_marginLeft="@dimen/medium_padding"
+                            android:visibility="invisible">
+                            <TextView
+                                android:id="@+id/receiving_yards_total_team2"
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:text="RECEIVING YARDS: " />
+                            <TextView
+                                android:id="@+id/receiving_comp_total_team2"
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:layout_below="@id/receiving_yards_total_team2"
+                                android:text="COMPLETIONS: " />
+                            <TextView
+                                android:id="@+id/receiving_attempts_total_team2"
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:layout_below="@id/receiving_comp_total_team2"
+                                android:text="ATTEMPTS: " />
+                            <TextView
+                                android:id="@+id/receiving_yards_display_total_team2"
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:layout_toRightOf="@id/receiving_yards_total_team2"
+                                android:paddingLeft="@dimen/small_med_padding"
+                                android:text="0000" />
+                            <TextView
+                                android:id="@+id/receiving_comp_display_total_team2"
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:layout_below="@id/receiving_yards_display_total_team2"
+                                android:layout_alignLeft="@id/receiving_yards_display_total_team2"
+                                android:paddingLeft="@dimen/small_med_padding"
+                                android:text="0000" />
+                            <TextView
+                                android:id="@+id/receiving_attempt_display_total_team2"
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:layout_below="@id/receiving_comp_display_total_team2"
+                                android:layout_alignLeft="@id/receiving_comp_display_total_team2"
+                                android:paddingLeft="@dimen/small_med_padding"
+                                android:text="0000" />
+                            <TextView
+                                android:id="@+id/touchdown_wr_two_display"
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:layout_toRightOf="@id/receiving_comp_display_total_team2"
+                                android:paddingLeft="@dimen/medium_padding"
+                                android:text="TOUCHDOWNS: " />
+                            <TextView
+                                android:id="@+id/fumbles_wr_two_display"
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:layout_toRightOf="@id/receiving_comp_display_total_team2"
+                                android:layout_below="@id/touchdown_wr_two_display"
+                                android:paddingLeft="@dimen/medium_padding"
+                                android:text="FUMBLES: " />
+                            <TextView
+                                android:id="@+id/receiving_td_display_total_team2"
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:layout_toRightOf="@id/touchdown_wr_two_display"
+                                android:paddingLeft="@dimen/small_med_padding"
+                                android:text="0000" />
+                            <TextView
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:layout_alignLeft="@id/receiving_td_display_total_team2"
+                                android:layout_below="@id/receiving_td_display_total_team2"
+                                android:paddingLeft="@dimen/small_med_padding"
+                                android:text="0000"/>
+                        </RelativeLayout>
+                        <RelativeLayout
+                            android:id="@+id/rushing_scoring_statistics_team2"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:layout_below="@id/spinner_team_two_scoring"
+                            android:layout_marginRight="@dimen/medium_padding"
+                            android:layout_marginLeft="@dimen/medium_padding"
+                            android:visibility="invisible">
+                            <TextView
+                                android:id="@+id/rushing_yards_total_team2"
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:text="RUSHING YARDS: " />
+                            <TextView
+                                android:id="@+id/rushing_comp_total_team2"
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:layout_below="@id/rushing_yards_total_team2"
+                                android:text="COMPLETIONS: " />
+                            <TextView
+                                android:id="@+id/rushing_attempts_total_team2"
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:layout_below="@id/rushing_comp_total_team2"
+                                android:text="ATTEMPTS: " />
+                            <TextView
+                                android:id="@+id/rushing_yards_display_total_team2"
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:layout_toRightOf="@id/rushing_yards_total_team2"
+                                android:paddingLeft="@dimen/small_med_padding"
+                                android:text="0000" />
+                            <TextView
+                                android:id="@+id/rushing_comp_display_total_team2"
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:layout_below="@id/rushing_yards_display_total_team2"
+                                android:layout_alignLeft="@id/rushing_yards_display_total_team2"
+                                android:paddingLeft="@dimen/small_med_padding"
+                                android:text="0000" />
+                            <TextView
+                                android:id="@+id/rushing_attempt_display_total_team2"
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:layout_below="@id/rushing_comp_display_total_team2"
+                                android:layout_alignLeft="@id/rushing_comp_display_total_team2"
+                                android:paddingLeft="@dimen/small_med_padding"
+                                android:text="0000" />
+                            <TextView
+                                android:id="@+id/touchdown_rb_two_display"
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:layout_toRightOf="@id/rushing_comp_display_total_team2"
+                                android:paddingLeft="@dimen/medium_padding"
+                                android:text="TOUCHDOWNS: " />
+                            <TextView
+                                android:id="@+id/fumbles_rb_two_display"
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:layout_toRightOf="@id/rushing_comp_display_total_team2"
+                                android:layout_below="@id/touchdown_rb_two_display"
+                                android:paddingLeft="@dimen/medium_padding"
+                                android:text="FUMBLES: " />
+                            <TextView
+                                android:id="@+id/rushing_td_display_total_team2"
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:layout_toRightOf="@id/touchdown_rb_two_display"
+                                android:paddingLeft="@dimen/small_med_padding"
+                                android:text="0000" />
+                            <TextView
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:layout_alignLeft="@id/rushing_td_display_total_team2"
+                                android:layout_below="@id/rushing_td_display_total_team2"
+                                android:paddingLeft="@dimen/small_med_padding"
+                                android:text="0000"/>
+                        </RelativeLayout>
+                        <View
+                            android:layout_width="match_parent"
+                            android:layout_height="1dp"
+                            android:layout_below="@id/passing_scoring_statistics_team2"
+                            android:layout_marginTop="@dimen/small_padding"
+                            android:layout_marginLeft="@dimen/small_med_padding"
+                            android:layout_marginRight="@dimen/small_med_padding"
+                            android:background="#000000"/>
+                    </RelativeLayout>
                     <RelativeLayout
                         android:layout_width="match_parent"
                         android:layout_height="wrap_content"
@@ -649,13 +1045,7 @@
 
 
                 </LinearLayout>
-
-
-
-
             </FrameLayout>
-
-
 
         </LinearLayout>
     </TabHost>

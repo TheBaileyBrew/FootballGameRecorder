@@ -5,6 +5,10 @@ import android.support.v7.app.AppCompatActivity;
 import android.view.Menu;
 import android.view.MenuItem;
 import android.view.View;
+import android.widget.AdapterView;
+import android.widget.ArrayAdapter;
+import android.widget.RelativeLayout;
+import android.widget.Spinner;
 import android.widget.TabHost;
 import android.widget.TextView;
 
@@ -27,18 +31,21 @@ public class GameHasStarted extends AppCompatActivity {
     int TeamOneCompleted=0;
     int TeamOneAttempts=0;
     int TeamOneInterceptions=0;
-
-
-
-
     TabHost tabHost;
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.started_game);
-
         String teamOneName = getIntent().getStringExtra("team_one");
         String teamTwoName = getIntent().getStringExtra("team_two");
+        final Spinner teamOneSpinnerScoring;
+        Spinner teamTwoSpinnerScoring;
+        RelativeLayout PassingRelativeTeamOne;
+        RelativeLayout ReceivingRelativeTeamOne;
+        RelativeLayout RushingRelativeTeamOne;
+        RelativeLayout PassingRelativeTeamTwo;
+        RelativeLayout ReceivingRelativeTeamTwo;
+        RelativeLayout RushingRelativeTeamTwo;
 
         TabHost host = (TabHost)findViewById(R.id.tabhost);
         host.setup();
@@ -50,16 +57,81 @@ public class GameHasStarted extends AppCompatActivity {
         host.addTab(spec);
 
         //Team Two - Tab Two
-        spec = host.newTabSpec("Team One");
+        spec = host.newTabSpec("Team Two");
         spec.setContent(R.id.team_two);
         spec.setIndicator(teamTwoName);
         host.addTab(spec);
 
+        teamOneSpinnerScoring = (Spinner) findViewById(R.id.spinner_team_one_scoring);
+        ArrayAdapter<CharSequence> teamOneAdapter = ArrayAdapter.createFromResource(this, R.array.scoring, android.R.layout.simple_spinner_dropdown_item);
+        teamOneSpinnerScoring.setAdapter(teamOneAdapter);
+        PassingRelativeTeamOne = (RelativeLayout) findViewById(R.id.passing_scoring_statistics);
+        teamOneSpinnerScoring.setOnItemSelectedListener(new AdapterView.OnItemSelectedListener() {
+            @Override
+            public void onItemSelected(AdapterView<?> adapterView, View view, int i, long l) {
+                String spinnerTeamOne = ((TextView) view).getText().toString();
+                switch (spinnerTeamOne) {
+                    case "Passing Stats":
+                        findViewById(R.id.passing_scoring_statistics).setVisibility(View.VISIBLE);
+                        findViewById(R.id.receiving_scoring_statistics).setVisibility(View.INVISIBLE);
+                        findViewById(R.id.rushing_scoring_statistics).setVisibility(View.INVISIBLE);
+                        break;
+                    case "Rushing Stats":
+                        findViewById(R.id.passing_scoring_statistics).setVisibility(View.INVISIBLE);
+                        findViewById(R.id.receiving_scoring_statistics).setVisibility(View.INVISIBLE);
+                        findViewById(R.id.rushing_scoring_statistics).setVisibility(View.VISIBLE);
+                        break;
+                    case "Receiving Stats":
+                        findViewById(R.id.passing_scoring_statistics).setVisibility(View.INVISIBLE);
+                        findViewById(R.id.receiving_scoring_statistics).setVisibility(View.VISIBLE);
+                        findViewById(R.id.rushing_scoring_statistics).setVisibility(View.INVISIBLE);
+                        break;
+                }
+            }
 
+            @Override
+            public void onNothingSelected(AdapterView<?> adapterView) {
+
+            }
+        });
+
+        teamTwoSpinnerScoring = (Spinner) findViewById(R.id.spinner_team_two_scoring);
+        ArrayAdapter<CharSequence> teamTwoAdapter = ArrayAdapter.createFromResource(this, R.array.scoring, android.R.layout.simple_spinner_dropdown_item);
+        teamTwoSpinnerScoring.setAdapter(teamTwoAdapter);
+        PassingRelativeTeamOne = (RelativeLayout) findViewById(R.id.passing_scoring_statistics_team2);
+        teamTwoSpinnerScoring.setOnItemSelectedListener(new AdapterView.OnItemSelectedListener() {
+            @Override
+            public void onItemSelected(AdapterView<?> adapterView, View view, int i, long l) {
+                String spinnerTeamTwo = ((TextView) view).getText().toString();
+                switch (spinnerTeamTwo) {
+                    case "Passing Stats":
+                        findViewById(R.id.passing_scoring_statistics).setVisibility(View.VISIBLE);
+                        findViewById(R.id.receiving_scoring_statistics).setVisibility(View.INVISIBLE);
+                        findViewById(R.id.rushing_scoring_statistics).setVisibility(View.INVISIBLE);
+                        break;
+                    case "Rushing Stats":
+                        findViewById(R.id.passing_scoring_statistics).setVisibility(View.INVISIBLE);
+                        findViewById(R.id.receiving_scoring_statistics).setVisibility(View.INVISIBLE);
+                        findViewById(R.id.rushing_scoring_statistics).setVisibility(View.VISIBLE);
+                        break;
+                    case "Receiving Stats":
+                        findViewById(R.id.passing_scoring_statistics).setVisibility(View.INVISIBLE);
+                        findViewById(R.id.receiving_scoring_statistics).setVisibility(View.VISIBLE);
+                        findViewById(R.id.rushing_scoring_statistics).setVisibility(View.INVISIBLE);
+                        break;
+                }
+            }
+
+            @Override
+            public void onNothingSelected(AdapterView<?> adapterView) {
+
+            }
+        });
 
 
 
     }
+
 
 
     public void onClickTeamOneDefTD(View view) {
