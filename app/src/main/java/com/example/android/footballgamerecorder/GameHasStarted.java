@@ -134,6 +134,10 @@ public class GameHasStarted extends AppCompatActivity {
 
 
 
+    //Validate all the scoring fields and where exactly they update.... on device, fields update incorrectly (text fields for touchdowns, fumbles and yardage totals do not add correctly.
+    //still need to implement the onRestore features since swapping between screens resets all the counters.
+
+
     public void onClickTeamOneDefTD(View view) {
         TeamOneScore = TeamOneScore + 6;
         teamOneTotalScore(TeamOneScore);
