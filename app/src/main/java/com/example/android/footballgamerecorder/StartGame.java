@@ -465,8 +465,15 @@ public class StartGame extends AppCompatActivity {
         startActivity(goToTeamSelect);
     }
 
-    public void onClickStartHalf(View view) {
+    public void onClickStartFirstHalf(View view) {
         Intent startHalf = new Intent(this, GameHasStarted.class);
+        startHalf.putExtra("team_one", teamOneName);
+        startHalf.putExtra("team_two", teamTwoName);
+        startActivity(startHalf);
+    }
+
+    public void onClickStartSecondHalf(View view) {
+        Intent startHalf = new Intent (this, GameHasStarted.class);
         startHalf.putExtra("team_one", teamOneName);
         startHalf.putExtra("team_two", teamTwoName);
         startActivity(startHalf);

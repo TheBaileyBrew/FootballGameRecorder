@@ -51,8 +51,8 @@
     <color name="saintsSecondary">#101820</color>
     <color name="giantsPrimary">#001E62</color>
     <color name="giantsSecondary">#A6192E</color>
-    <color name="jetsPrimary">#FFFFFF</color>
-    <color name="jetsSecondary">#2A433A</color>
+    <color name="jetsPrimary">#2A433A</color>
+    <color name="jetsSecondary">#000000</color>
     <color name="raidersPrimary">#A5ACAF</color>
     <color name="raidersSecondary">#101820</color>
     <color name="eaglesPrimary">#004581</color>
