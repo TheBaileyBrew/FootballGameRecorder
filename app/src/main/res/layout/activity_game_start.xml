@@ -51,7 +51,7 @@
             android:paddingRight="@dimen/small_padding"
             android:paddingEnd="@dimen/small_padding"
             android:fontFamily="@font/freshman"
-            android:textSize="@dimen/small_font"
+            android:textSize="@dimen/small_med_font"
             android:textColor="#000000"
             android:text="Starting Quarterback: "/>
         <TextView
@@ -59,7 +59,7 @@
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:fontFamily="@font/freshman"
-            android:textSize="@dimen/small_font"
+            android:textSize="@dimen/small_med_font"
             android:text="Temporary Name Here" />
     </LinearLayout>
 
@@ -188,7 +188,7 @@
             android:paddingRight="@dimen/small_padding"
             android:paddingEnd="@dimen/small_padding"
             android:fontFamily="@font/freshman"
-            android:textSize="@dimen/small_font"
+            android:textSize="@dimen/small_med_font"
             android:textColor="#000000"
             android:text="Starting Quarterback: "/>
         <TextView
@@ -196,7 +196,7 @@
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:fontFamily="@font/freshman"
-            android:textSize="@dimen/small_font"
+            android:textSize="@dimen/small_med_font"
             android:text="Temporary Name Here"/>
     </LinearLayout>
 

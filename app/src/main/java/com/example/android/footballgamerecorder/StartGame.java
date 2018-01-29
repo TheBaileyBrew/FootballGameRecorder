@@ -12,6 +12,8 @@ import android.widget.ImageView;
 import android.widget.TextView;
 import android.widget.Toast;
 
+import org.w3c.dom.Text;
+
 /**
  * Created by grumnb on 1/24/2018.
  */
@@ -31,6 +33,14 @@ public class StartGame extends AppCompatActivity {
         String teamTwoQuarterback;
         teamTwoName = getIntent().getStringExtra("team_two");
         teamOneName = getIntent().getStringExtra("team_one");
+
+        TextView teamOnePassing = (TextView) findViewById(R.id.team_one_passing_yards_display);
+        TextView teamTwoPassing = (TextView) findViewById(R.id.team_two_passing_yards_display);
+        TextView teamOneRushing = (TextView) findViewById(R.id.team_one_rushing_yards_display);
+        TextView teamTwoRushing = (TextView) findViewById(R.id.team_two_rushing_yards_display);
+        TextView teamOneReceiving = (TextView) findViewById(R.id.team_one_receiving_yards_display);
+        TextView teamTwoReceiving = (TextView) findViewById(R.id.team_two_receiving_yards_display);
+
 
         TextView textView = (TextView) findViewById(R.id.team_one_game_start_name_display);
         TextView scoreTeamOne = (TextView) findViewById(R.id.team_one_score_display);

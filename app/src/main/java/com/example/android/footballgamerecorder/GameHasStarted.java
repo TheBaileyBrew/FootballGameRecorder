@@ -1,5 +1,6 @@
 package com.example.android.footballgamerecorder;
 
+import android.content.Intent;
 import android.os.Bundle;
 import android.support.v7.app.AppCompatActivity;
 import android.view.Menu;
@@ -274,6 +275,15 @@ public class GameHasStarted extends AppCompatActivity {
     public void rbtd (int td) {
         TextView backTD = (TextView) findViewById(R.id.touchdown_rb_one_display);
         backTD.setText(String.valueOf(td));
+    }
+
+
+
+
+    public void onClickReturnToHalf (View view) {
+        Intent goToHalf = new Intent (this, StartGame.class);
+
+        startActivity(goToHalf);
     }
 
 
