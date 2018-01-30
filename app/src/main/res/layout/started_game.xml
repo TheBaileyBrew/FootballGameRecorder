@@ -320,12 +320,13 @@
                     <RelativeLayout
                         android:layout_width="match_parent"
                         android:layout_height="wrap_content"
-                        android:padding="@dimen/small_med_padding">
+                        android:layout_margin="@dimen/small_med_padding">
                             <Button
                                 android:id="@+id/team_one_defensive_td"
                                 android:onClick="onClickTeamOneDefTD"
                                 android:layout_width="wrap_content"
                                 android:layout_height="wrap_content"
+                                android:layout_toLeftOf="@id/team_one_rushing_td"
                                 android:text="@string/defense_td"
                                 android:textSize="@dimen/small_font"
                                 />
@@ -334,7 +335,7 @@
                                 android:onClick="onClickTeamOneRushTD"
                                 android:layout_width="wrap_content"
                                 android:layout_height="wrap_content"
-                                android:layout_toRightOf="@id/team_one_defensive_td"
+                                android:layout_centerHorizontal="true"
                                 android:text="@string/rushing_td"
                                 android:textSize="@dimen/small_font"
                                 />
@@ -346,13 +347,40 @@
                                 android:layout_toRightOf="@id/team_one_rushing_td"
                                 android:text="@string/receiving_td"
                                 android:textSize="@dimen/small_font"/>
+                            <Button
+                                android:id="@+id/team_one_conversion_safety"
+
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:layout_below="@id/team_one_rushing_td"
+                                android:layout_centerHorizontal="true"
+                                android:text="safety / +2"
+                                android:textSize="@dimen/small_font"/>
+                            <Button
+                                android:id="@+id/team_one_fieldgoal"
+
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:layout_below="@id/team_one_receiving_td"
+                                android:layout_toRightOf="@id/team_one_conversion_safety"
+                                android:text="fieldgoal"
+                                android:textSize="@dimen/small_font"/>
+                            <Button
+                                android:id="@+id/team_one_extrapoint"
+
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:layout_below="@id/team_one_defensive_td"
+                                android:layout_toLeftOf="@id/team_one_conversion_safety"
+                                android:text="extra point"
+                                android:textSize="@dimen/small_font"/>
                         <TextView
                             android:id="@+id/team_one_pass_stats"
                             android:layout_width="match_parent"
                             android:layout_height="wrap_content"
                             android:gravity="center_horizontal"
-                            android:layout_marginTop="@dimen/medium_padding"
-                            android:layout_below="@id/team_one_defensive_td"
+                            android:layout_marginTop="@dimen/small_padding"
+                            android:layout_below="@id/team_one_conversion_safety"
                             android:text="@string/passing_statistics"
                             android:textStyle="bold"
                             android:textColor="#000000"
@@ -401,7 +429,7 @@
                             android:layout_width="match_parent"
                             android:layout_height="wrap_content"
                             android:gravity="center_horizontal"
-                            android:layout_marginTop="@dimen/medium_padding"
+                            android:layout_marginTop="@dimen/small_padding"
                             android:layout_below="@id/qb_one_pass_attempt"
                             android:text="@string/rushing_statistics"
                             android:textStyle="bold"
@@ -451,7 +479,7 @@
                             android:layout_width="match_parent"
                             android:layout_height="wrap_content"
                             android:gravity="center_horizontal"
-                            android:layout_marginTop="@dimen/medium_padding"
+                            android:layout_marginTop="@dimen/small_padding"
                             android:layout_below="@id/team_one_rushing_minus_one"
                             android:text="@string/receiving_statistics"
                             android:textStyle="bold"
@@ -498,6 +526,29 @@
                             android:textSize="@dimen/small_font"
                             />
                     </RelativeLayout>
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:gravity="center_horizontal">
+                        <Button
+                            android:id="@+id/undoTeamOneLastScore"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:textSize="@dimen/small_font"
+                            android:text="undo score"/>
+                        <Button
+                            android:id="@+id/goToHalfTime"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:textSize="@dimen/small_font"
+                            android:text="Half time"/>
+                        <Button
+                            android:id="@+id/useTimeout"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:textSize="@dimen/small_font"
+                            android:text="use timeout"/>
+                    </LinearLayout>
                 </LinearLayout>
                 <LinearLayout
                     android:id="@+id/team_two"
@@ -814,6 +865,7 @@
                             android:onClick="onClickTeamTwoDefTD"
                             android:layout_width="wrap_content"
                             android:layout_height="wrap_content"
+                            android:layout_toLeftOf="@id/team_two_rushing_td"
                             android:text="@string/defense_td"
                             android:textSize="@dimen/small_font"
                             />
@@ -822,7 +874,7 @@
                             android:onClick="onClickTeamTwoRushTD"
                             android:layout_width="wrap_content"
                             android:layout_height="wrap_content"
-                            android:layout_toRightOf="@id/team_two_defensive_td"
+                            android:layout_centerHorizontal="true"
                             android:text="@string/rushing_td"
                             android:textSize="@dimen/small_font"
                             />
@@ -834,13 +886,40 @@
                             android:layout_toRightOf="@id/team_two_rushing_td"
                             android:text="@string/receiving_td"
                             android:textSize="@dimen/small_font"/>
+                        <Button
+                            android:id="@+id/team_two_conversion_safety"
+
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_below="@id/team_two_rushing_td"
+                            android:layout_centerHorizontal="true"
+                            android:text="safety / +2"
+                            android:textSize="@dimen/small_font"/>
+                        <Button
+                            android:id="@+id/team_two_fieldgoal"
+
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_below="@id/team_two_receiving_td"
+                            android:layout_toRightOf="@id/team_two_conversion_safety"
+                            android:text="fieldgoal"
+                            android:textSize="@dimen/small_font"/>
+                        <Button
+                            android:id="@+id/team_two_extrapoint"
+
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_below="@id/team_two_defensive_td"
+                            android:layout_toLeftOf="@id/team_two_conversion_safety"
+                            android:text="extra point"
+                            android:textSize="@dimen/small_font"/>
                         <TextView
                             android:id="@+id/team_two_pass_stats"
                             android:layout_width="match_parent"
                             android:layout_height="wrap_content"
                             android:gravity="center_horizontal"
-                            android:layout_marginTop="@dimen/medium_padding"
-                            android:layout_below="@id/team_two_defensive_td"
+                            android:layout_marginTop="@dimen/small_padding"
+                            android:layout_below="@id/team_two_conversion_safety"
                             android:text="@string/passing_statistics"
                             android:textStyle="bold"
                             android:textColor="#000000"
@@ -889,7 +968,7 @@
                             android:layout_width="match_parent"
                             android:layout_height="wrap_content"
                             android:gravity="center_horizontal"
-                            android:layout_marginTop="@dimen/medium_padding"
+                            android:layout_marginTop="@dimen/small_padding"
                             android:layout_below="@id/qb_two_pass_attempt"
                             android:text="@string/rushing_statistics"
                             android:textStyle="bold"
@@ -939,7 +1018,7 @@
                             android:layout_width="match_parent"
                             android:layout_height="wrap_content"
                             android:gravity="center_horizontal"
-                            android:layout_marginTop="@dimen/medium_padding"
+                            android:layout_marginTop="@dimen/small_padding"
                             android:layout_below="@id/team_two_rushing_minus_one"
                             android:text="@string/receiving_statistics"
                             android:textStyle="bold"

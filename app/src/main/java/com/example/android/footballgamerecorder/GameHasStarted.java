@@ -13,28 +13,30 @@ import android.widget.TextView;
 
 public class GameHasStarted extends AppCompatActivity {
     int TeamOneScore=0;
-    int TeamOnePassyards=0;
-    int TeamOneRushYard=0;
-    int rushingTD=0;
-    int receivingTD=0;
-    int TeamOneRecYard=0;
-    int TeamOneQBFumble=0;
-    int TeamOneRBFumble=0;
-    int TeamOneWRFumble=0;
-    int TeamOneCompleted=0;
-    int TeamOneAttempts=0;
-    int TeamOneInterceptions=0;
     int TeamTwoScore=0;
+    int TeamOneLastScoring=0;
+    int TeamTwoLastScoring=0;
+    int TeamOnePassyards=0;
     int TeamTwoPassyards=0;
+    int TeamOneRushYard=0;
     int TeamTwoRushYard=0;
+    int rushingTD=0;
     int rushingTD2=0;
+    int receivingTD=0;
     int receivingTD2=0;
+    int TeamOneRecYard=0;
     int TeamTwoRecYard=0;
+    int TeamOneQBFumble=0;
     int TeamTwoQBFumble=0;
+    int TeamOneRBFumble=0;
     int TeamTwoRBFumble=0;
+    int TeamOneWRFumble=0;
     int TeamTwoWRFumble=0;
+    int TeamOneCompleted=0;
     int TeamTwoCompleted=0;
+    int TeamOneAttempts=0;
     int TeamTwoAttempts=0;
+    int TeamOneInterceptions=0;
     int TeamTwoInterceptions=0;
     TabHost tabHost;
     @Override
@@ -135,21 +137,25 @@ public class GameHasStarted extends AppCompatActivity {
 
     public void onClickTeamOneDefTD(View view) {
         TeamOneScore = TeamOneScore + 6;
+        TeamOneLastScoring=6;
         teamOneTotalScore(TeamOneScore);
     }
     public void onClickTeamTwoDefTD(View view) {
         TeamTwoScore = TeamTwoScore + 6;
+        TeamOneLastScoring=6;
         teamTwoTotalScore(TeamTwoScore);
     }
 
     public void onClickTeamOneRushTD(View view) {
         TeamOneScore = TeamOneScore + 6;
+        TeamOneLastScoring=6;
         rushingTD = rushingTD +1;
         teamOneTotalScore(TeamOneScore);
         rbtd(rushingTD);
     }
     public void onClickTeamTwoRushTD(View view) {
         TeamTwoScore = TeamTwoScore + 6;
+        TeamOneLastScoring=6;
         rushingTD2 = rushingTD2 +1;
         teamTwoTotalScore(TeamTwoScore);
         rbtd2(rushingTD2);
@@ -157,12 +163,14 @@ public class GameHasStarted extends AppCompatActivity {
 
     public void onClickTeamOneRecTD(View view) {
         TeamOneScore = TeamOneScore + 6;
+        TeamOneLastScoring=6;
         receivingTD = receivingTD + 1;
         teamOneTotalScore(TeamOneScore);
         wrtd(receivingTD);
     }
     public void onClickTeamTwoRecTD(View view) {
         TeamTwoScore = TeamTwoScore + 6;
+        TeamOneLastScoring=6;
         receivingTD2 = receivingTD2 + 1;
         teamTwoTotalScore(TeamTwoScore);
         wrtd2(receivingTD2);
@@ -350,10 +358,6 @@ public class GameHasStarted extends AppCompatActivity {
         TextView wrincomplete2 = findViewById(R.id.receiving_attempt_display_total_team2);
         wrincomplete2.setText(String.valueOf(pass));
     }
-
-
-
-
 
     //QUARTERBACK FUMBLE DISPLAY
     public void qbTeamOneFumble (int fumble) {
