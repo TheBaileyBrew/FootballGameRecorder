@@ -320,6 +320,7 @@
                     <RelativeLayout
                         android:layout_width="match_parent"
                         android:layout_height="wrap_content"
+                        android:gravity="center_horizontal"
                         android:layout_margin="@dimen/small_med_padding">
                             <Button
                                 android:id="@+id/team_one_defensive_td"
@@ -392,7 +393,7 @@
                             android:layout_height="wrap_content"
                             android:layout_below="@id/team_one_pass_stats"
                             android:text="@string/complete"
-                            android:textSize="@dimen/small_font"
+                            android:textSize="@dimen/small_med_font"
                             />
                         <Button
                             android:id="@+id/qb_one_incomplete"
@@ -402,7 +403,7 @@
                             android:layout_below="@id/team_one_pass_stats"
                             android:layout_toRightOf="@id/qb_one_pass_attempt"
                             android:text="@string/incomplete"
-                            android:textSize="@dimen/small_font"
+                            android:textSize="@dimen/small_med_font"
                             />
                         <Button
                             android:id="@+id/qb_one_interception"
@@ -412,7 +413,7 @@
                             android:layout_below="@id/team_one_pass_stats"
                             android:layout_toRightOf="@id/qb_one_incomplete"
                             android:text="@string/intercepted"
-                            android:textSize="@dimen/small_font"
+                            android:textSize="@dimen/small_med_font"
                             />
                         <Button
                             android:id="@+id/qb_one_fumb"
@@ -422,7 +423,7 @@
                             android:layout_below="@id/team_one_pass_stats"
                             android:layout_toRightOf="@id/qb_one_interception"
                             android:text="@string/fumble"
-                            android:textSize="@dimen/small_font"
+                            android:textSize="@dimen/small_med_font"
                             />
                         <TextView
                             android:id="@+id/team_one_rush_stats"
@@ -435,34 +436,29 @@
                             android:textStyle="bold"
                             android:textColor="#000000"
                             />
-                        <Button
+                        <EditText
                             android:id="@+id/team_one_rushing_minus_one"
-                            android:onClick="onClickTeamOneMinusOneRush"
                             android:layout_width="wrap_content"
                             android:layout_height="wrap_content"
+                            android:layout_alignTop="@id/team_one_rushing_plus_ten"
+                            android:layout_alignBottom="@id/team_one_rushing_plus_ten"
+                            android:layout_alignLeft="@id/qb_one_pass_attempt"
+                            android:layout_alignRight="@id/qb_one_incomplete"
                             android:layout_below="@id/team_one_rush_stats"
-                            android:text="@string/_1"
-                            android:textSize="@dimen/small_font"
-                            />
-                        <Button
-                            android:id="@+id/team_one_rushing_plus_one"
-                            android:onClick="onClickTeamOnePlusOneRush"
-                            android:layout_width="wrap_content"
-                            android:layout_height="wrap_content"
-                            android:layout_below="@id/team_one_rush_stats"
-                            android:layout_toRightOf="@id/team_one_rushing_minus_one"
-                            android:text="@string/_1plus"
+                            android:gravity="center|bottom"
+                            android:text="Enter Yardadage Gained"
+                            android:textColor="#55777777"
                             android:textSize="@dimen/small_font"
                             />
                         <Button
                             android:id="@+id/team_one_rushing_plus_ten"
-                            android:onClick="onClickTeamOnePlusTenRush"
+                            android:onClick="onClickTeamOneRushComplete"
                             android:layout_width="wrap_content"
                             android:layout_height="wrap_content"
                             android:layout_below="@id/team_one_rush_stats"
-                            android:layout_toRightOf="@id/team_one_rushing_plus_one"
-                            android:text="@string/_10"
-                            android:textSize="@dimen/small_font"
+                            android:layout_toRightOf="@id/team_one_rushing_minus_one"
+                            android:text="Completion"
+                            android:textSize="@dimen/small_med_font"
                             />
                         <Button
                             android:id="@+id/team_one_rushing_fumble"
@@ -472,7 +468,7 @@
                             android:layout_below="@id/team_one_rush_stats"
                             android:layout_toRightOf="@id/team_one_rushing_plus_ten"
                             android:text="@string/fumble"
-                            android:textSize="@dimen/small_font"
+                            android:textSize="@dimen/small_med_font"
                             />
                         <TextView
                             android:id="@+id/team_one_rec_stats"
@@ -486,34 +482,29 @@
                             android:textColor="#000000"
                             />
 
-                        <Button
+                        <EditText
                             android:id="@+id/team_one_receiving_minus_one"
-                            android:onClick="onClickTeamOneMinusOneRec"
                             android:layout_width="wrap_content"
                             android:layout_height="wrap_content"
-                            android:layout_below="@id/team_one_rec_stats"
-                            android:text="@string/_1"
-                            android:textSize="@dimen/small_font"
-                            />
-                        <Button
-                            android:id="@+id/team_one_receiving_plus_one"
-                            android:onClick="onClickTeamOnePlusOneRec"
-                            android:layout_width="wrap_content"
-                            android:layout_height="wrap_content"
-                            android:layout_below="@id/team_one_rec_stats"
-                            android:layout_toRightOf="@id/team_one_receiving_minus_one"
-                            android:text="@string/_1plus"
+                            android:layout_alignTop="@id/team_one_receiving_plus_ten"
+                            android:layout_alignBottom="@id/team_one_receiving_plus_ten"
+                            android:layout_alignLeft="@id/qb_one_pass_attempt"
+                            android:layout_alignRight="@id/qb_one_incomplete"
+                            android:layout_below="@id/team_one_rush_stats"
+                            android:gravity="center|bottom"
+                            android:text="Enter Yardadage Gained"
+                            android:textColor="#55777777"
                             android:textSize="@dimen/small_font"
                             />
                         <Button
                             android:id="@+id/team_one_receiving_plus_ten"
-                            android:onClick="onClickTeamOnePlusTenRec"
+                            android:onClick="onClickTeamOneRushComplete"
                             android:layout_width="wrap_content"
                             android:layout_height="wrap_content"
                             android:layout_below="@id/team_one_rec_stats"
-                            android:layout_toRightOf="@id/team_one_receiving_plus_one"
-                            android:text="@string/_10"
-                            android:textSize="@dimen/small_font"
+                            android:layout_toRightOf="@id/team_one_receiving_minus_one"
+                            android:text="Completion"
+                            android:textSize="@dimen/small_med_font"
                             />
                         <Button
                             android:id="@+id/team_one_receiving_fumble"
@@ -523,7 +514,7 @@
                             android:layout_below="@id/team_one_rec_stats"
                             android:layout_toRightOf="@id/team_one_receiving_plus_ten"
                             android:text="@string/fumble"
-                            android:textSize="@dimen/small_font"
+                            android:textSize="@dimen/small_med_font"
                             />
                     </RelativeLayout>
                     <LinearLayout

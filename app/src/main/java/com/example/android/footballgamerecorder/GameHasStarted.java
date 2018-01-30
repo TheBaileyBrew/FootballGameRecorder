@@ -419,5 +419,6 @@ public class GameHasStarted extends AppCompatActivity {
     }
 
 
-
+    public void onClickTeamOneRushComplete(View view) {
+    }
 }
