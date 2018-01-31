@@ -23,18 +23,7 @@
             android:textColor="#000000"
             android:textStyle="bold"
             android:textAllCaps="true"/>
-        <Button
-            style="@style/Widget.AppCompat.Button.Borderless.Colored"
-            android:onClick="returnToTeamSelection"
-            android:layout_width="0dp"
-            android:layout_weight=".75"
-            android:layout_height="match_parent"
-            android:gravity="center"
-            android:background="@drawable/border_black"
-            android:fontFamily="@font/freshman"
-            android:textColor="#66111111"
-            android:textSize="@dimen/small_font"
-            android:text="New Team"/>
+
     </LinearLayout>
 
     <LinearLayout
@@ -83,19 +72,64 @@
                 android:layout_marginBottom="@dimen/small_med_padding"
                 android:gravity="center"
                 android:fontFamily="@font/freshman"
-                android:text="2017 Record"
+                android:text="SCORE"
                 android:textColor="#111111"
-                android:textSize="@dimen/large_font"
+                android:textSize="@dimen/larger_font"
                 />
+
             <TextView
-                android:layout_width="match_parent"
+                android:id="@+id/team_one_passing_yards_display"
+                android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:layout_below="@id/team_one_score_display"
-                android:layout_marginBottom="@dimen/small_padding"
-                android:gravity="center"
-                android:fontFamily="@font/freshman"
-                android:text="12-2-2"
-                android:textColor="#111111"/>
+                android:layout_marginLeft="@dimen/medium_padding"
+                android:text="000"
+                />
+            <TextView
+                android:id="@+id/team_one_passing_yards"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_toRightOf="@id/team_one_passing_yards_display"
+                android:layout_below="@id/team_one_score_display"
+                android:layout_marginLeft="@dimen/small_med_padding"
+                android:text="Passing Yards"
+                />
+
+            <TextView
+                android:id="@+id/team_one_rushing_yards_display"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_below="@id/team_one_passing_yards_display"
+                android:layout_marginLeft="@dimen/medium_padding"
+                android:text="000"
+                />
+            <TextView
+                android:id="@+id/team_one_rushing_yards"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_toRightOf="@id/team_one_rushing_yards_display"
+                android:layout_marginLeft="@dimen/small_med_padding"
+                android:layout_below="@id/team_one_passing_yards"
+                android:text="Rushing Yards"
+                />
+
+            <TextView
+                android:id="@+id/team_one_receiving_yards_display"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_below="@id/team_one_rushing_yards_display"
+                android:layout_marginLeft="@dimen/medium_padding"
+                android:text="000"
+                />
+            <TextView
+                android:id="@+id/team_one_receiving_yards"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="@dimen/small_med_padding"
+                android:layout_toRightOf="@id/team_one_receiving_yards_display"
+                android:layout_below="@id/team_one_rushing_yards"
+                android:text="Receiving Yards"
+                />
         </RelativeLayout>
     </LinearLayout>
 
@@ -115,18 +149,7 @@
             android:textColor="#000000"
             android:textStyle="bold"
             android:textAllCaps="true"/>
-        <Button
-            style="@style/Widget.AppCompat.Button.Borderless.Colored"
-            android:onClick="returnToTeamSelection"
-            android:layout_width="0dp"
-            android:layout_weight=".75"
-            android:layout_height="match_parent"
-            android:gravity="center"
-            android:background="@drawable/border_black"
-            android:fontFamily="@font/freshman"
-            android:textColor="#66111111"
-            android:textSize="@dimen/small_font"
-            android:text="New Team"/>
+
     </LinearLayout>
 
     <LinearLayout
@@ -175,9 +198,63 @@
                 android:gravity="center"
                 android:layout_marginBottom="@dimen/small_med_padding"
                 android:fontFamily="@font/freshman"
-                android:text="2017 Record"
+                android:text="SCORE"
                 android:textColor="#111111"
-                android:textSize="@dimen/large_font"
+                android:textSize="@dimen/larger_font"
+                />
+
+            <TextView
+                android:id="@+id/team_two_passing_yards_display"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_below="@id/team_two_score_display"
+                android:layout_marginLeft="@dimen/medium_padding"
+                android:text="000"
+                />
+            <TextView
+                android:id="@+id/team_two_passing_yards"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_toRightOf="@id/team_two_passing_yards_display"
+                android:layout_below="@id/team_two_score_display"
+                android:layout_marginLeft="@dimen/small_med_padding"
+                android:text="Passing Yards"
+                />
+
+            <TextView
+                android:id="@+id/team_two_rushing_yards_display"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_below="@id/team_two_passing_yards_display"
+                android:layout_marginLeft="@dimen/medium_padding"
+                android:text="000"
+                />
+            <TextView
+                android:id="@+id/team_two_rushing_yards"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_toRightOf="@id/team_two_rushing_yards_display"
+                android:layout_marginLeft="@dimen/small_med_padding"
+                android:layout_below="@id/team_two_passing_yards"
+                android:text="Rushing Yards"
+                />
+
+            <TextView
+                android:id="@+id/team_two_receiving_yards_display"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_below="@id/team_two_rushing_yards_display"
+                android:layout_marginLeft="@dimen/medium_padding"
+                android:text="000"
+                />
+            <TextView
+                android:id="@+id/team_two_receiving_yards"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="@dimen/small_med_padding"
+                android:layout_toRightOf="@id/team_two_receiving_yards_display"
+                android:layout_below="@id/team_two_rushing_yards"
+                android:text="Receiving Yards"
                 />
         </RelativeLayout>
 
@@ -192,21 +269,21 @@
         android:gravity="center">
         <Button
             style="@style/Widget.AppCompat.Button.Borderless.Colored"
-            android:onClick="onClickStartFirstHalf"
+            android:onClick="onClickStartSecondHalf"
+            android:id="@+id/start_second_half"
             android:background="@drawable/border_black_nofade"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:layout_marginRight="@dimen/small_padding"
             android:layout_marginLeft="@dimen/small_padding"
             android:padding="@dimen/small_padding"
-            android:text="start 1st half"
+            android:text="start 2nd half"
             android:fontFamily="@font/freshman"
             android:textSize="@dimen/small_font"
             android:textStyle="bold"
             android:textAllCaps="true"
             android:textColor="#000000"
             />
-
     </LinearLayout>
 
 

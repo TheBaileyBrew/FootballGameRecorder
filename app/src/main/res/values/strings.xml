@@ -62,6 +62,49 @@
     <string name="_1plus">+1</string>
     <string name="_10">+10</string>
     <string name="receiving_statistics">RECEIVING STATISTICS</string>
+    <string name="enter_yardage_gain">Enter Yardage Gain</string>
+    <string name="completion">Completion</string>
+    <!--String List for Statistics-->
+    <string name="arizona_stats">8-8</string>
+    <string name="atlanta_stats">10-6</string>
+    <string name="baltimore_stats">9-7</string>
+    <string name="buffalo_stats">9-7</string>
+    <string name="carolina_stats">11-5</string>
+    <string name="chicago_stats">5-11</string>
+    <string name="cincinnati_stats">7-9</string>
+    <string name="cleveland_stats">0-16</string>
+    <string name="dallas_stats">9-7</string>
+    <string name="denver_stats">5-11</string>
+    <string name="detroit_stats">9-7</string>
+    <string name="green_bay_stats">7-9</string>
+    <string name="houston_stats">4-12</string>
+    <string name="indianapolis_stats">4-12</string>
+    <string name="jacksonville_stats">10-6</string>
+    <string name="kansas_city_stats">10-6</string>
+    <string name="los_angeles_chargers_stats">9-7</string>
+    <string name="los_angeles_rams_stats">11-5</string>
+    <string name="miami_stats">6-10</string>
+    <string name="minnesota_stas">13-3</string>
+    <string name="new_england_stats">13-3</string>
+    <string name="new_orleans_stats">11-5</string>
+    <string name="new_york_giants_stats">3-13</string>
+    <string name="new_york_jets_stats">5-11</string>
+    <string name="oakland_stats">6-10</string>
+    <string name="philadelphia_stats">13-3</string>
+    <string name="pittsburgh_stats">13-3</string>
+    <string name="san_francisco_stats">6-10</string>
+    <string name="seattle_stats">9-7</string>
+    <string name="tampa_bay_stats">5-11</string>
+    <string name="tennessee_stats">9-7</string>
+    <string name="washington_stats">7-9</string>
+
+
+
+
+
+
+
+
     <string-array name="football_teams">
         <item>Choose Your Team</item>
         <item>Arizona Cardinals</item>

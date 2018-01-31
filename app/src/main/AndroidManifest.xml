@@ -23,7 +23,10 @@
         <activity android:name=".GameHasStarted"
             android:label="Scoring Menu"
             android:theme="@style/Theme.AppCompat.Light.NoActionBar">
-
+        </activity>
+        <activity android:name=".HalfTime"
+            android:label="Half Time Menu"
+            android:theme="@style/Theme.AppCompat.Light.NoActionBar">
         </activity>
     </application>
 

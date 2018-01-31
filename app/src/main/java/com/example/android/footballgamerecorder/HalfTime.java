@@ -1,24 +1,17 @@
 package com.example.android.footballgamerecorder;
 
-import android.app.Application;
 import android.content.Intent;
 import android.os.Bundle;
-import android.support.annotation.Nullable;
 import android.support.v7.app.AppCompatActivity;
-import android.util.Log;
 import android.view.View;
-import android.widget.Button;
 import android.widget.ImageView;
 import android.widget.TextView;
-import android.widget.Toast;
-
-import org.w3c.dom.Text;
 
 /**
  * Created by grumnb on 1/24/2018.
  */
 
-public class StartGame extends AppCompatActivity {
+public class HalfTime extends AppCompatActivity {
 
 
     static String teamOneName;
@@ -29,12 +22,40 @@ public class StartGame extends AppCompatActivity {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_game_start);
 
+        String teamOneQuarterback;
+        String teamTwoQuarterback;
         teamTwoName = getIntent().getStringExtra("team_two");
         teamOneName = getIntent().getStringExtra("team_one");
+
+        String teamOneRecYards = getIntent().getStringExtra("Team_One_Rec");
+        String teamTwoRecYards = getIntent().getStringExtra("Team_Two_Rec");
+        String teamOneRushYards = getIntent().getStringExtra("Team_One_Rush");
+        String teamTwoRushYards = getIntent().getStringExtra("Team_Two_Rush");
+        String teamOnePassYards = getIntent().getStringExtra("Team_One_Pass");
+        String teamTwoPassYards = getIntent().getStringExtra("Team_Two_Pass");
+        String teamOneScore = getIntent().getStringExtra("Team_One_Score");
+        String teamTwoScore = getIntent().getStringExtra("Team_Two_Score");
         TextView textView = findViewById(R.id.team_one_game_start_name_display);
         TextView textView2 = findViewById(R.id.team_two_game_start_name_display);
         TextView scoreTeamOne = findViewById(R.id.team_one_score_display);
         TextView scoreTeamTwo = findViewById(R.id.team_two_score_display);
+        if (teamOneScore == null) {
+            scoreTeamOne.setText("0");
+        } else {
+            scoreTeamOne.setText(teamOneScore);
+        }
+        if (teamTwoScore == null) {
+            scoreTeamTwo.setText("0");
+        } else {
+            scoreTeamTwo.setText(teamOneScore);
+        }
+
+        TextView teamOnePassing = findViewById(R.id.team_one_passing_yards_display);
+        TextView teamTwoPassing = findViewById(R.id.team_two_passing_yards_display);
+        TextView teamOneRushing = findViewById(R.id.team_one_rushing_yards_display);
+        TextView teamTwoRushing = findViewById(R.id.team_two_rushing_yards_display);
+        TextView teamOneReceiving = findViewById(R.id.team_one_receiving_yards_display);
+        TextView teamTwoReceiving = findViewById(R.id.team_two_receiving_yards_display);
         textView.setText(teamOneName);
         textView2.setText(teamTwoName);
         TextView teamOneQB = findViewById(R.id.team_one_passing_player_name);

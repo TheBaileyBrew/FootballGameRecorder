@@ -6,47 +6,64 @@ import android.support.v7.app.AppCompatActivity;
 import android.view.View;
 import android.widget.AdapterView;
 import android.widget.ArrayAdapter;
+import android.widget.EditText;
 import android.widget.Spinner;
 import android.widget.TabHost;
 import android.widget.TextView;
+import android.widget.Toast;
 
 
 public class GameHasStarted extends AppCompatActivity {
-    int TeamOneScore=0;
-    int TeamTwoScore=0;
-    int TeamOneLastScoring=0;
-    int TeamTwoLastScoring=0;
-    int TeamOnePassyards=0;
-    int TeamTwoPassyards=0;
-    int TeamOneRushYard=0;
-    int TeamTwoRushYard=0;
-    int rushingTD=0;
-    int rushingTD2=0;
-    int receivingTD=0;
-    int receivingTD2=0;
-    int TeamOneRecYard=0;
-    int TeamTwoRecYard=0;
-    int TeamOneQBFumble=0;
-    int TeamTwoQBFumble=0;
-    int TeamOneRBFumble=0;
-    int TeamTwoRBFumble=0;
-    int TeamOneWRFumble=0;
-    int TeamTwoWRFumble=0;
-    int TeamOneCompleted=0;
-    int TeamTwoCompleted=0;
-    int TeamOneAttempts=0;
-    int TeamTwoAttempts=0;
-    int TeamOneInterceptions=0;
-    int TeamTwoInterceptions=0;
+    String teamOneName;
+    String teamTwoName;
+    int TeamOneScore = 0;
+    int TeamTwoScore = 0;
+    int TeamOneLastScoring = 0;
+    int TeamTwoLastScoring = 0;
+    int TeamOnePassyards = 0;
+    int TeamTwoPassyards = 0;
+    int TeamOneRushYard = 0;
+    int TeamTwoRushYard = 0;
+    int TeamOneRecYard = 0;
+    int TeamTwoRecYard = 0;
+
+    int rushingTD = 0;
+    int rushingTD2 = 0;
+    int receivingTD = 0;
+    int receivingTD2 = 0;
+
+    int TeamOneQBFumble = 0;
+    int TeamTwoQBFumble = 0;
+    int TeamOneRBFumble = 0;
+    int TeamTwoRBFumble = 0;
+    int TeamOneWRFumble = 0;
+    int TeamTwoWRFumble = 0;
+
+    int TeamOneCompleted = 0;
+    int TeamTwoCompleted = 0;
+    int TeamOneAttempts = 0;
+    int TeamTwoAttempts = 0;
+    int TeamOneInterceptions = 0;
+    int TeamTwoInterceptions = 0;
+
+    int TeamOneRushAttempts = 0;
+    int TeamTwoRushAttempts = 0;
+
     TabHost tabHost;
+
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.started_game);
-        String teamOneName = getIntent().getStringExtra("team_one");
-        String teamTwoName = getIntent().getStringExtra("team_two");
+        teamOneName = getIntent().getStringExtra("team_one");
+        teamTwoName = getIntent().getStringExtra("team_two");
         final Spinner teamOneSpinnerScoring;
         Spinner teamTwoSpinnerScoring;
+
+        EditText teamOneRushingYards = findViewById(R.id.team_one_rushing_yardage);
+        EditText teamTwoRushingYards = findViewById(R.id.team_two_rushing_yardage);
+        EditText teamOneReceivingYards = findViewById(R.id.team_one_receiving_yardage);
+        EditText teamTwoReceivingYards = findViewById(R.id.team_two_receiving_yardage);
 
         TabHost host = findViewById(R.id.tabhost);
         host.setup();
@@ -128,49 +145,50 @@ public class GameHasStarted extends AppCompatActivity {
         });
 
 
-
     }
-
 
 
     //Updating the values of scoring, yardage and counts
 
     public void onClickTeamOneDefTD(View view) {
         TeamOneScore = TeamOneScore + 6;
-        TeamOneLastScoring=6;
+        TeamOneLastScoring = 6;
         teamOneTotalScore(TeamOneScore);
     }
+
     public void onClickTeamTwoDefTD(View view) {
         TeamTwoScore = TeamTwoScore + 6;
-        TeamOneLastScoring=6;
+        TeamOneLastScoring = 6;
         teamTwoTotalScore(TeamTwoScore);
     }
 
     public void onClickTeamOneRushTD(View view) {
         TeamOneScore = TeamOneScore + 6;
-        TeamOneLastScoring=6;
-        rushingTD = rushingTD +1;
+        TeamOneLastScoring = 6;
+        rushingTD = rushingTD + 1;
         teamOneTotalScore(TeamOneScore);
         rbtd(rushingTD);
     }
+
     public void onClickTeamTwoRushTD(View view) {
         TeamTwoScore = TeamTwoScore + 6;
-        TeamOneLastScoring=6;
-        rushingTD2 = rushingTD2 +1;
+        TeamOneLastScoring = 6;
+        rushingTD2 = rushingTD2 + 1;
         teamTwoTotalScore(TeamTwoScore);
         rbtd2(rushingTD2);
     }
 
     public void onClickTeamOneRecTD(View view) {
         TeamOneScore = TeamOneScore + 6;
-        TeamOneLastScoring=6;
+        TeamOneLastScoring = 6;
         receivingTD = receivingTD + 1;
         teamOneTotalScore(TeamOneScore);
         wrtd(receivingTD);
     }
+
     public void onClickTeamTwoRecTD(View view) {
         TeamTwoScore = TeamTwoScore + 6;
-        TeamOneLastScoring=6;
+        TeamOneLastScoring = 6;
         receivingTD2 = receivingTD2 + 1;
         teamTwoTotalScore(TeamTwoScore);
         wrtd2(receivingTD2);
@@ -184,6 +202,7 @@ public class GameHasStarted extends AppCompatActivity {
         teamOneComplete(TeamOneCompleted);
         teamOneWRComplete(TeamOneCompleted);
     }
+
     public void onClickTeamTwoPassComplete(View view) {
         TeamTwoAttempts = TeamTwoAttempts + 1;
         TeamTwoCompleted = TeamTwoCompleted + 1;
@@ -198,6 +217,7 @@ public class GameHasStarted extends AppCompatActivity {
         teamOneIncomplete(TeamOneAttempts);
         teamOneWRIncomplete(TeamOneAttempts);
     }
+
     public void onClickTeamTwoPassIncomplete(View view) {
         TeamTwoAttempts = TeamTwoAttempts + 1;
         teamTwoIncomplete(TeamTwoAttempts);
@@ -208,91 +228,70 @@ public class GameHasStarted extends AppCompatActivity {
         TeamOneInterceptions = TeamOneInterceptions + 1;
         teamOneIntercept(TeamOneInterceptions);
     }
+
     public void onClickTeamTwoPassInterception(View view) {
         TeamTwoInterceptions = TeamTwoInterceptions + 1;
         teamTwoIntercept(TeamTwoInterceptions);
     }
 
     public void onClickTeamOnePassFumble(View view) {
-        TeamOneQBFumble =+ 1;
+        TeamOneQBFumble = +1;
         qbTeamOneFumble(TeamOneQBFumble);
     }
+
     public void onClickTeamTwoPassFumble(View view) {
-        TeamTwoQBFumble =+ 1;
+        TeamTwoQBFumble = +1;
         qbTeamTwoFumble(TeamTwoQBFumble);
     }
 
-    public void onClickTeamOneMinusOneRush(View view) {
-        TeamOneRushYard =- 1;
-        teamOneRushing(TeamOneRushYard);
-    }
-    public void onClickTeamTwoMinusOneRush(View view) {
-        TeamTwoRushYard =- 1;
-        teamTwoRushing(TeamTwoRushYard);
-    }
-
-    public void onClickTeamOnePlusOneRush(View view) {
-        TeamOneRushYard =+ 1;
-        teamOneRushing(TeamOneRushYard);
-    }
-    public void onClickTeamTwoPlusOneRush(View view) {
-        TeamTwoRushYard =+ 1;
-        teamTwoRushing(TeamTwoRushYard);
-    }
-
-    public void onClickTeamOnePlusTenRush(View view) {
-        TeamOneRushYard =+ 10;
-        teamOneRushing(TeamOneRushYard);
-    }
-    public void onClickTeamTwoPlusTenRush(View view) {
-        TeamTwoRushYard =+ 10;
-        teamTwoRushing(TeamTwoRushYard);
-    }
-
     public void onClickTeamOneRBFumble(View view) {
-        TeamOneRBFumble =+ 1;
+        TeamOneRBFumble = +1;
         rbTeamOneFumble(TeamOneRBFumble);
     }
+
     public void onClickTeamTwoRBFumble(View view) {
-        TeamTwoRBFumble =+ 1;
+        TeamTwoRBFumble = +1;
         rbTeamTwoFumble(TeamTwoRBFumble);
     }
 
     public void onClickTeamOneMinusOneRec(View view) {
-        TeamOneRecYard =- 1;
-        TeamOnePassyards =- 1;
+        TeamOneRecYard = -1;
+        TeamOnePassyards = -1;
         teamOneReceiving(TeamOneRecYard);
         teamOnePassing(TeamOnePassyards);
     }
+
     public void onClickTeamTwoMinusOneRec(View view) {
-        TeamTwoRecYard =- 1;
-        TeamTwoPassyards =- 1;
+        TeamTwoRecYard = -1;
+        TeamTwoPassyards = -1;
         teamTwoReceiving(TeamTwoRecYard);
         teamTwoPassing(TeamTwoPassyards);
     }
 
     public void onClickTeamOnePlusOneRec(View view) {
-        TeamOneRecYard =+ 1;
-        TeamOnePassyards =+ 1;
+        TeamOneRecYard = +1;
+        TeamOnePassyards = +1;
         teamOneReceiving(TeamOneRecYard);
         teamTwoPassing(TeamOnePassyards);
     }
+
     public void onClickTeamTwoPlusOneRec(View view) {
-        TeamTwoRecYard =+ 1;
-        TeamTwoPassyards =+1;
+        TeamTwoRecYard = +1;
+        TeamTwoPassyards = +1;
         teamTwoReceiving(TeamTwoRecYard);
         teamTwoPassing(TeamTwoPassyards);
     }
 
     public void onClickTeamOnePlusTenRec(View view) {
-        TeamOneRecYard =+ 10;
-        TeamOnePassyards =+ 10;
+        TeamOneRecYard = +10;
+        TeamOnePassyards = +10;
         teamOneReceiving(TeamOneRecYard);
         teamOnePassing(TeamOnePassyards);
     }
+
     public void onClickTeamTwoPlusTenRec(View view) {
-        TeamTwoRecYard =+ 10;
-        TeamTwoPassyards =+ 10;
+        TeamTwoRecYard = +10;
+        TeamTwoPassyards = +10;
         teamTwoReceiving(TeamTwoRecYard);
         teamTwoPassing(TeamTwoPassyards);
     }
@@ -301,6 +300,7 @@ public class GameHasStarted extends AppCompatActivity {
         TeamOneWRFumble = TeamOneWRFumble + 1;
         wrTeamOneFumble(TeamOneWRFumble);
     }
+
     public void onClickTeamTwoWRFumble(View view) {
         TeamTwoWRFumble = TeamTwoWRFumble + 1;
         wrTeamTwoFumble(TeamTwoWRFumble);
@@ -308,80 +308,94 @@ public class GameHasStarted extends AppCompatActivity {
 
     //Updating the field values for scoring changes
 
-    public void teamOneTotalScore (int score) {
+    public void teamOneTotalScore(int score) {
         TextView teamOneScoreTabOne = findViewById(R.id.team_one_score_tab_one);
         TextView teamOneScoreTabTwo = findViewById(R.id.team_one_score_tab_two);
         teamOneScoreTabOne.setText(String.valueOf(score));
         teamOneScoreTabTwo.setText(String.valueOf(score));
     }
-    public void teamTwoTotalScore (int score) {
+
+    public void teamTwoTotalScore(int score) {
         TextView teamTwoScoreTabOne = findViewById(R.id.team_two_score_tab_one);
         TextView teamTwoScoreTabTwo = findViewById(R.id.team_two_score_tab_two);
         teamTwoScoreTabOne.setText(String.valueOf(score));
         teamTwoScoreTabTwo.setText(String.valueOf(score));
     }
+
     /*Display Receiving Yards*/
-    public void teamOnePassing (int pass) {
+    public void teamOnePassing(int pass) {
         TextView teamOnePass = findViewById(R.id.passing_yards_display_total);
         teamOnePass.setText(String.valueOf(pass));
     }
-    public void teamTwoPassing (int pass) {
+
+    public void teamTwoPassing(int pass) {
         TextView teamTwoPass = findViewById(R.id.passing_yards_display_total_team2);
         teamTwoPass.setText(String.valueOf(pass));
     }
 
     /*Display Rushing Yards*/
-    public void teamOneRushing (int rush) {
+    public void teamOneRushing(int rush) {
         TextView teamOneRush = findViewById(R.id.rushing_yards_display_total);
         teamOneRush.setText(String.valueOf(rush));
     }
-    public void teamTwoRushing (int rush) {
+    public void teamTwoRushing(int rush) {
         TextView teamTwoRush = findViewById(R.id.rushing_yards_display_total_team2);
         teamTwoRush.setText(String.valueOf(rush));
     }
 
+    /*Display Rushing Attempts*/
+    public void teamOneRushAtt(int attempt) {
+        TextView teamOneRushAttempt = findViewById(R.id.rushing_comp_display_total);
+        teamOneRushAttempt.setText(String.valueOf(attempt));
+    }
+    public void teamTwoRushAtt(int attempt) {
+        TextView teamTwoRushAttempt = findViewById(R.id.rushing_comp_display_total_team2);
+        teamTwoRushAttempt.setText(String.valueOf(attempt));
+    }
+
+
     /*Display Receiving Yards*/
-    public void teamOneReceiving (int rec) {
+    public void teamOneReceiving(int rec) {
         TextView teamOneRec = findViewById(R.id.receiving_yards_display_total);
         teamOneRec.setText(String.valueOf(rec));
     }
-    public void teamTwoReceiving (int rec) {
+    public void teamTwoReceiving(int rec) {
         TextView teamTwoRec = findViewById(R.id.receiving_yards_display_total_team2);
         teamTwoRec.setText(String.valueOf(rec));
     }
 
     /*Display Passing Interceptions*/
-    public void teamOneIntercept (int pass) {
+    public void teamOneIntercept(int pass) {
         TextView qbintercept = findViewById(R.id.passing_intercept_display_total);
         qbintercept.setText(String.valueOf(pass));
     }
-    public void teamTwoIntercept (int pass) {
+    public void teamTwoIntercept(int pass) {
         TextView qbintercept2 = findViewById(R.id.passing_intercept_display_total_team2);
         qbintercept2.setText(String.valueOf(pass));
     }
 
     /*Display Passing Complete*/
-    public void teamOneComplete (int pass) {
+    public void teamOneComplete(int pass) {
         TextView qbcomplete = findViewById(R.id.passing_comp_display_total);
         qbcomplete.setText(String.valueOf(pass));
     }
-    public void teamTwoComplete (int pass) {
+    public void teamTwoComplete(int pass) {
         TextView qbcomplete2 = findViewById(R.id.passing_comp_display_total_team2);
         qbcomplete2.setText(String.valueOf(pass));
     }
 
     /*Display QB Incomplete*/
-    public void teamOneIncomplete (int pass) {
+    public void teamOneIncomplete(int pass) {
         TextView qbincomplete = findViewById(R.id.passing_attempt_display_total);
         qbincomplete.setText(String.valueOf(pass));
     }
-    public void teamTwoIncomplete (int pass) {
+    public void teamTwoIncomplete(int pass) {
         TextView qbincomplete2 = findViewById(R.id.passing_attempt_display_total_team2);
         qbincomplete2.setText(String.valueOf(pass));
     }
 
     /*Display Receiving Complete*/
-    public void teamOneWRComplete (int pass) {
+    public void teamOneWRComplete(int pass) {
         TextView wrcomplete = findViewById(R.id.receiving_comp_display_total);
         wrcomplete.setText(String.valueOf(pass));
     }
@@ -389,71 +403,109 @@ public class GameHasStarted extends AppCompatActivity {
         TextView wrincomplete2 = findViewById(R.id.receiving_comp_display_total_team2);
         wrincomplete2.setText(String.valueOf(pass));
     }
+
     /*Display Receiving Incomplete*/
-    public void teamOneWRIncomplete (int pass) {
+    public void teamOneWRIncomplete(int pass) {
         TextView wrincomplete = findViewById(R.id.receiving_attempt_display_total);
         wrincomplete.setText(String.valueOf(pass));
     }
-    public void teamTwoWRIncomplete (int pass) {
+    public void teamTwoWRIncomplete(int pass) {
         TextView wrincomplete2 = findViewById(R.id.receiving_attempt_display_total_team2);
         wrincomplete2.setText(String.valueOf(pass));
     }
 
     /*Display Passing Fumbles*/
-    public void qbTeamOneFumble (int fumble) {
+    public void qbTeamOneFumble(int fumble) {
         TextView qbfumble = findViewById(R.id.passing_fumble_display_total);
         qbfumble.setText(String.valueOf(fumble));
     }
-    public void qbTeamTwoFumble (int fumble) {
+    public void qbTeamTwoFumble(int fumble) {
         TextView qbfumble2 = findViewById(R.id.passing_fumble_display_total_team2);
         qbfumble2.setText(String.valueOf(fumble));
     }
 
     /*Display Receiving Fumbles*/
-    public void wrTeamOneFumble (int fumble) {
+    public void wrTeamOneFumble(int fumble) {
         TextView wrfumble = findViewById(R.id.receiving_fumble_display_total);
         wrfumble.setText(String.valueOf(fumble));
     }
-    public void wrTeamTwoFumble (int fumble) {
+    public void wrTeamTwoFumble(int fumble) {
         TextView wrfumble2 = findViewById(R.id.receiving_fumble_display_total_team2);
         wrfumble2.setText(String.valueOf(fumble));
     }
 
     /*Display Rushing Fumbles*/
-    public void rbTeamOneFumble (int fumble) {
+    public void rbTeamOneFumble(int fumble) {
         TextView rbfumble = findViewById(R.id.rushing_fumble_display_total);
         rbfumble.setText(String.valueOf(fumble));
     }
-    public void rbTeamTwoFumble (int fumble) {
+    public void rbTeamTwoFumble(int fumble) {
         TextView rbfumble2 = findViewById(R.id.rushing_fumble_display_total_team2);
         rbfumble2.setText(String.valueOf(fumble));
     }
 
     /*Display Receiving TD*/
-    public void wrtd (int td) {
+    public void wrtd(int td) {
         TextView wideTD = findViewById(R.id.receiving_td_display_total);
         wideTD.setText(String.valueOf(td));
     }
-    public void wrtd2 (int td) {
+
+    public void wrtd2(int td) {
         TextView wideTD2 = findViewById(R.id.receiving_td_display_total_team2);
         wideTD2.setText(String.valueOf(td));
     }
 
     /*Display Rushing TD*/
-    public void rbtd (int td) {
+    public void rbtd(int td) {
         TextView backTD = findViewById(R.id.rushing_td_display_total);
         backTD.setText(String.valueOf(td));
     }
-    public void rbtd2 (int td) {
+
+    public void rbtd2(int td) {
         TextView backTD2 = findViewById(R.id.rushing_td_display_total_team2);
         backTD2.setText(String.valueOf(td));
     }
 
+    public void onClickTeamOneRushComplete(View view) {
+        EditText teamOneRushingYards = findViewById(R.id.team_one_rushing_yardage);
+        int rushYards = Integer.parseInt(teamOneRushingYards.getText().toString());
+        if (rushYards > 0) {
+            Toast.makeText(getApplicationContext(), rushYards + " Rushing Yards Added", Toast.LENGTH_LONG).show();
+            TeamOneRushYard = TeamOneRushYard+ rushYards;
+            TeamOneRushAttempts = TeamOneRushAttempts + 1;
+            teamOneRushing(TeamOneRushYard);
+            teamOneRushAtt(TeamOneRushAttempts);
+            teamOneRushingYards.setText("");
+        } else if (rushYards == 0) {
+            Toast.makeText(getApplicationContext(), "No Gain", Toast.LENGTH_LONG).show();
+            TeamOneRushAttempts = TeamOneRushAttempts + 1;
+            teamOneRushAtt(TeamOneRushAttempts);
+            teamOneRushingYards.setText("");
+        } else {
+            Toast.makeText(getApplicationContext(), rushYards + " RUSHING YARDS LOST", Toast.LENGTH_LONG).show();
+            TeamOneRushYard = TeamOneRushYard + rushYards;
+            TeamOneRushAttempts = TeamOneRushAttempts + 1;
+            teamOneRushAtt(TeamOneRushAttempts);
+            teamOneRushing(TeamOneRushYard);
+            teamOneRushingYards.setText("");
+        }
+    }
+
+    public void teamTwoYardageRush(int yards) {
+        EditText teamTwoRushingYards = findViewById(R.id.team_two_rushing_yardage);
+    }
+
+    public void teamOneYardageRec(int yards) {
+        EditText teamOneReceivingYards = findViewById(R.id.team_one_receiving_yardage);
+    }
+
+    public void teamTwoYardageRec(int yards) {
+        EditText teamTwoReceivingYards = findViewById(R.id.team_two_receiving_yardage);
+    }
 
 
-
-    public void onClickReturnToHalf (View view) {
-        Intent goToHalf = new Intent (this, StartGame.class);
+    public void onClickReturnToHalf(View view) {
+        Intent goToHalf = new Intent(this, HalfTime.class);
         goToHalf.putExtra("Team_One_Score", TeamOneScore);
         goToHalf.putExtra("Team_Two_Score", TeamTwoScore);
         goToHalf.putExtra("Team_One_Pass", TeamOnePassyards);
@@ -462,10 +514,11 @@ public class GameHasStarted extends AppCompatActivity {
         goToHalf.putExtra("Team_Two_Rush", TeamTwoRushYard);
         goToHalf.putExtra("Team_One_Rec", TeamOneRecYard);
         goToHalf.putExtra("Team_Two_Rec", TeamTwoRecYard);
+        goToHalf.putExtra("team_one", teamOneName);
+        goToHalf.putExtra("team_two", teamTwoName);
         startActivity(goToHalf);
     }
-
-
-    public void onClickTeamOneRushComplete(View view) {
-    }
 }
+
+
+
