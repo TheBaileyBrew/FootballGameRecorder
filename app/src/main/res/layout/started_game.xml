@@ -76,7 +76,6 @@
                             android:layout_height="wrap_content"
                             android:layout_marginTop="@dimen/small_padding"
                             android:layout_marginBottom="@dimen/small_padding">
-
                         </Spinner>
 
     <!-- Passing Statistics Display-->
@@ -529,16 +528,11 @@
                             android:text="undo score"/>
                         <Button
                             android:id="@+id/goToHalfTime"
+                            android:onClick="onClickReturnToHalf"
                             android:layout_width="wrap_content"
                             android:layout_height="wrap_content"
                             android:textSize="@dimen/small_font"
                             android:text="Half time"/>
-                        <Button
-                            android:id="@+id/useTimeout"
-                            android:layout_width="wrap_content"
-                            android:layout_height="wrap_content"
-                            android:textSize="@dimen/small_font"
-                            android:text="use timeout"/>
                     </LinearLayout>
                 </LinearLayout>
                 <LinearLayout
