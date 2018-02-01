@@ -1,38 +1,5 @@
 <resources>
     <string name="app_name">Football Game Recorder</string>
-    <string name="blank_team"> </string>
-    <string name="arizona_cardinals">Carson Palmer</string>
-    <string name="atlanta_falcons">Matt Ryan</string>
-    <string name="baltimore_ravens">Joe Flacco</string>
-    <string name="buffalo_bills">Tyrod Taylor</string>
-    <string name="carolina_panthers">Cam Newton</string>
-    <string name="chicago_bears">Mitchell Trubisky</string>
-    <string name="cincinnati_bengals">Andy Dalton</string>
-    <string name="cleveland_browns">DeShone Kizer</string>
-    <string name="dallas_cowboys">Dak Prescott</string>
-    <string name="denver_broncos">Paxton Lynch</string>
-    <string name="detroit_lions">Matthew Stafford</string>
-    <string name="green_bay_packers">Aaron Rodgers</string>
-    <string name="houston_texans">T.J. Yates</string>
-    <string name="indianapolis_colts">Andrew Luck</string>
-    <string name="jacksonville_jaguars">Blake Bortles</string>
-    <string name="kansas_city_chiefs">Alex Smith</string>
-    <string name="los_angeles_chargers">Philip Rivers</string>
-    <string name="los_angeles_rams">Jared Goff</string>
-    <string name="miami_dolphins">Jay Cutler</string>
-    <string name="minnesota_vikings">Case Keenum</string>
-    <string name="new_england_patriots">Tom Brady</string>
-    <string name="new_orleans_saints">Drew Brees</string>
-    <string name="new_york_giants">Eli Manning</string>
-    <string name="new_york_jets">Bryce Petty</string>
-    <string name="oakland_raiders">Derek Carr</string>
-    <string name="philadelphia_eagles">Carson Wentz</string>
-    <string name="pittsburgh_steelers">Ben Rothlisberger</string>
-    <string name="san_francisco_49ers">Jimmy Garoppolo</string>
-    <string name="seattle_seahawks">Seattle Russell Wilson</string>
-    <string name="tampa_bay_bucanneers">Jameis Winston</string>
-    <string name="tennessee_titans">Marcus Mariota</string>
-    <string name="washington_redskins">Kirk Cousins</string>
     <string name="start_game">Start Game</string>
     <string name="team_name_here">Team Name Here</string>
     <string name="home">Home:</string>
@@ -64,6 +31,76 @@
     <string name="receiving_statistics">RECEIVING STATISTICS</string>
     <string name="enter_yardage_gain">Enter Yardage Gain</string>
     <string name="completion">Completion</string>
+
+
+    <!--String List for PositionPlayers: QB : WR1 : WR2 :RB -->
+    <string name="blank_team"> </string>
+    <string name="wide1_blank_team"> </string> <string name="wide2_blank_team"> </string> <string name="rb_blank_team"> </string>
+    <!--Arizona-->
+    <string name="arizona_cardinals">Carson Palmer</string> <string name="wide1_arizona_cardinals">Larry Fitzgerald</string> <string name="wide2_arizona_cardinals">John Brown</string> <string name="rb_arizona_cardinals">Kerwynn Williams</string>
+    <!--Atlanta-->
+    <string name="atlanta_falcons">Matt Ryan</string> <string name="wide1_atlanta_falcons">Julio Jones</string> <string name="wide2_atlanta_falcons">Mohamed Sanu</string> <string name="rb_atlanta_falcons">Devonta Freeman</string>
+    <!--Baltimore-->
+    <string name="baltimore_ravens">Joe Flacco</string> <string name="wide1_baltimore_ravens">Mike Wallace</string> <string name="wide2_baltimore_ravens">Jeremm Maclin</string> <string name="rb_baltimore_ravens">Alex Collins</string>
+    <!--Buffalo-->
+    <string name="buffalo_bills">Tyrod Taylor</string> <string name="wide1_buffalo_bills">Kelvin Benjamin</string> <string name="wide2_buffalo_bills">Zay Jones</string> <string name="rb_buffalo_bills">LeSean McCoy</string>
+    <!--Carolina-->
+    <string name="carolina_panthers">Cam Newton</string> <string name="wide1_carolina_panthers">Devin Funchess</string> <string name="wide2_carolina_panthers">Russell Shepard</string> <string name="rb_carolina_panthers">Christian McCaffery</string>
+    <!--Chicago-->
+    <string name="chicago_bears">Mitchell Trubisky</string> <string name="wide1_chicago_bears">Dontrelle Inman</string> <string name="wide2_chicago_bears">Kendall Wright</string> <string name="rb_chicago_bears">Jordan Howard</string>
+    <!--Cincinnati-->
+    <string name="cincinnati_bengals">Andy Dalton</string> <string name="wide1_cincinnati_bengals">A.J. Green</string> <string name="wide2_cincinnati_bengals">Brandon LaFell</string> <string name="rb_cincinnati_bengals">Joe Mixon</string>
+    <!--Cleveland-->
+    <string name="cleveland_browns">DeShone Kizer</string> <string name="wide1_cleveland_browns">Josh Gordon</string> <string name="wide2_cleveland_browns">Corey Coleman</string> <string name="rb_cleveland_browns">Duke Johnson Jr.</string>
+    <!--Dallas-->
+    <string name="dallas_cowboys">Dak Prescott</string> <string name="wide1_dallas_cowboys">Dez Bryant</string> <string name="wide2_dallas_cowboys">Terrence Williams</string> <string name="rb_dallas_cowboys">Ezekiel Elliott</string>
+    <!--Denver-->
+    <string name="denver_broncos">Paxton Lynch</string> <string name="wide1_denver_broncos">Demaryius Thomas</string> <string name="wide2_denver_broncos">Emmanuel Sanders</string> <string name="rb_denver_broncos">C.J. Anderson</string>
+    <!--Detroit-->
+    <string name="detroit_lions">Matthew Stafford</string> <string name="wide1_detroit_lions">Marvin Jones</string> <string name="wide2_detroit_lions">Golden Tate</string> <string name="rb_detroit_lions">Ameer Abdullah</string>
+    <!--Green Bay-->
+    <string name="green_bay_packers">Aaron Rodgers</string> <string name="wide1_green_bay_packers">Jordy Nelson</string> <string name="wide2_green_bay_packers">Davante Adams</string> <string name="rb_green_bay_packers">Ty Montgomery</string>
+    <!--Houston-->
+    <string name="houston_texans">T.J. Yates</string> <string name="wide1_houston_texans">DeAndre Hopkins</string> <string name="wide2_houston_texans">Will Fuller V</string> <string name="rb_houston_texans">Lamar Miller</string>
+    <!--Indianapolis-->
+    <string name="indianapolis_colts">Andrew Luck</string> <string name="wide1_indianapolis_colts">T.Y. Hilton</string> <string name="wide2_indianapolis_colts">Donte Moncrief</string> <string name="rb_indianapolis_colts">Frank Gore</string>
+    <!--Jacksonville-->
+    <string name="jacksonville_jaguars">Blake Bortles</string> <string name="wide1_jacksonville_jaguars">Marqise Lee</string> <string name="wide2_jacksonville_jaguars">Allen Hurns</string> <string name="rb_jacksonville_jaguars">Leonard Fournette</string>
+    <!--Kansas City-->
+    <string name="kansas_city_chiefs">Alex Smith</string> <string name="wide1_kansas_city_chiefs">Tyreek Hill</string> <string name="wide2_kansas_city_chiefs">Albert Wilson</string> <string name="rb_kansas_city_chiefs">Kareem Hunt</string>
+    <!--LA Chargers-->
+    <string name="los_angeles_chargers">Philip Rivers</string> <string name="wide1_los_angeles_chargers">Keenan Allen</string> <string name="wide2_los_angeles_chargers">Tyrell Williams</string> <string name="rb_los_angeles_chargers">Melvin Gordon</string>
+    <!--LA Rams-->
+    <string name="los_angeles_rams">Jared Goff</string> <string name="wide1_los_angeles_rams">Robert Woods</string> <string name="wide_los_angeles_rams">Sammy Watkins</string> <string name="rb_los_angeles_rams">Todd Gurley</string>
+    <!--Miami-->
+    <string name="miami_dolphins">Jay Cutler</string> <string name="wide1_miami_dolphins">Jarvis landry</string> <string name="wide2_miami_dolphins">DeVante Parker</string> <string name="rb_miami_dolphins">Kenyen Drake</string>
+    <!--Minnesota-->
+    <string name="minnesota_vikings">Case Keenum</string> <string name="wide1_minnesota_vikings">Stefon Diggs</string> <string name="wide2_minnesota_vikings">Adam Thielen</string> <string name="rb_minnesota_vikings">Latavius Murray</string>
+    <!--New England-->
+    <string name="new_england_patriots">Tom Brady</string> <string name="wide1_new_england_patriots"> </string> <string name="wide2_new_england_patriots"> </string> <string name="rb_new_england_patriots"> </string>
+    <!--New Orleans-->
+    <string name="new_orleans_saints">Drew Brees</string> <string name="wide1_new_orleans_saints"> </string> <string name="wide2_new_orleans_saints"> </string> <string name="rb_new_orleans_saints"> </string>
+    <!--NY Giants-->
+    <string name="new_york_giants">Eli Manning</string> <string name="wide1_new_york_giants"> </string> <string name="wide2_new_york_giants"> </string> <string name="rb_new_york_giants"> </string>
+    <!--NY Jets-->
+    <string name="new_york_jets">Bryce Petty</string> <string name="wide1_new_york_jets"> </string> <string name="wide2_new_york_jets"> </string> <string name="rb_new_york_jets"> </string>
+    <!--Oakland-->
+    <string name="oakland_raiders">Derek Carr</string> <string name="wide1_oakland_raiders"> </string> <string name="wide2_oakland_raiders"> </string> <string name="rb_oakland_raiders"> </string>
+    <!--Philadelphia-->
+    <string name="philadelphia_eagles">Carson Wentz</string> <string name="wide1_philadelphia_eagles"> </string> <string name="wide2_philadelphia_eagles"> </string> <string name="rb_philadelphia_eagles"> </string>
+    <!--Pittsburgh-->
+    <string name="pittsburgh_steelers">Ben Rothlisberger</string> <string name="wide1_pittsburgh_steelers"> </string> <string name="wide2_pittsburgh_steelers"> </string> <string name="rb_pittsburgh_steelers"> </string>
+    <!--San Francisco-->
+    <string name="san_francisco_49ers">Jimmy Garoppolo</string> <string name="wide1_san_francisco_49ers"> </string> <string name="wide2_san_francisco_49ers"> </string> <string name="rb_san_francisco_49ers"> </string>
+    <!--Seattle-->
+    <string name="seattle_seahawks">Russell Wilson</string> <string name="wide1_seattle_seahawks">  </string> <string name="wide2_seattle_seahawks">  </string> <string name="rb_seattle_seahawks">  </string>
+    <!--Tampa Bay-->
+    <string name="tampa_bay_bucanneers">Jameis Winston</string> <string name="wide1_tampa_bay_bucanneers"> </string> <string name="wide2_tampa_bay_bucanneers"> </string> <string name="rb_tampa_bay_bucanneers"> </string>
+    <!--Tennessee-->
+    <string name="tennessee_titans">Marcus Mariota</string> <string name="wide1_tennessee_titans"> </string> <string name="wide2_tennessee_titans"> </string> <string name="rb_tennessee_titans"> </string>
+    <!--Washington-->
+    <string name="washington_redskins">Kirk Cousins</string> <string name="wide1_washington_redskins"> </string> <string name="wide2_washington_redskins"> </string> <string name="rb_washington_redskins"> </string>
+
     <!--String List for Statistics-->
     <string name="arizona_stats">8-8</string>
     <string name="atlanta_stats">10-6</string>
@@ -98,13 +135,8 @@
     <string name="tennessee_stats">9-7</string>
     <string name="washington_stats">7-9</string>
 
-
-
-
-
-
-
-
+    
+    <!--Team Names String Array-->
     <string-array name="football_teams">
         <item>Choose Your Team</item>
         <item>Arizona Cardinals</item>
