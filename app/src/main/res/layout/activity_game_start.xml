@@ -5,139 +5,130 @@
     android:layout_height="match_parent"
     xmlns:app="http://schemas.android.com/apk/res-auto"
     android:orientation="vertical"
+    android:background="@drawable/football_field_fade"
     tools:context="com.example.android.footballgamerecorder.StartGame">
 
-    <LinearLayout
+
+    <TextView
+        android:id="@+id/team_one_game_start_name_display"
+        android:layout_weight=".60"
         android:layout_width="match_parent"
         android:layout_height="0dp"
-        android:layout_weight=".75"
-        android:layout_margin="@dimen/small_padding">
-        <TextView
-            android:id="@+id/team_one_game_start_name_display"
-            android:layout_weight="3"
-            android:layout_width="0dp"
-            android:layout_height="wrap_content"
-            android:text="@string/team_name_here"
-            android:fontFamily="@font/freshman"
-            android:textSize="@dimen/large_font"
-            android:textColor="#000000"
-            android:textStyle="bold"
-            android:textAllCaps="true"/>
-        <Button
-            style="@style/Widget.AppCompat.Button.Borderless.Colored"
-            android:onClick="returnToTeamSelection"
-            android:layout_width="0dp"
-            android:layout_weight=".75"
-            android:layout_height="match_parent"
-            android:gravity="center"
-            android:background="@drawable/border_black"
-            android:fontFamily="@font/freshman"
-            android:textColor="#66111111"
-            android:textSize="@dimen/small_font"
-            android:text="New Team"/>
-    </LinearLayout>
+        android:layout_marginTop="@dimen/small_med_padding"
+        android:layout_marginLeft="@dimen/small_med_padding"
+        android:layout_marginRight="@dimen/small_med_padding"
+        android:text="@string/team_name_here"
+        android:fontFamily="@font/freshman"
+        android:textSize="@dimen/large_font"
+        android:textColor="#FFFFFF"
+        android:textStyle="bold"
+        android:textAllCaps="true"/>
 
     <LinearLayout
-        android:id="@+id/start_quarterback_display"
         android:layout_width="match_parent"
         android:layout_height="0dp"
         android:layout_weight=".25"
         android:layout_marginRight="@dimen/small_padding"
-        android:layout_marginLeft="@dimen/small_padding">
+        android:layout_marginLeft="@dimen/small_padding"
+        android:layout_marginBottom="@dimen/xtra_small_padding">
         <TextView
-            android:id="@+id/team_one_starting_qb"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:paddingRight="@dimen/small_padding"
             android:paddingEnd="@dimen/small_padding"
             android:fontFamily="@font/freshman"
             android:textSize="@dimen/small_med_font"
-            android:textColor="#000000"
-            android:text="Starting Quarterback: "/>
+            android:textColor="#FFFFFF"
+            android:text="Quarterback: "
+            tools:ignore="RtlSymmetry" />
         <TextView
             android:id="@+id/team_one_passing_player_name"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:fontFamily="@font/freshman"
             android:textSize="@dimen/small_med_font"
+            android:textColor="#000000"
             android:text="Temporary Name Here" />
     </LinearLayout>
 
     <LinearLayout
-        android:id="@+id/start_widereceiver_display"
         android:layout_width="match_parent"
         android:layout_height="0dp"
         android:layout_weight=".25"
         android:layout_marginRight="@dimen/small_padding"
-        android:layout_marginLeft="@dimen/small_padding">
+        android:layout_marginLeft="@dimen/small_padding"
+        android:layout_marginBottom="@dimen/xtra_small_padding">
         <TextView
-            android:id="@+id/team_one_starting_wr"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:paddingRight="@dimen/small_padding"
             android:paddingEnd="@dimen/small_padding"
             android:fontFamily="@font/freshman"
             android:textSize="@dimen/small_med_font"
-            android:textColor="#000000"
-            android:text="Starting Wide Receiver 1: "/>
+            android:textColor="#FFFFFF"
+            android:text="Wide Receiver 1: "
+            tools:ignore="RtlSymmetry" />
         <TextView
             android:id="@+id/team_one_receiving_player_name"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:fontFamily="@font/freshman"
             android:textSize="@dimen/small_med_font"
+            android:textColor="#000000"
             android:text="Temporary Name Here" />
     </LinearLayout>
 
     <LinearLayout
-        android:id="@+id/start_widereceiver2_display"
         android:layout_width="match_parent"
         android:layout_height="0dp"
         android:layout_weight=".25"
         android:layout_marginRight="@dimen/small_padding"
-        android:layout_marginLeft="@dimen/small_padding">
+        android:layout_marginLeft="@dimen/small_padding"
+        android:layout_marginBottom="@dimen/xtra_small_padding">
         <TextView
-            android:id="@+id/team_one_starting_wr2"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:paddingRight="@dimen/small_padding"
             android:paddingEnd="@dimen/small_padding"
             android:fontFamily="@font/freshman"
             android:textSize="@dimen/small_med_font"
-            android:textColor="#000000"
-            android:text="Starting Wide Receiver 2: "/>
+            android:textColor="#FFFFFF"
+            android:text="Wide Receiver 2: "
+            tools:ignore="RtlSymmetry" />
         <TextView
             android:id="@+id/team_one_receiving2_player_name"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:fontFamily="@font/freshman"
             android:textSize="@dimen/small_med_font"
+            android:textColor="#000000"
             android:text="Temporary Name Here" />
     </LinearLayout>
 
     <LinearLayout
-        android:id="@+id/start_runnningback_display"
         android:layout_width="match_parent"
         android:layout_height="0dp"
         android:layout_weight=".25"
         android:layout_marginRight="@dimen/small_padding"
-        android:layout_marginLeft="@dimen/small_padding">
+        android:layout_marginLeft="@dimen/small_padding"
+        android:layout_marginBottom="@dimen/xtra_small_padding">
         <TextView
-            android:id="@+id/team_one_starting_rb"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:paddingRight="@dimen/small_padding"
             android:paddingEnd="@dimen/small_padding"
             android:fontFamily="@font/freshman"
             android:textSize="@dimen/small_med_font"
-            android:textColor="#000000"
-            android:text="Starting Running Back: "/>
+            android:textColor="#FFFFFF"
+            android:text="Running Back: "
+            tools:ignore="RtlSymmetry" />
         <TextView
             android:id="@+id/team_one_rushing_player_name"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:fontFamily="@font/freshman"
             android:textSize="@dimen/small_med_font"
+            android:textColor="#000000"
             android:text="Temporary Name Here" />
     </LinearLayout>
 
@@ -146,19 +137,22 @@
         android:layout_height="0dp"
         android:layout_weight="3">
         <ImageView
+            android:contentDescription="NFL Logo Helmet Alternates"
             android:id="@+id/team_one_game_start_logo"
             android:layout_width="140dp"
             android:layout_height="140dp"
             />
         <RelativeLayout
             android:layout_width="match_parent"
-            android:layout_height="wrap_content">
+            android:layout_height="wrap_content"
+            android:background="#66FFFFFF"
+            android:padding="@dimen/small_med_padding">
             <TextView
                 android:id="@+id/team_one_score_display"
                 android:layout_gravity="center_horizontal"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
-                android:layout_marginBottom="@dimen/small_med_padding"
+                android:layout_marginBottom="@dimen/small_padding"
                 android:gravity="center"
                 android:fontFamily="@font/freshman"
                 android:text="2017 Record"
@@ -166,148 +160,153 @@
                 android:textSize="@dimen/large_font"
                 />
             <TextView
+                android:id="@+id/team_one_previous_record"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 android:layout_below="@id/team_one_score_display"
                 android:layout_marginBottom="@dimen/small_padding"
                 android:gravity="center"
                 android:fontFamily="@font/freshman"
-                android:text="12-2-2"
-                android:textColor="#111111"/>
+                android:text=""
+                android:textSize="@dimen/medium_font"
+                android:textColor="#000000"/>
+            <Button
+                style="@style/Widget.AppCompat.Button.Borderless.Colored"
+                android:onClick="returnToTeamSelection"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:gravity="center"
+                android:layout_below="@id/team_one_previous_record"
+                android:layout_centerHorizontal="true"
+                android:layout_marginLeft="@dimen/large_padding"
+                android:layout_marginRight="@dimen/large_padding"
+                android:background="@drawable/border_black"
+                android:fontFamily="@font/freshman"
+                android:textColor="#333333"
+                android:textSize="@dimen/small_font"
+                android:text="Change Team"/>
         </RelativeLayout>
     </LinearLayout>
 
-    <LinearLayout
+
+    <TextView
+        android:id="@+id/team_two_game_start_name_display"
+        android:layout_weight=".60"
         android:layout_width="match_parent"
         android:layout_height="0dp"
-        android:layout_weight=".75"
-        android:layout_margin="@dimen/small_padding">
-        <TextView
-            android:id="@+id/team_two_game_start_name_display"
-            android:layout_weight="3"
-            android:layout_width="0dp"
-            android:layout_height="wrap_content"
-            android:text="@string/team_name_here"
-            android:fontFamily="@font/freshman"
-            android:textSize="@dimen/large_font"
-            android:textColor="#000000"
-            android:textStyle="bold"
-            android:textAllCaps="true"/>
-        <Button
-            style="@style/Widget.AppCompat.Button.Borderless.Colored"
-            android:onClick="returnToTeamSelection"
-            android:layout_width="0dp"
-            android:layout_weight=".75"
-            android:layout_height="match_parent"
-            android:gravity="center"
-            android:background="@drawable/border_black"
-            android:fontFamily="@font/freshman"
-            android:textColor="#66111111"
-            android:textSize="@dimen/small_font"
-            android:text="New Team"/>
-    </LinearLayout>
+        android:layout_marginLeft="@dimen/small_med_padding"
+        android:layout_marginRight="@dimen/small_med_padding"
+        android:text="@string/team_name_here"
+        android:fontFamily="@font/freshman"
+        android:textSize="@dimen/large_font"
+        android:textColor="#FFFFFF"
+        android:textStyle="bold"
+        android:textAllCaps="true"/>
 
     <LinearLayout
-        android:id="@+id/start_quarterback2_display"
         android:layout_width="match_parent"
         android:layout_height="0dp"
         android:layout_weight=".25"
         android:layout_marginRight="@dimen/small_padding"
-        android:layout_marginLeft="@dimen/small_padding">
+        android:layout_marginLeft="@dimen/small_padding"
+        android:layout_marginBottom="@dimen/xtra_small_padding">
         <TextView
-            android:id="@+id/team_two_starting_qb"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:paddingRight="@dimen/small_padding"
-            android:paddingEnd="@dimen/small_padding"
+            android:layout_marginRight="@dimen/small_padding"
+            android:layout_marginEnd="@dimen/small_padding"
             android:fontFamily="@font/freshman"
             android:textSize="@dimen/small_med_font"
-            android:textColor="#000000"
-            android:text="Starting Quarterback: "/>
+            android:textColor="#FFFFFF"
+            android:text="Quarterback: "/>
         <TextView
             android:id="@+id/team_two_passing_player_name"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:fontFamily="@font/freshman"
             android:textSize="@dimen/small_med_font"
+            android:textColor="#000000"
             android:text="Temporary Name Here"/>
     </LinearLayout>
 
     <LinearLayout
-        android:id="@+id/start_widereceiver_display_team2"
         android:layout_width="match_parent"
         android:layout_height="0dp"
         android:layout_weight=".25"
         android:layout_marginRight="@dimen/small_padding"
-        android:layout_marginLeft="@dimen/small_padding">
+        android:layout_marginLeft="@dimen/small_padding"
+        android:layout_marginBottom="@dimen/xtra_small_padding">
         <TextView
-            android:id="@+id/team_two_starting_wr"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:paddingRight="@dimen/small_padding"
             android:paddingEnd="@dimen/small_padding"
             android:fontFamily="@font/freshman"
             android:textSize="@dimen/small_med_font"
-            android:textColor="#000000"
-            android:text="Starting Wide Receiver 1: "/>
+            android:textColor="#FFFFFF"
+            android:text="Wide Receiver 1: "
+            tools:ignore="RtlSymmetry" />
         <TextView
             android:id="@+id/team_two_receiving_player_name"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:fontFamily="@font/freshman"
             android:textSize="@dimen/small_med_font"
+            android:textColor="#000000"
             android:text="Temporary Name Here" />
     </LinearLayout>
 
     <LinearLayout
-        android:id="@+id/start_widereceiver2_display_team2"
         android:layout_width="match_parent"
         android:layout_height="0dp"
         android:layout_weight=".25"
         android:layout_marginRight="@dimen/small_padding"
-        android:layout_marginLeft="@dimen/small_padding">
+        android:layout_marginLeft="@dimen/small_padding"
+        android:layout_marginBottom="@dimen/xtra_small_padding">
         <TextView
-            android:id="@+id/team_two_starting_wr2"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:paddingRight="@dimen/small_padding"
             android:paddingEnd="@dimen/small_padding"
             android:fontFamily="@font/freshman"
             android:textSize="@dimen/small_med_font"
-            android:textColor="#000000"
-            android:text="Starting Wide Receiver 2: "/>
+            android:textColor="#FFFFFF"
+            android:text="Wide Receiver 2: "
+            tools:ignore="RtlSymmetry" />
         <TextView
             android:id="@+id/team_two_receiving2_player_name"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:fontFamily="@font/freshman"
             android:textSize="@dimen/small_med_font"
+            android:textColor="#000000"
             android:text="Temporary Name Here" />
     </LinearLayout>
 
     <LinearLayout
-        android:id="@+id/start_runnningback_display_team2"
         android:layout_width="match_parent"
         android:layout_height="0dp"
         android:layout_weight=".25"
         android:layout_marginRight="@dimen/small_padding"
-        android:layout_marginLeft="@dimen/small_padding">
+        android:layout_marginLeft="@dimen/small_padding"
+        android:layout_marginBottom="@dimen/xtra_small_padding">
         <TextView
-            android:id="@+id/team_two_starting_rb"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:paddingRight="@dimen/small_padding"
             android:paddingEnd="@dimen/small_padding"
             android:fontFamily="@font/freshman"
             android:textSize="@dimen/small_med_font"
-            android:textColor="#000000"
-            android:text="Starting Running Back: "/>
+            android:textColor="#FFFFFF"
+            android:text="Running Back: "
+            tools:ignore="RtlSymmetry" />
         <TextView
             android:id="@+id/team_two_rushing_player_name"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:fontFamily="@font/freshman"
             android:textSize="@dimen/small_med_font"
+            android:textColor="#000000"
             android:text="Temporary Name Here" />
     </LinearLayout>
 
@@ -317,24 +316,53 @@
         android:layout_height="0dp"
         android:layout_weight="3">
         <ImageView
+            android:contentDescription="NFL Logo Helmet Alternate"
             android:id="@+id/team_two_game_start_logo"
             android:layout_width="140dp"
             android:layout_height="140dp"/>
         <RelativeLayout
             android:layout_width="match_parent"
-            android:layout_height="wrap_content">
+            android:layout_height="wrap_content"
+            android:background="#66FFFFFF"
+            android:padding="@dimen/small_med_padding">
             <TextView
                 android:id="@+id/team_two_score_display"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 android:layout_gravity="center_horizontal"
                 android:gravity="center"
-                android:layout_marginBottom="@dimen/small_med_padding"
+                android:layout_marginBottom="@dimen/small_padding"
                 android:fontFamily="@font/freshman"
                 android:text="2017 Record"
                 android:textColor="#111111"
                 android:textSize="@dimen/large_font"
                 />
+            <TextView
+                android:id="@+id/team_two_previous_record"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_below="@id/team_two_score_display"
+                android:layout_marginBottom="@dimen/small_padding"
+                android:gravity="center"
+                android:fontFamily="@font/freshman"
+                android:textSize="@dimen/medium_font"
+                android:text=""
+                android:textColor="#000000"/>
+            <Button
+                style="@style/Widget.AppCompat.Button.Borderless.Colored"
+                android:onClick="returnToTeamSelection"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:gravity="center"
+                android:layout_below="@id/team_two_previous_record"
+                android:layout_centerHorizontal="true"
+                android:layout_marginLeft="@dimen/large_padding"
+                android:layout_marginRight="@dimen/large_padding"
+                android:background="@drawable/border_black"
+                android:fontFamily="@font/freshman"
+                android:textColor="#333333"
+                android:textSize="@dimen/small_font"
+                android:text="Change Team"/>
         </RelativeLayout>
 
 
@@ -343,7 +371,7 @@
     <LinearLayout
         android:layout_width="match_parent"
         android:layout_height="0dp"
-        android:layout_weight=".50"
+        android:layout_weight=".75"
         android:layout_marginBottom="@dimen/small_padding"
         android:gravity="center">
         <Button
@@ -354,7 +382,7 @@
             android:layout_height="wrap_content"
             android:layout_marginRight="@dimen/small_padding"
             android:layout_marginLeft="@dimen/small_padding"
-            android:padding="@dimen/small_padding"
+            android:padding="@dimen/small_med_padding"
             android:text="start 1st half"
             android:fontFamily="@font/freshman"
             android:textSize="@dimen/small_font"

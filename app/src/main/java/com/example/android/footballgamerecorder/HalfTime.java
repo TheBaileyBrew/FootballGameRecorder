@@ -20,42 +20,48 @@ public class HalfTime extends AppCompatActivity {
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
-        setContentView(R.layout.activity_game_start);
+        setContentView(R.layout.half_time);
 
         String teamOneQuarterback;
         String teamTwoQuarterback;
         teamTwoName = getIntent().getStringExtra("team_two");
         teamOneName = getIntent().getStringExtra("team_one");
 
-        String teamOneRecYards = getIntent().getStringExtra("Team_One_Rec");
-        String teamTwoRecYards = getIntent().getStringExtra("Team_Two_Rec");
-        String teamOneRushYards = getIntent().getStringExtra("Team_One_Rush");
-        String teamTwoRushYards = getIntent().getStringExtra("Team_Two_Rush");
-        String teamOnePassYards = getIntent().getStringExtra("Team_One_Pass");
-        String teamTwoPassYards = getIntent().getStringExtra("Team_Two_Pass");
-        String teamOneScore = getIntent().getStringExtra("Team_One_Score");
-        String teamTwoScore = getIntent().getStringExtra("Team_Two_Score");
+        int teamOneRecYards = getIntent().getIntExtra("Team_One_Rec", 0);
+        int teamTwoRecYards = getIntent().getIntExtra("Team_Two_Rec", 0);
+        int teamOneRushYards = getIntent().getIntExtra("Team_One_Rush", 0);
+        int teamTwoRushYards = getIntent().getIntExtra("Team_Two_Rush", 0);
+        int teamOnePassYards = getIntent().getIntExtra("Team_One_Pass", 0);
+        int teamTwoPassYards = getIntent().getIntExtra("Team_Two_Pass", 0);
+        int teamOneScore = getIntent().getIntExtra("Team_One_Score", 0);
+        int teamTwoScore = getIntent().getIntExtra("Team_Two_Score", 0);
         TextView textView = findViewById(R.id.team_one_game_start_name_display);
         TextView textView2 = findViewById(R.id.team_two_game_start_name_display);
         TextView scoreTeamOne = findViewById(R.id.team_one_score_display);
         TextView scoreTeamTwo = findViewById(R.id.team_two_score_display);
-        if (teamOneScore == null) {
+        if (teamOneScore == 0) {
             scoreTeamOne.setText("0");
         } else {
-            scoreTeamOne.setText(teamOneScore);
+            scoreTeamOne.setText(String.valueOf(teamOneScore));
         }
-        if (teamTwoScore == null) {
+        if (teamTwoScore == 0) {
             scoreTeamTwo.setText("0");
         } else {
-            scoreTeamTwo.setText(teamOneScore);
+            scoreTeamTwo.setText(String.valueOf(teamOneScore));
         }
 
         TextView teamOnePassing = findViewById(R.id.team_one_passing_yards_display);
+        teamOnePassing.setText(String.valueOf(teamOnePassYards));
         TextView teamTwoPassing = findViewById(R.id.team_two_passing_yards_display);
+        teamTwoPassing.setText(String.valueOf(teamTwoPassYards));
         TextView teamOneRushing = findViewById(R.id.team_one_rushing_yards_display);
+        teamOneRushing.setText(String.valueOf(teamOneRushYards));
         TextView teamTwoRushing = findViewById(R.id.team_two_rushing_yards_display);
+        teamTwoRushing.setText(String.valueOf(teamTwoRushYards));
         TextView teamOneReceiving = findViewById(R.id.team_one_receiving_yards_display);
+        teamOneReceiving.setText(String.valueOf(teamOnePassYards));
         TextView teamTwoReceiving = findViewById(R.id.team_two_receiving_yards_display);
+        teamTwoReceiving.setText(String.valueOf(teamOnePassYards));
         textView.setText(teamOneName);
         textView2.setText(teamTwoName);
         TextView teamOneQB = findViewById(R.id.team_one_passing_player_name);
