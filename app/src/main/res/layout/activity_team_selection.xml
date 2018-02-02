@@ -9,7 +9,7 @@
     tools:context="com.example.android.footballgamerecorder.TeamSelection">
 
     <Spinner
-        style="@style/Widget.AppCompat.Light.Spinner.DropDown.ActionBar"
+        style="@style/Widget.AppCompat.Spinner.DropDown"
         android:background="#66ffffff"
         android:id="@+id/teamOne_spinner"
         android:layout_width="match_parent"
@@ -30,9 +30,9 @@
         android:layout_marginLeft="@dimen/small_padding"
         android:layout_marginRight="@dimen/small_padding"
         android:gravity="center"
-        android:contentDescription="TODO" />
+        android:contentDescription="@string/home_team_logo_helmet" />
     <Spinner
-        style="@style/Widget.AppCompat.Light.Spinner.DropDown.ActionBar"
+        style="@style/Widget.AppCompat.Spinner.DropDown"
         android:background="#66ffffff"
         android:id="@+id/teamTwo_spinner"
         android:layout_width="match_parent"
@@ -40,7 +40,6 @@
         android:layout_weight=".5"
         android:layout_marginLeft="@dimen/small_padding"
         android:layout_marginRight="@dimen/small_padding"
-        android:text="Choose Away Team"
         android:textSize="@dimen/medium_font"
         android:gravity="center" />
     <ImageView
@@ -51,7 +50,7 @@
         android:layout_marginLeft="@dimen/small_padding"
         android:layout_marginRight="@dimen/small_padding"
         android:gravity="center"
-        android:contentDescription="TODO" />
+        android:contentDescription="@string/away_team_logo_helmet" />
     <Button
         style="@style/Widget.AppCompat.Button.Borderless"
         android:onClick="onClickStartGame"

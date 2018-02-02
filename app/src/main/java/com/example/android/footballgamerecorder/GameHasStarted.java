@@ -118,19 +118,19 @@ public class GameHasStarted extends AppCompatActivity {
                 String spinnerTeamTwo = ((TextView) view).getText().toString();
                 switch (spinnerTeamTwo) {
                     case "Passing Stats":
-                        findViewById(R.id.passing_scoring_statistics).setVisibility(View.VISIBLE);
-                        findViewById(R.id.receiving_scoring_statistics).setVisibility(View.INVISIBLE);
-                        findViewById(R.id.rushing_scoring_statistics).setVisibility(View.INVISIBLE);
+                        findViewById(R.id.passing_scoring_statistics_team2).setVisibility(View.VISIBLE);
+                        findViewById(R.id.receiving_scoring_statistics_team2).setVisibility(View.INVISIBLE);
+                        findViewById(R.id.rushing_scoring_statistics_team2).setVisibility(View.INVISIBLE);
                         break;
                     case "Rushing Stats":
-                        findViewById(R.id.passing_scoring_statistics).setVisibility(View.INVISIBLE);
-                        findViewById(R.id.receiving_scoring_statistics).setVisibility(View.INVISIBLE);
-                        findViewById(R.id.rushing_scoring_statistics).setVisibility(View.VISIBLE);
+                        findViewById(R.id.passing_scoring_statistics_team2).setVisibility(View.INVISIBLE);
+                        findViewById(R.id.receiving_scoring_statistics_team2).setVisibility(View.INVISIBLE);
+                        findViewById(R.id.rushing_scoring_statistics_team2).setVisibility(View.VISIBLE);
                         break;
                     case "Receiving Stats":
-                        findViewById(R.id.passing_scoring_statistics).setVisibility(View.INVISIBLE);
-                        findViewById(R.id.receiving_scoring_statistics).setVisibility(View.VISIBLE);
-                        findViewById(R.id.rushing_scoring_statistics).setVisibility(View.INVISIBLE);
+                        findViewById(R.id.passing_scoring_statistics_team2).setVisibility(View.INVISIBLE);
+                        findViewById(R.id.receiving_scoring_statistics_team2).setVisibility(View.VISIBLE);
+                        findViewById(R.id.rushing_scoring_statistics_team2).setVisibility(View.INVISIBLE);
                         break;
                 }
             }

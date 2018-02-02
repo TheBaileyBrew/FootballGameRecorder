@@ -696,9 +696,9 @@
                             <TextView
                                 android:layout_width="wrap_content"
                                 android:layout_height="wrap_content"
-                                android:layout_toRightOf="@id/interception_qb_one_display_team2"
+                                android:layout_alignLeft="@id/interception_qb_one_display_team2"
                                 android:layout_below="@id/interception_qb_one_display_team2"
-                                android:paddingLeft="@dimen/medium_padding"
+                                android:paddingLeft="@dimen/large_padding"
                                 android:text="@string/fumbles"
                                 tools:ignore="RtlHardcoded,RtlSymmetry" />
                             <TextView
@@ -782,7 +782,7 @@
                             <TextView
                                 android:layout_width="wrap_content"
                                 android:layout_height="wrap_content"
-                                android:layout_toRightOf="@id/touchdown_wr_two_display_team2"
+                                android:layout_alignLeft="@id/touchdown_wr_two_display_team2"
                                 android:layout_below="@id/touchdown_wr_two_display_team2"
                                 android:paddingLeft="@dimen/large_padding"
                                 android:text="@string/fumbles"
@@ -855,9 +855,9 @@
                             <TextView
                                 android:layout_width="wrap_content"
                                 android:layout_height="wrap_content"
-                                android:layout_toRightOf="@id/touchdown_rb_two_display_team2"
+                                android:layout_alignLeft="@id/touchdown_rb_two_display_team2"
                                 android:layout_below="@id/touchdown_rb_two_display_team2"
-                                android:paddingLeft="@dimen/medium_padding"
+                                android:paddingLeft="@dimen/large_padding"
                                 android:text="@string/fumbles"
                                 tools:ignore="RtlHardcoded,RtlSymmetry" />
                             <TextView

@@ -25,7 +25,7 @@ public class TeamSelection extends AppCompatActivity {
             /* Team One spinner selection criteria and image display */
             teamOneSpinner = findViewById(R.id.teamOne_spinner);
             /* Create the ArrayAdapter for Spinner Data */
-            ArrayAdapter<CharSequence> teamOneAdapter = ArrayAdapter.createFromResource(this, R.array.football_teams, android.R.layout.simple_spinner_dropdown_item);
+            final ArrayAdapter<CharSequence> teamOneAdapter = ArrayAdapter.createFromResource(this, R.array.football_teams, R.layout.spinner_item);
         teamOneSpinner.setAdapter(teamOneAdapter);
         teamOneSpinner.setOnItemSelectedListener(new AdapterView.OnItemSelectedListener() {
                 @Override
@@ -142,7 +142,7 @@ public class TeamSelection extends AppCompatActivity {
             /* Team Two spinner selection criteria and image display */
             teamTwoSpinner = findViewById(R.id.teamTwo_spinner);
             /* Create the ArrayAdapter for Spinner Data */
-            ArrayAdapter<CharSequence> teamTwoAdapter = ArrayAdapter.createFromResource(this, R.array.football_teams, android.R.layout.simple_spinner_dropdown_item);
+            ArrayAdapter<CharSequence> teamTwoAdapter = ArrayAdapter.createFromResource(this, R.array.football_teams, R.layout.spinner_item);
         teamTwoSpinner.setAdapter(teamTwoAdapter);
         teamTwoSpinner.setOnItemSelectedListener(new AdapterView.OnItemSelectedListener() {
                 @Override

@@ -26,6 +26,11 @@
     <string name="receiving_statistics">RECEIVING STATISTICS</string>
     <string name="enter_yardage_gain">Enter Yardage Gain</string>
     <string name="completion">Completion</string>
+    <string name="extra_point">extra point</string>
+    <string name="fieldgoal">fieldgoal</string>
+    <string name="safety_2">safety / +2</string>
+    <string name="end_game">End Game</string>
+    <string name="half_time">Half Time</string>
 
 
     <!--String List for PositionPlayers: QB : WR1 : WR2 :RB -->
@@ -223,13 +228,8 @@
     <string name="tampa_bay_stats">Win/Loss: 5\-11 \n Passing: 4368/26/14 \n Rushing: 1448/8</string>
     <string name="tennessee_stats">Win/Loss: 9\-7 \n Passing: 3191/14/17 \n Rushing: 1833/18</string>
     <string name="washington_stats">Win/Loss: 7\-9 \n Passing: 3751/27/13 \n Rushing: 1448/10</string>
-    <string name="completion">Completion</string>
-    <string name="enter_yardage_gain">Enter Yardage Gain</string>
-    <string name="extra_point">extra point</string>
-    <string name="fieldgoal">fieldgoal</string>
-    <string name="safety_2">safety / +2</string>
-    <string name="end_game">End Game</string>
-    <string name="half_time">Half Time</string>
+    <string name="away_team_logo_helmet">Away Team Logo Helmet</string>
+    <string name="home_team_logo_helmet">Home Team Logo Helmet</string>
 
 
     <!--Team Names String Array-->
