@@ -47,7 +47,7 @@
                             android:layout_width="wrap_content"
                             android:layout_height="wrap_content"
                             android:layout_marginLeft="@dimen/small_padding"
-                            android:text="0"
+                            android:text="@string/_0"
                             android:textSize="@dimen/medium_font"
                             android:textColor="#000000"
                             tools:ignore="RtlHardcoded" />
@@ -64,7 +64,7 @@
                             android:layout_width="wrap_content"
                             android:layout_height="wrap_content"
                             android:layout_marginLeft="@dimen/small_padding"
-                            android:text="0"
+                            android:text="@string/_0"
                             android:textSize="@dimen/medium_font"
                             android:textColor="#000000"
                             tools:ignore="RtlHardcoded" />
@@ -340,7 +340,6 @@
                         android:layout_margin="@dimen/small_med_padding">
                             <Button
                                 style="@style/Widget.AppCompat.Button.Borderless.Colored"
-
                                 android:id="@+id/team_one_defensive_td"
                                 android:onClick="onClickTeamOneDefTD"
                                 android:layout_width="wrap_content"
@@ -377,7 +376,7 @@
                                 android:layout_height="wrap_content"
                                 android:layout_below="@id/team_one_rushing_td"
                                 android:layout_centerHorizontal="true"
-                                android:text="safety / +2"
+                                android:text="@string/safety_2"
                                 android:textSize="@dimen/small_med_font"/>
                             <Button
                                 style="@style/Widget.AppCompat.Button.Borderless.Colored"
@@ -387,7 +386,7 @@
                                 android:layout_height="wrap_content"
                                 android:layout_below="@id/team_one_receiving_td"
                                 android:layout_toRightOf="@id/team_one_conversion_safety"
-                                android:text="fieldgoal"
+                                android:text="@string/fieldgoal"
                                 android:textSize="@dimen/small_med_font"
                                 tools:ignore="RtlHardcoded" />
                             <Button
@@ -398,7 +397,7 @@
                                 android:layout_height="wrap_content"
                                 android:layout_below="@id/team_one_defensive_td"
                                 android:layout_toLeftOf="@id/team_one_conversion_safety"
-                                android:text="extra point"
+                                android:text="@string/extra_point"
                                 android:textSize="@dimen/small_med_font"
                                 tools:ignore="RtlHardcoded" />
                         <TextView
@@ -478,7 +477,7 @@
                             android:inputType="numberDecimal|numberSigned"
                             android:digits="01234567890-"
                             android:text=""
-                            android:hint="Enter Yardage Gain"
+                            android:hint="@string/enter_yardage_gain"
                             android:textColorHint="#666666"
                             android:textColor="#999999"
                             android:textSize="@dimen/small_font"
@@ -491,7 +490,7 @@
                             android:layout_height="wrap_content"
                             android:layout_below="@id/team_one_rush_stats"
                             android:layout_toRightOf="@id/team_one_rushing_yardage"
-                            android:text="Completion"
+                            android:text="@string/completion"
                             android:textSize="@dimen/small_med_font"
                             tools:ignore="RtlHardcoded" />
                         <Button
@@ -529,7 +528,7 @@
                             android:digits="0123456789-"
                             android:inputType="numberDecimal|numberSigned"
                             android:text=""
-                            android:hint="Enter Yardage Gain"
+                            android:hint="@string/enter_yardage_gain"
                             android:textColorHint="#666666"
                             android:textColor="#999999"
                             android:textSize="@dimen/small_font"
@@ -542,7 +541,7 @@
                             android:layout_height="wrap_content"
                             android:layout_below="@id/team_one_rec_stats"
                             android:layout_toRightOf="@id/team_one_receiving_yardage"
-                            android:text="Completion"
+                            android:text="@string/completion"
                             android:textSize="@dimen/small_med_font"
                             tools:ignore="RtlHardcoded" />
                         <Button
@@ -556,19 +555,28 @@
                             android:textSize="@dimen/small_med_font"
                             tools:ignore="RtlHardcoded" />
                     </RelativeLayout>
-                    <LinearLayout
-                        android:layout_width="match_parent"
-                        android:layout_height="wrap_content"
-                        android:gravity="center_horizontal">
                         <Button
+                            android:id="@+id/tab_one_halftime_button"
                             style="@style/Widget.AppCompat.Button.Borderless.Colored"
                             android:onClick="onClickReturnToHalf"
+                            android:layout_gravity="center_horizontal"
                             android:layout_width="wrap_content"
                             android:layout_height="wrap_content"
                             android:padding="@dimen/small_med_padding"
                             android:textSize="@dimen/medium_font"
-                            android:text="Half time"/>
-                    </LinearLayout>
+                            android:text="@string/half_time"/>
+                        <Button
+                            android:id="@+id/tab_one_game_complete"
+                            style="@style/Widget.AppCompat.Button.Borderless.Colored"
+                            android:visibility="gone"
+                            android:onClick="onClickGameComplete"
+                            android:layout_gravity="center_horizontal"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:padding="@dimen/small_med_padding"
+                            android:textSize="@dimen/medium_font"
+                            android:text="@string/end_game"/>
+
                 </LinearLayout>
                 <LinearLayout
                     android:id="@+id/team_two"
@@ -921,7 +929,7 @@
                             android:layout_height="wrap_content"
                             android:layout_below="@id/team_two_rushing_td"
                             android:layout_centerHorizontal="true"
-                            android:text="safety / +2"
+                            android:text="@string/safety_2"
                             android:textSize="@dimen/small_med_font"/>
                         <Button
                             style="@style/Widget.AppCompat.Button.Borderless.Colored"
@@ -930,7 +938,7 @@
                             android:layout_height="wrap_content"
                             android:layout_below="@id/team_two_receiving_td"
                             android:layout_toRightOf="@id/team_two_conversion_safety"
-                            android:text="fieldgoal"
+                            android:text="@string/fieldgoal"
                             android:textSize="@dimen/small_med_font"
                             tools:ignore="RtlHardcoded" />
                         <Button
@@ -940,7 +948,7 @@
                             android:layout_height="wrap_content"
                             android:layout_below="@id/team_two_defensive_td"
                             android:layout_toLeftOf="@id/team_two_conversion_safety"
-                            android:text="extra point"
+                            android:text="@string/extra_point"
                             android:textSize="@dimen/small_med_font"
                             tools:ignore="RtlHardcoded" />
                         <TextView
@@ -1097,24 +1105,30 @@
                             tools:ignore="RtlHardcoded" />
                     </RelativeLayout>
                     <Button
+                        android:id="@+id/tab_two_halftime_button"
                         style="@style/Widget.AppCompat.Button.Borderless.Colored"
                         android:onClick="onClickReturnToHalf"
-                        android:layout_width="match_parent"
-                        android:layout_height="wrap_content"
                         android:layout_gravity="center_horizontal"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
                         android:padding="@dimen/small_med_padding"
                         android:textSize="@dimen/medium_font"
-                        android:text="Half time"/>
+                        android:text="@string/half_time"/>
+                    <Button
+                        android:id="@+id/tab_two_game_complete"
+                        style="@style/Widget.AppCompat.Button.Borderless.Colored"
+                        android:visibility="gone"
+                        android:onClick="onClickGameComplete"
+                        android:layout_gravity="center_horizontal"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:padding="@dimen/small_med_padding"
+                        android:textSize="@dimen/medium_font"
+                        android:text="@string/end_game"/>
                 </LinearLayout>
             </FrameLayout>
 
         </LinearLayout>
     </TabHost>
-
-
-
-
-
-
 
 </LinearLayout>

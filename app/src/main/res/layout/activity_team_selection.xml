@@ -9,6 +9,8 @@
     tools:context="com.example.android.footballgamerecorder.TeamSelection">
 
     <Spinner
+        style="@style/Widget.AppCompat.Light.Spinner.DropDown.ActionBar"
+        android:background="#66ffffff"
         android:id="@+id/teamOne_spinner"
         android:layout_width="match_parent"
         android:layout_height="0dp"
@@ -17,7 +19,6 @@
         android:layout_marginLeft="@dimen/small_padding"
         android:layout_marginRight="@dimen/small_padding"
         android:fontFamily="@font/freshman"
-        android:text="Choose Home Team"
         android:textSize="@dimen/medium_font"
         android:gravity="center" />
     <ImageView
@@ -31,6 +32,8 @@
         android:gravity="center"
         android:contentDescription="TODO" />
     <Spinner
+        style="@style/Widget.AppCompat.Light.Spinner.DropDown.ActionBar"
+        android:background="#66ffffff"
         android:id="@+id/teamTwo_spinner"
         android:layout_width="match_parent"
         android:layout_height="0dp"
