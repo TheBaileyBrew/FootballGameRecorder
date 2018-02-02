@@ -28,6 +28,10 @@
             android:label="Half Time Menu"
             android:theme="@style/Theme.AppCompat.Light.NoActionBar">
         </activity>
+        <activity android:name=".gameComplete"
+            android:label="End Of Regulation"
+            android:theme="@style/Theme.AppCompat.Light.NoActionBar">
+        </activity>
     </application>
 
 </manifest>

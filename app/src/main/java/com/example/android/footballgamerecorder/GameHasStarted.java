@@ -7,11 +7,15 @@ import android.util.Log;
 import android.view.View;
 import android.widget.AdapterView;
 import android.widget.ArrayAdapter;
+import android.widget.Button;
 import android.widget.EditText;
 import android.widget.Spinner;
 import android.widget.TabHost;
 import android.widget.TextView;
 import android.widget.Toast;
+
+import static android.view.View.GONE;
+import static android.view.View.VISIBLE;
 
 
 public class GameHasStarted extends AppCompatActivity {
@@ -19,37 +23,67 @@ public class GameHasStarted extends AppCompatActivity {
     private String teamOneName;
     private String teamTwoName;
     private int TeamOneScore = 0;
+    String teamOneScore;
     private int TeamTwoScore = 0;
-    private int TeamOneLastScoring = 0;
-    private int TeamTwoLastScoring = 0;
-    private int TeamOnePassyards = 0;
-    private int TeamTwoPassyards = 0;
+    String teamTwoScore;
     private int TeamOneRushYard = 0;
+    String teamOneRushing;
     private int TeamTwoRushYard = 0;
+    String teamTwoRushing;
     private int TeamOneRecYard = 0;
+    String teamOnePassing;
+    String teamOneReceiving;
     private int TeamTwoRecYard = 0;
+    String teamTwoPassing;
+    String teamTwoReceiving;
 
     private int rushingTD = 0;
+    String teamOneRushTD;
     private int rushingTD2 = 0;
+    String teamTwoRushTD;
     private int receivingTD = 0;
+    String teamOneRecTD;
     private int receivingTD2 = 0;
+    String teamTwoRecTD;
 
     private int TeamOneQBFumble = 0;
+    String teamOnePassFumble;
     private int TeamTwoQBFumble = 0;
+    String teamTwoPassFumble;
     private int TeamOneRBFumble = 0;
+    String teamOneRushFumble;
     private int TeamTwoRBFumble = 0;
+    String teamTwoRushFumble;
     private int TeamOneWRFumble = 0;
+    String teamOneRecFumble;
     private int TeamTwoWRFumble = 0;
+    String teamTwoRecFumble;
 
     private int TeamOneCompleted = 0;
+    String teamOnePassComp;
+    String teamOneRecComp;
     private int TeamTwoCompleted = 0;
+    String teamTwoPassComp;
+    String teamTwoRecComp;
     private int TeamOneAttempts = 0;
+    String teamOnePassAttempt;
+    String teamOneRecAttempt;
     private int TeamTwoAttempts = 0;
+    String teamTwoPassAttempt;
+    String teamTwoRecAttempt;
     private int TeamOneInterceptions = 0;
+    String teamOneInt;
     private int TeamTwoInterceptions = 0;
-
+    String teamTwoInt;
     private int TeamOneRushAttempts = 0;
+    String teamOneRushAttempt;
     private int TeamTwoRushAttempts = 0;
+    String teamTwoRushAttempt;
+
+    Button gameComplete;
+    Button gameComplete2;
+    Button halftime;
+    Button halftime2;
 
     TabHost tabHost;
 
@@ -86,18 +120,18 @@ public class GameHasStarted extends AppCompatActivity {
                 String spinnerTeamOne = ((TextView) view).getText().toString();
                 switch (spinnerTeamOne) {
                     case "Passing Stats":
-                        findViewById(R.id.passing_scoring_statistics).setVisibility(View.VISIBLE);
+                        findViewById(R.id.passing_scoring_statistics).setVisibility(VISIBLE);
                         findViewById(R.id.receiving_scoring_statistics).setVisibility(View.INVISIBLE);
                         findViewById(R.id.rushing_scoring_statistics).setVisibility(View.INVISIBLE);
                         break;
                     case "Rushing Stats":
                         findViewById(R.id.passing_scoring_statistics).setVisibility(View.INVISIBLE);
                         findViewById(R.id.receiving_scoring_statistics).setVisibility(View.INVISIBLE);
-                        findViewById(R.id.rushing_scoring_statistics).setVisibility(View.VISIBLE);
+                        findViewById(R.id.rushing_scoring_statistics).setVisibility(VISIBLE);
                         break;
                     case "Receiving Stats":
                         findViewById(R.id.passing_scoring_statistics).setVisibility(View.INVISIBLE);
-                        findViewById(R.id.receiving_scoring_statistics).setVisibility(View.VISIBLE);
+                        findViewById(R.id.receiving_scoring_statistics).setVisibility(VISIBLE);
                         findViewById(R.id.rushing_scoring_statistics).setVisibility(View.INVISIBLE);
                         break;
                 }
@@ -118,18 +152,18 @@ public class GameHasStarted extends AppCompatActivity {
                 String spinnerTeamTwo = ((TextView) view).getText().toString();
                 switch (spinnerTeamTwo) {
                     case "Passing Stats":
-                        findViewById(R.id.passing_scoring_statistics_team2).setVisibility(View.VISIBLE);
+                        findViewById(R.id.passing_scoring_statistics_team2).setVisibility(VISIBLE);
                         findViewById(R.id.receiving_scoring_statistics_team2).setVisibility(View.INVISIBLE);
                         findViewById(R.id.rushing_scoring_statistics_team2).setVisibility(View.INVISIBLE);
                         break;
                     case "Rushing Stats":
                         findViewById(R.id.passing_scoring_statistics_team2).setVisibility(View.INVISIBLE);
                         findViewById(R.id.receiving_scoring_statistics_team2).setVisibility(View.INVISIBLE);
-                        findViewById(R.id.rushing_scoring_statistics_team2).setVisibility(View.VISIBLE);
+                        findViewById(R.id.rushing_scoring_statistics_team2).setVisibility(VISIBLE);
                         break;
                     case "Receiving Stats":
                         findViewById(R.id.passing_scoring_statistics_team2).setVisibility(View.INVISIBLE);
-                        findViewById(R.id.receiving_scoring_statistics_team2).setVisibility(View.VISIBLE);
+                        findViewById(R.id.receiving_scoring_statistics_team2).setVisibility(VISIBLE);
                         findViewById(R.id.rushing_scoring_statistics_team2).setVisibility(View.INVISIBLE);
                         break;
                 }
@@ -143,6 +177,132 @@ public class GameHasStarted extends AppCompatActivity {
 
 
     }
+
+    @Override
+    protected void onSaveInstanceState(Bundle savedInstanceState) {
+        //Save custom scoring values
+        savedInstanceState.putInt(teamOneScore, TeamOneScore);
+        savedInstanceState.putInt(teamTwoScore, TeamTwoScore);
+        //Save custom passing statistics
+        savedInstanceState.putInt(teamOnePassing, TeamOneRecYard);
+        savedInstanceState.putInt(teamTwoPassing, TeamTwoRecYard);
+        savedInstanceState.putInt(teamOnePassComp, TeamOneCompleted);
+        savedInstanceState.putInt(teamTwoPassComp, TeamTwoCompleted);
+        savedInstanceState.putInt(teamOnePassAttempt, TeamOneAttempts);
+        savedInstanceState.putInt(teamTwoPassAttempt, TeamTwoAttempts);
+        savedInstanceState.putInt(teamOnePassFumble, TeamOneQBFumble);
+        savedInstanceState.putInt(teamTwoPassFumble, TeamTwoQBFumble);
+        savedInstanceState.putInt(teamOneInt, TeamOneInterceptions);
+        savedInstanceState.putInt(teamTwoInt, TeamTwoInterceptions);
+        //Save custom rushing statistics
+        savedInstanceState.putInt(teamOneRushing, TeamOneRushYard);
+        savedInstanceState.putInt(teamTwoRushing, TeamTwoRushYard);
+        savedInstanceState.putInt(teamOneRushAttempt, TeamOneRushAttempts);
+        savedInstanceState.putInt(teamTwoRushAttempt, TeamTwoRushAttempts);
+        savedInstanceState.putInt(teamOneRushFumble, TeamOneRBFumble);
+        savedInstanceState.putInt(teamTwoRushFumble, TeamTwoRBFumble);
+        savedInstanceState.putInt(teamOneRushTD, rushingTD);
+        savedInstanceState.putInt(teamTwoRushTD, rushingTD2);
+        //Save customer receiving statistics
+        savedInstanceState.putInt(teamOneReceiving, TeamOneRecYard);
+        savedInstanceState.putInt(teamTwoReceiving, TeamTwoRecYard);
+        savedInstanceState.putInt(teamOneRecTD, receivingTD);
+        savedInstanceState.putInt(teamTwoRecTD, receivingTD2);
+        savedInstanceState.putInt(teamOneRecComp, TeamOneCompleted);
+        savedInstanceState.putInt(teamTwoRecComp, TeamTwoCompleted);
+        savedInstanceState.putInt(teamOneRecAttempt, TeamOneAttempts);
+        savedInstanceState.putInt(teamTwoRecAttempt, TeamTwoAttempts);
+        savedInstanceState.putInt(teamOneRecFumble, TeamOneWRFumble);
+        savedInstanceState.putInt(teamTwoRecFumble, TeamTwoWRFumble);
+
+        super.onSaveInstanceState(savedInstanceState);
+    }
+
+    @Override
+    protected void onRestoreInstanceState(Bundle savedInstanceState) {
+        //Call the superclass to restore hierarchy
+        super.onRestoreInstanceState(savedInstanceState);
+        //Restore the instance members to store values
+        TeamOneScore = savedInstanceState.getInt(teamOneScore);
+        teamOneTotalScore(TeamOneScore);
+        TeamTwoScore = savedInstanceState.getInt(teamTwoScore);
+        teamTwoTotalScore(TeamTwoScore);
+        TeamOneRecYard = savedInstanceState.getInt(teamOnePassing);
+        teamTwoReceiving(TeamOneRecYard);
+        TeamTwoRecYard = savedInstanceState.getInt(teamTwoPassing);
+        teamTwoReceiving(TeamTwoRecYard);
+        TeamOneCompleted = savedInstanceState.getInt(teamOnePassComp);
+        teamOneComplete(TeamOneCompleted);
+        TeamTwoCompleted = savedInstanceState.getInt(teamTwoPassComp);
+        teamTwoComplete(TeamTwoCompleted);
+        TeamOneAttempts = savedInstanceState.getInt(teamOnePassAttempt);
+        teamOneIncomplete(TeamOneAttempts);
+        TeamTwoAttempts = savedInstanceState.getInt(teamTwoPassAttempt);
+        teamTwoIncomplete(TeamTwoAttempts);
+        TeamOneQBFumble = savedInstanceState.getInt(teamOnePassFumble);
+        qbTeamOneFumble(TeamOneQBFumble);
+        TeamTwoQBFumble = savedInstanceState.getInt(teamTwoPassFumble);
+        qbTeamTwoFumble(TeamTwoQBFumble);
+        TeamOneInterceptions = savedInstanceState.getInt(teamOneInt);
+        teamOneIntercept(TeamOneInterceptions);
+        TeamTwoInterceptions = savedInstanceState.getInt(teamTwoInt);
+        teamTwoIntercept(TeamTwoInterceptions);
+        //Save custom rushing statistics
+        TeamOneRushYard = savedInstanceState.getInt(teamOneRushing);
+        teamOneRushing(TeamOneRushYard);
+        TeamTwoRushYard = savedInstanceState.getInt(teamTwoRushing);
+        teamTwoRushing(TeamTwoRushYard);
+        TeamOneRushAttempts = savedInstanceState.getInt(teamOneRushAttempt);
+        teamOneRushAtt(TeamOneRushAttempts);
+        TeamTwoRushAttempts = savedInstanceState.getInt(teamTwoRushAttempt);
+        teamTwoRushAtt(TeamTwoRushAttempts);
+        TeamOneRBFumble = savedInstanceState.getInt(teamOneRushFumble);
+        rbTeamOneFumble(TeamOneRBFumble);
+        TeamTwoRBFumble = savedInstanceState.getInt(teamTwoRushFumble);
+        rbTeamTwoFumble(TeamTwoRBFumble);
+        rushingTD = savedInstanceState.getInt(teamOneRushTD);
+        rbtd(rushingTD);
+        rushingTD2 = savedInstanceState.getInt(teamTwoRushTD);
+        rbtd2(rushingTD2);
+        //Save customer receiving statistics
+        TeamOneRecYard = savedInstanceState.getInt(teamOneReceiving);
+        teamOneReceiving(TeamOneRecYard);
+        TeamTwoRecYard = savedInstanceState.getInt(teamTwoReceiving);
+        teamTwoReceiving(TeamOneRecYard);
+        receivingTD = savedInstanceState.getInt(teamOneRecTD);
+        wrtd(receivingTD);
+        receivingTD2 = savedInstanceState.getInt(teamTwoRecTD);
+        wrtd2(receivingTD2);
+        TeamOneCompleted = savedInstanceState.getInt(teamOneRecComp);
+        teamOneComplete(TeamOneCompleted);
+        TeamTwoCompleted = savedInstanceState.getInt(teamTwoRecComp);
+        teamTwoComplete(TeamTwoCompleted);
+        TeamOneAttempts = savedInstanceState.getInt(teamOneRecAttempt);
+        teamOneIncomplete(TeamOneAttempts);
+        TeamTwoAttempts = savedInstanceState.getInt(teamTwoRecAttempt);
+        teamTwoIncomplete(TeamTwoAttempts);
+        TeamOneWRFumble = savedInstanceState.getInt(teamOneRecFumble);
+        wrTeamOneFumble(TeamOneWRFumble);
+        TeamTwoWRFumble = savedInstanceState.getInt(teamTwoRecFumble);
+        wrTeamTwoFumble(TeamTwoWRFumble);
+
+        gameComplete = findViewById(R.id.tab_one_game_complete);
+        gameComplete2 = findViewById(R.id.tab_two_game_complete);
+        gameComplete.setVisibility(VISIBLE);
+        gameComplete2.setVisibility(VISIBLE);
+
+        halftime = findViewById(R.id.tab_one_halftime_button);
+        halftime2 = findViewById(R.id.tab_two_halftime_button);
+        halftime.setVisibility(GONE);
+        halftime2.setVisibility(GONE);
+
+
+
+
+    }
+
+
+
 
 
     //Updating the values of scoring, yardage and counts
@@ -520,24 +680,25 @@ public class GameHasStarted extends AppCompatActivity {
     public void onClickReturnToHalf(View view) {
         Intent goToHalf = new Intent(this, HalfTime.class);
         goToHalf.putExtra("Team_One_Score", TeamOneScore);
-        Log.i("score_team_one", String.valueOf(TeamOneScore));
         goToHalf.putExtra("Team_Two_Score", TeamTwoScore);
-        Log.i("score_team_two", String.valueOf(TeamTwoScore));
         goToHalf.putExtra("Team_One_Pass", TeamOneRecYard);
-        Log.i("passyards tm1", String.valueOf(TeamOneRecYard));
         goToHalf.putExtra("Team_Two_Pass", TeamTwoRecYard);
-        Log.i("passyards tm2", String.valueOf(TeamTwoRecYard));
         goToHalf.putExtra("Team_One_Rush", TeamOneRushYard);
-        Log.i("rushyards tm1", String.valueOf(TeamOneRushYard));
         goToHalf.putExtra("Team_Two_Rush", TeamTwoRushYard);
-        Log.i("rushyards tm2", String.valueOf(TeamTwoRushYard));
         goToHalf.putExtra("Team_One_Rec", TeamOneRecYard);
-        Log.i("recyards tm1", String.valueOf(TeamTwoRecYard));
         goToHalf.putExtra("Team_Two_Rec", TeamTwoRecYard);
-        Log.i("recyards tm2", String.valueOf(TeamTwoRecYard));
         goToHalf.putExtra("team_one", teamOneName);
         goToHalf.putExtra("team_two", teamTwoName);
         startActivity(goToHalf);
+    }
+
+    public void onClickGameComplete(View view) {
+        Intent gameComplete = new Intent(this, gameComplete.class);
+        gameComplete.putExtra("Team_One_Name", teamOneName);
+        gameComplete.putExtra("Team_Two_Name", teamTwoName);
+        gameComplete.putExtra("Team_One_Score", TeamOneScore);
+        gameComplete.putExtra("Team_Two_Score", TeamTwoScore);
+        startActivity(gameComplete);
     }
 }
 

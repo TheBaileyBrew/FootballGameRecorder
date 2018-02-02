@@ -59,9 +59,9 @@ public class HalfTime extends AppCompatActivity {
         TextView teamTwoRushing = findViewById(R.id.team_two_rushing_yards_display);
         teamTwoRushing.setText(String.valueOf(teamTwoRushYards));
         TextView teamOneReceiving = findViewById(R.id.team_one_receiving_yards_display);
-        teamOneReceiving.setText(String.valueOf(teamOnePassYards));
+        teamOneReceiving.setText(String.valueOf(teamOneRecYards));
         TextView teamTwoReceiving = findViewById(R.id.team_two_receiving_yards_display);
-        teamTwoReceiving.setText(String.valueOf(teamOnePassYards));
+        teamTwoReceiving.setText(String.valueOf(teamTwoRecYards));
         textView.setText(teamOneName);
         textView2.setText(teamTwoName);
         TextView teamOneQB = findViewById(R.id.team_one_passing_player_name);
